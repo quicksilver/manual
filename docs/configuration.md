@@ -28,7 +28,7 @@ Configuring new Quicksilver features is usually done by installing the relevant 
 
 Quicksilver’s Preferences are divided into sets at the left of the window. Those listed at the top are built-in to Quicksilver and those in the bottom section are enabled by installed plugins.
 
-The Application Preferences control the most fundamental aspects of Quicksilver as an application. Once you’re hooked on Quicksilver you’ll want to enable "Start at login". 
+The Application Preferences control the most fundamental aspects of Quicksilver as an application. Once you’re hooked on Quicksilver you’ll want to enable “Start at login”. 
 
 Quicksilver shows an icon in the Dock like most applications, but many people prefer to disable this. Uncheck the box to disable the Dock icon. The ⌽ symbol indicates Quicksilver must be restarted before the change will take affect. The easy way to restart is to activate Quicksilver (<kbd>⌃</kbd><kbd>space</kbd>) and then type <kbd>⌃</kbd><kbd>⌘</kbd><kbd>Q</kbd>
 

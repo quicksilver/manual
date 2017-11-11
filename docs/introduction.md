@@ -2,7 +2,7 @@
 
 While Quicksilver is easy to use and very powerful, it’s not obvious how to use it and it takes a little while to realize its power. As a result it’s difficult to explain why Quicksilver is so great.
 
-It took me about a week before I really "got" Quicksilver, and I think that’s pretty common. And then it took months of writing the manual to understand all the nooks and crannies. You can start off small and add to your knowledge slowly. The real power (and difference from Spotlight) is that there are multiple actions you can choose from, not just "open".
+It took me about a week before I really “got” Quicksilver, and I think that’s pretty common. And then it took months of writing the manual to understand all the nooks and crannies. You can start off small and add to your knowledge slowly. The real power (and difference from Spotlight) is that there are multiple actions you can choose from, not just “open”.
 
 The part that’s hard to describe is this.  On a Mac today you do a lot of different things and go to different programs to do them (e.g., Safari for browsing, Mail for email, Messages for IM, Contacts for contacts, etc.) Even though the Mac is pretty consistent, these are all different applications and depending on what you want to do, you do different things, click in different places, use different shortcuts, etc.
 
@@ -89,7 +89,7 @@ The Quicksilver application runs in the background. Typically there is no menu, 
 
 ![Command Window Terms](images/command_window_terms.png)
 
-Quicksilver commands are entered via two or three panes containing respectively an **_object_**, an **_action_** and if a third pane is needed, an **_argument_**. These are the terms used in this manual, but unfortunately other terms are used in some places in Quicksilver and in the forums and other articles. The Primer Interface labels the panes Subject, Action, and Object. Some forum posts use Subject, Verb, and Object; and others use Direct Object, Verb, and Indirect Object. Much of the built-in plugin documentation refers to objects in the first and third panes as "items". This manual uses the terms in the diagram above. 
+Quicksilver commands are entered via two or three panes containing respectively an **_object_**, an **_action_** and if a third pane is needed, an **_argument_**. These are the terms used in this manual, but unfortunately other terms are used in some places in Quicksilver and in the forums and other articles. The Primer Interface labels the panes Subject, Action, and Object. Some forum posts use Subject, Verb, and Object; and others use Direct Object, Verb, and Indirect Object. Much of the built-in plugin documentation refers to objects in the first and third panes as “items”. This manual uses the terms in the diagram above. 
 
 When typing in one of the panes, Quicksilver determines what items **_match_** and puts the top choice in the pane and additional, lower ranked matching items are shown in the **_results list_**. This happens for each pane so the results list will contain objects, actions, or arguments depending on which pane is selected.  The results list above is showing the possible arguments that match the entered text <kbd>Q</kbd><kbd>u</kbd><kbd>i</kbd>. The term **_item_** is used for something appearing in the results list, regardless of whether they are objects, actions or arguments.
 
@@ -99,7 +99,7 @@ The **_Catalog_** is the list of objects that can be selected in Quicksilver’s
 
 For example, there is a source for Safari which indexes bookmarks and history into the catalog. Each bookmark is an object in Quicksilver. So are files and folders in the home directory,  contacts in Contacts, all the apps in the Applications directory, albums in iPhoto, the playlists in iTunes, and many other things (provided the appropriate plugins are installed). Note that some plugins (such as Remember the Milk) allow Quicksilver to index things stored on web servers and not merely things on the hard drive.
 
-A Preference pane shows all the available actions. All actions work on objects and actions are available based on the **_type_** of object selected. E.g., the **Open URL** action is only available for objects that are URLs. Actions that require an argument typically end in “…” and arguments are expected to be of a certain type. E.g., the **Email to…** actions expect the argument to be an email address or contact. Actions with optional arguments usually end in "[…]"
+A Preference pane shows all the available actions. All actions work on objects and actions are available based on the **_type_** of object selected. E.g., the **Open URL** action is only available for objects that are URLs. Actions that require an argument typically end in “…” and arguments are expected to be of a certain type. E.g., the **Email to…** actions expect the argument to be an email address or contact. Actions with optional arguments usually end in “[…]”
 
 Some actions have a complementary action that reverse the object and argument ordering. Consider the two commands: 
 
@@ -139,13 +139,17 @@ With Quicksilver activated and the first pane selected, type some characters and
 
 If it doesn’t quite make to the top of the results list, scroll through the list and find the item and click it to select it. This can happen if there are several objects with the same name, for example a Contacts entry for Abraham Lincoln and a Finder folder named the same thing.
 
-Quicksilver remembers what’s been typed and what’s been selected and learns to guess better as its used. If I type <kbd>a</kbd> and pick Abraham Lincoln’s Contacts entry, Quicksilver will start to guess it more often instead of the folder of the same name or "AirPort Utility" or "Adium" or other things that begin with "a".
+Quicksilver remembers what’s been typed and what’s been selected and learns to
+guess better as its used. If I type <kbd>a</kbd> and pick Abraham Lincoln’s
+Contacts entry, Quicksilver will start to guess it more often instead of the
+folder of the same name or “AirPort Utility” or “Adium” or other things that
+begin with “a”.
 
 The matching algorithm that Quicksilver uses for selecting objects (it’s not used for selecting actions) and how you can help it learn more efficiently are discussed below. 
 
 Quicksilver includes a lot of things in its Catalog but to keep things fast it doesn’t include everything on the system and unlike Spotlight it doesn’t index the contents of objects, just their names. Lincoln’s Contact entry may have his phone number and email address, but typing them in the first pane won’t match the Contact. Quicksilver can navigate an iTunes music collection, but doesn’t include all songs and artists in the Catalog. 
 
-That’s not to say Quicksilver can’t use and manipulate these things. Once a parent object (in these example a contact or the iTunes apps) is selected, typing <kbd>→</kbd> will move into the object and the results list will show its children (the contact fields or music collection). The results list displays items with children by showing a > at the far right. Navigating like this is often referred to as "right-arrowing into an object". Similarly <kbd>←</kbd> will select the parent object. Quicksilver can navigate files and folders this way too. So while every file might not be indexed in the Catalog, the entire filesystem can be navigated using the arrow keys in Quicksilver. Since this is so common, the <kbd>/</kbd> key is a synonym for <kbd>→</kbd> and <kbd>⇧</kbd><kbd>/</kbd> (which is <kbd>?</kbd> on American keyboards) can be used for <kbd>←</kbd>.
+That’s not to say Quicksilver can’t use and manipulate these things. Once a parent object (in these example a contact or the iTunes apps) is selected, typing <kbd>→</kbd> will move into the object and the results list will show its children (the contact fields or music collection). The results list displays items with children by showing a > at the far right. Navigating like this is often referred to as “right-arrowing into an object”. Similarly <kbd>←</kbd> will select the parent object. Quicksilver can navigate files and folders this way too. So while every file might not be indexed in the Catalog, the entire filesystem can be navigated using the arrow keys in Quicksilver. Since this is so common, the <kbd>/</kbd> key is a synonym for <kbd>→</kbd> and <kbd>⇧</kbd><kbd>/</kbd> (which is <kbd>?</kbd> on American keyboards) can be used for <kbd>←</kbd>.
 
 A mouse or trackpad can be used to navigate the results list, but Quicksilver can do virtually anything from the keyboard. The <kbd>↓</kbd> and <kbd>↑</kbd> keys will move the selection in the results list down and up one item. For touch typists, the keystrokes <kbd>⌃</kbd><kbd>N</kbd> (next) and <kbd>⌃</kbd><kbd>P</kbd> (previous) will do the same thing and <kbd>⌃</kbd><kbd>V</kbd> and <kbd>⌥</kbd><kbd>V</kbd> will scroll the results list down or up one whole screen.
 
@@ -240,6 +244,6 @@ The above is all for objects in the first and third panes. Actions in the second
 
 A slightly different matching algorithm can be installed using the TextStart Ranker plugin and selecting it as the String Ranker handler in Preferences. In general it works better matching acronyms over continuous letters in the name of something. Specifically, it makes two changes to the algorithm. 
 
-The first is that it favors letters at the beginning of words more. E.g., if the input is <kbd>A</kbd><kbd>M</kbd> it will match "Activity Monitor" over "Amazon" since two beginning of word letters are matched instead of just one. The second difference is that it favors input that matches a higher percentage of the words. So the input <kbd>A</kbd><kbd>M</kbd> will favor "Activity Monitor" over "Audio MIDI Setup" since all the words are matched (2 out of 2) instead of two thirds of them (2 out of 3).
+The first is that it favors letters at the beginning of words more. E.g., if the input is <kbd>A</kbd><kbd>M</kbd> it will match “Activity Monitor” over “Amazon” since two beginning of word letters are matched instead of just one. The second difference is that it favors input that matches a higher percentage of the words. So the input <kbd>A</kbd><kbd>M</kbd> will favor “Activity Monitor” over “Audio MIDI Setup” since all the words are matched (2 out of 2) instead of two thirds of them (2 out of 3).
 
 TODO: (is this still the case?) However there are reported problems with matching things in the third pane such as when using the **Open With…** action or the **Email to…** action. Sometimes no results match in the third pane.

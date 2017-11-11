@@ -40,7 +40,7 @@ If you use the command line you may find that you’ll want it to be able to int
 
 Invoke `qs` with one or more files as arguments and Quicksilver will be activated with those files selected in the object pane. With an argument of `-` it will read from stdin though piping in filenames results in the file names being in the object pane as text, which is not the the same as having the files selected. If you use the `-s` or `--shelf` option the files or text will be put on the shelf.
 
-If you are an Emacs user, here’s an Emacs command to pass the current file (of a buffer, in dired, or buffer-menu mode) to Quicksilver using ```qs`. You could bind it to “C-c q” using something like: `(global-set-key "\C-cq" 'buffer-file-to-quicksilver)`
+If you are an Emacs user, here’s an Emacs command to pass the current file (of a buffer, in dired, or buffer-menu mode) to Quicksilver using ```qs`. You could bind it to "C-c q" using something like: `(global-set-key "\C-cq" 'buffer-file-to-quicksilver)`
 
 ```emacs-lisp
 (defun buffer-file-to-quicksilver ()

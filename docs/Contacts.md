@@ -2,7 +2,7 @@
 
 ## Contacts
 
-The Contacts plugin provides access to contacts in the Apple’s Contacts. The plugin adds three actions, a catalog source under modules called Contacts and has no configuration options. Normally all contacts are included in the catalog, if there is a group named "Quicksilver" then only its contents will be included in the catalog.
+The Contacts plugin provides access to contacts in the Apple’s Contacts. The plugin adds three actions, a catalog source under modules called Contacts and has no configuration options. Normally all contacts are included in the catalog, if there is a group named “Quicksilver” then only its contents will be included in the catalog.
 
 With the Contacts catalog source enabled, a contact can be brought up in the first pane by typing the contact’s name. Quicksilver will match against the first name, last name, initials, or nickname; but not the company name, email address, maiden name or other fields. If the contact has a picture in Contacts it will appear in the pane. I find the pictures help me to differentiate people with similar names (like various Johns) ensuring I choose the one I want. The ability to select on nicknames also helps particularly since Mail.app before 10.5 didn’t recognize nicknames in header fields. 
 
@@ -40,11 +40,11 @@ Quicksilver chooses default actions based on the type of object in the first pan
 
 The Entourage 2004 Module Plugin provides support for contacts and email actions. The contact support is more limited than the Apple Contacts plugin provides. See the email section for details about sending email from Quicksilver using Entourage. See below for using Entourage 2008 with Quicksilver.
 
-Install the Entourage 2004 Module plugin, start Entourage and bring up the preferences. Under General Preferences, Security make sure "Warn before allowing an external application to access the address book" is unchecked. Open the Quicksilver Catalog and under Modules make sure Entourage Contacts is checked and selected and click the (Rescan Source) button at the bottom. The Entourage contacts should now be in the catalog, though in B51 it does seem to be a bit buggy. If the contacts don’t appear, rescan the catalog.
+Install the Entourage 2004 Module plugin, start Entourage and bring up the preferences. Under General Preferences, Security make sure “Warn before allowing an external application to access the address book” is unchecked. Open the Quicksilver Catalog and under Modules make sure Entourage Contacts is checked and selected and click the (Rescan Source) button at the bottom. The Entourage contacts should now be in the catalog, though in B51 it does seem to be a bit buggy. If the contacts don’t appear, rescan the catalog.
 
 Activate Quicksilver and start typing the name of a contact to bring it up in the first pane. There is a Show Contact action that will bring it up in Entourage. At least in B51 typing <kbd>→</kbd> will not show the details of the contact. There is no Edit Contact action for Entourage. Other actions that do Email and IM should work for contacts as well. See the email section for details about sending email from Quicksilver using Entourage. 
 
-Entourage 2008 changed some things and Quicksilver is no longer able to catalog contacts stored in it. However, Entourage 2008 now has the ability to sync with the Address Book and Quicksilver’s Apple Address Book Module can be used to find contacts in it. In Entourage 2008 Preferences under General Preferences in Sync Services, check the option to "Synchronize contacts with Address Book and .Mac" and select Address Book (On My Computer) from the drop down.
+Entourage 2008 changed some things and Quicksilver is no longer able to catalog contacts stored in it. However, Entourage 2008 now has the ability to sync with the Address Book and Quicksilver’s Apple Address Book Module can be used to find contacts in it. In Entourage 2008 Preferences under General Preferences in Sync Services, check the option to “Synchronize contacts with Address Book and .Mac” and select Address Book (On My Computer) from the drop down.
 
 ## Now Contact
 
