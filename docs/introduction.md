@@ -1,16 +1,16 @@
 # Why Quicksilver
 
-While Quicksilver is easy to use and very powerful, it's not obvious how to use it and it takes a little while to realize its power. As a result it's difficult to explain why Quicksilver is so great.
+While Quicksilver is easy to use and very powerful, it’s not obvious how to use it and it takes a little while to realize its power. As a result it’s difficult to explain why Quicksilver is so great.
 
-It took me about a week before I really "got" Quicksilver, and I think that's pretty common. And then it took months of writing the manual to understand all the nooks and crannies. You can start off small and add to your knowledge slowly. The real power (and difference from Spotlight) is that there are multiple actions you can choose from, not just "open".
+It took me about a week before I really "got" Quicksilver, and I think that’s pretty common. And then it took months of writing the manual to understand all the nooks and crannies. You can start off small and add to your knowledge slowly. The real power (and difference from Spotlight) is that there are multiple actions you can choose from, not just "open".
 
-The part that's hard to describe is this.  On a Mac today you do a lot of different things and go to different programs to do them (e.g., Safari for browsing, Mail for email, Messages for IM, Contacts for contacts, etc.) Even though the Mac is pretty consistent, these are all different applications and depending on what you want to do, you do different things, click in different places, use different shortcuts, etc.
+The part that’s hard to describe is this.  On a Mac today you do a lot of different things and go to different programs to do them (e.g., Safari for browsing, Mail for email, Messages for IM, Contacts for contacts, etc.) Even though the Mac is pretty consistent, these are all different applications and depending on what you want to do, you do different things, click in different places, use different shortcuts, etc.
 
-Now imagine using Spotlight a lot. You would activate Spotlight, type the name of the thing you wanted to work with and hit return to open it in its app.  Maybe it's a bookmark that opens in Safari or a contact that opens in Contacts or a mail message that opens in Mail or a song that plays in iTunes. Once you do this, you use that app to do stuff.
+Now imagine using Spotlight a lot. You would activate Spotlight, type the name of the thing you wanted to work with and hit return to open it in its app.  Maybe it’s a bookmark that opens in Safari or a contact that opens in Contacts or a mail message that opens in Mail or a song that plays in iTunes. Once you do this, you use that app to do stuff.
 
-With Quicksilver you have a consistent interface as with Spotlight but with Quicksilver's actions you can get to the next step and often that's enough for the whole task. I can send a file to someone from Quicksilver alone, it will use Mail and Finder and Contacts to do the work in the background but I just used Quicksilver. I can control iTunes with keystrokes to go to the next song or pause or mute, from Quicksilver without leaving the task I'm working on. I can move or copy files without having to manipulate Finder windows or dragging and dropping.  I can do a Google search (or IMDb or Wikipedia) from within Quicksilver and have the results show in my browser. 
+With Quicksilver you have a consistent interface as with Spotlight but with Quicksilver’s actions you can get to the next step and often that’s enough for the whole task. I can send a file to someone from Quicksilver alone, it will use Mail and Finder and Contacts to do the work in the background but I just used Quicksilver. I can control iTunes with keystrokes to go to the next song or pause or mute, from Quicksilver without leaving the task I'm working on. I can move or copy files without having to manipulate Finder windows or dragging and dropping.  I can do a Google search (or IMDb or Wikipedia) from within Quicksilver and have the results show in my browser. 
 
-All this (and more) makes Quicksilver a consistent interface for my Mac and that has some psychological effect that makes things seem even easier than Quicksilver is making them. Quicksilver is my Mac to me. and that's hard to describe to someone who hasn't played with it. 
+All this (and more) makes Quicksilver a consistent interface for my Mac and that has some psychological effect that makes things seem even easier than Quicksilver is making them. Quicksilver is my Mac to me. and that’s hard to describe to someone who hasn’t played with it. 
 
 # Installation
 
@@ -33,7 +33,7 @@ When Quicksilver starts it contacts qs0.qsapp.com to check for new versions. A s
 
 ## Support Files
 
-The Quicksilver.app is usually installed in `/Applications/` or `~/Applications/`. Like most macOS applications Quicksilver stores its configuration information in the user's `~/Library` folder. As of 10.8, macOS hides this folder from the Finder by default. The Quicksilver action **Make Visible** from the File Attributes Plugin can be used to let the Finder show it. When first used, the following per user files and folders are created:
+The Quicksilver.app is usually installed in `/Applications/` or `~/Applications/`. Like most macOS applications Quicksilver stores its configuration information in the user’s `~/Library` folder. As of 10.8, macOS hides this folder from the Finder by default. The Quicksilver action **Make Visible** from the File Attributes Plugin can be used to let the Finder show it. When first used, the following per user files and folders are created:
 
 - `~/Library/Application Support/Quicksilver/`
     - `Actions.plist` - list of installed actions
@@ -53,7 +53,7 @@ It can also be useful to move or rename these while troubleshooting a problem. I
 
 ## Uninstalling Quicksilver
 
-Move the application file to the trash. This leaves the configuration files. If you reinstall Quicksilver, your configuration will be restored. To remove all remnants of Quicksilver, use the Uninstall Quicksilver button in the Quicksilver's preferences.
+Move the application file to the trash. This leaves the configuration files. If you reinstall Quicksilver, your configuration will be restored. To remove all remnants of Quicksilver, use the Uninstall Quicksilver button in the Quicksilver’s preferences.
 
 # Working with Quicksilver
 
@@ -95,7 +95,7 @@ When typing in one of the panes, Quicksilver determines what items **_match_** a
 
 **_Plugins_** are optional modules that are installed which can add objects, actions or other capabilities to Quicksilver. Plugins are managed entirely from within Quicksilver Preferences including finding, installing, updating, enabling, configuring and removing them. 
 
-The **_Catalog_** is the list of objects that can be selected in Quicksilver's first pane. Quicksilver populates the catalog by scanning **_catalog sources_** that are configured in the Catalog Preferences. The scanning is done in the background at regular intervals (every 10 minutes by default) so the catalog is kept up-to-date.
+The **_Catalog_** is the list of objects that can be selected in Quicksilver’s first pane. Quicksilver populates the catalog by scanning **_catalog sources_** that are configured in the Catalog Preferences. The scanning is done in the background at regular intervals (every 10 minutes by default) so the catalog is kept up-to-date.
 
 For example, there is a source for Safari which indexes bookmarks and history into the catalog. Each bookmark is an object in Quicksilver. So are files and folders in the home directory,  contacts in Contacts, all the apps in the Applications directory, albums in iPhoto, the playlists in iTunes, and many other things (provided the appropriate plugins are installed). Note that some plugins (such as Remember the Milk) allow Quicksilver to index things stored on web servers and not merely things on the hard drive.
 
@@ -107,7 +107,7 @@ Some actions have a complementary action that reverse the object and argument or
 
 > address, **Email Item… (Compose)**, file
 
-Notice the names of the actions are slightly different (**To** vs **Item**). Many (but not all) action names hint at the type of argument they take. **Email To….** wants an address to follow. **Email Item…** wants some kind of item to send (text or a file). These email actions are similarly named and many people don't notice they are two different actions. In other cases actions are so differently named people might not notice they are related. For example, to perform a web search on a site like Google the commands are: 
+Notice the names of the actions are slightly different (**To** vs **Item**). Many (but not all) action names hint at the type of argument they take. **Email To….** wants an address to follow. **Email Item…** wants some kind of item to send (text or a file). These email actions are similarly named and many people don’t notice they are two different actions. In other cases actions are so differently named people might not notice they are related. For example, to perform a web search on a site like Google the commands are: 
 
 > site, Search For…, query
 
@@ -121,7 +121,7 @@ Objects, actions and arguments are selected by typing. As each letter is typed t
 
 Some items have **_Children_**, e.g., folders have files, contacts have phone numbers and addresses, musical artists have albums, etc. When an item has children there is a > on the right side of the item in the results list. View the children (e.g., go into a folder) by typing <kbd>→</kbd> or <kbd>/</kbd>. The object then changes to the top child and the results list shows the other children. Navigate these by using the <kbd>↑</kbd> and <kbd>↓</kbd> arrows or better yet by typing to match against this list. This is an easy way to navigate folder hierarchies, or any other hierarchies.
 
-Quicksilver's matching algorithm makes finding something specific very efficient and Quicksilver's ability to perform many different actions on objects makes it powerful. The command window is efficient but there are even faster ways to perform commands. **_Triggers_** can be configured to start or complete a frequently used command. Typically keyboard triggers are used to run a command when a global shortcut key is pressed, but there are other triggers that run on mouse events such as clicks, drags or moving into a corner of the screen. Triggers can be invoked at anytime, without having to first activate Quicksilver (with <kbd>⌃</kbd><kbd>space</kbd>). There are built-in triggers to control iTunes (pause, play, skip to the next song or rate the current song) but it's easy to configure them to open a particular application or prompt for a query to send to Google.
+Quicksilver’s matching algorithm makes finding something specific very efficient and Quicksilver’s ability to perform many different actions on objects makes it powerful. The command window is efficient but there are even faster ways to perform commands. **_Triggers_** can be configured to start or complete a frequently used command. Typically keyboard triggers are used to run a command when a global shortcut key is pressed, but there are other triggers that run on mouse events such as clicks, drags or moving into a corner of the screen. Triggers can be invoked at anytime, without having to first activate Quicksilver (with <kbd>⌃</kbd><kbd>space</kbd>). There are built-in triggers to control iTunes (pause, play, skip to the next song or rate the current song) but it’s easy to configure them to open a particular application or prompt for a query to send to Google.
 
 **_Proxy objects_** work especially well with triggers. These are special objects which represent something on the system such as the currently selected text (which may be sent to a search engine) or the last downloaded file (which may be opened or moved) or the URL of the current page in Safari (which may be pasted into a document). 
 
@@ -131,19 +131,19 @@ Quicksilver's matching algorithm makes finding something specific very efficient
 
 ## Activating Quicksilver
 
-macOS uses the term activate to mean switching to an application (starting it if necessary).  In fact there's a Quicksilver action called Activate that does just that. The menu bar show the menus of the active application. But Quicksilver runs in the background and unless it's Preferences are open, it's not the active application (it's menu isn't in the menu bar). Activating Quicksilver, that is making it ready to use, is typically done by using the keyboard shortcut (by default <kbd>⌃</kbd><kbd>space</kbd>) to bring up the command window. The first pane is selected and ready to find something in the Catalog via typing.
+macOS uses the term activate to mean switching to an application (starting it if necessary).  In fact there’s a Quicksilver action called Activate that does just that. The menu bar show the menus of the active application. But Quicksilver runs in the background and unless it’s Preferences are open, it’s not the active application (it’s menu isn’t in the menu bar). Activating Quicksilver, that is making it ready to use, is typically done by using the keyboard shortcut (by default <kbd>⌃</kbd><kbd>space</kbd>) to bring up the command window. The first pane is selected and ready to find something in the Catalog via typing.
 
 ## Selecting Items
 
-With Quicksilver activated and the first pane selected, type some characters and an object will appear. To bring up a Contacts entry for Abraham Lincoln (doesn't everyone have him in their Address Book?), type <kbd>a</kbd><kbd>b</kbd><kbd>r</kbd><kbd>a</kbd><kbd>h</kbd><kbd>a</kbd><kbd>m</kbd>, <kbd>a</kbd><kbd>b</kbd><kbd>r</kbd><kbd>a</kbd><kbd>h</kbd>, <kbd>a</kbd><kbd>b</kbd>, or maybe just <kbd>a</kbd><kbd>l</kbd> to select it. The trick is to keep typing the name of item until it appears in the first pane (and at the top of the results list).
+With Quicksilver activated and the first pane selected, type some characters and an object will appear. To bring up a Contacts entry for Abraham Lincoln (doesn’t everyone have him in their Address Book?), type <kbd>a</kbd><kbd>b</kbd><kbd>r</kbd><kbd>a</kbd><kbd>h</kbd><kbd>a</kbd><kbd>m</kbd>, <kbd>a</kbd><kbd>b</kbd><kbd>r</kbd><kbd>a</kbd><kbd>h</kbd>, <kbd>a</kbd><kbd>b</kbd>, or maybe just <kbd>a</kbd><kbd>l</kbd> to select it. The trick is to keep typing the name of item until it appears in the first pane (and at the top of the results list).
 
-If it doesn't quite make to the top of the results list, scroll through the list and find the item and click it to select it. This can happen if there are several objects with the same name, for example a Contacts entry for Abraham Lincoln and a Finder folder named the same thing.
+If it doesn’t quite make to the top of the results list, scroll through the list and find the item and click it to select it. This can happen if there are several objects with the same name, for example a Contacts entry for Abraham Lincoln and a Finder folder named the same thing.
 
-Quicksilver remembers what's been typed and what's been selected and learns to guess better as its used. If I type <kbd>a</kbd> and pick Abraham Lincoln's Contacts entry, Quicksilver will start to guess it more often instead of the folder of the same name or "AirPort Utility" or "Adium" or other things that begin with "a".
+Quicksilver remembers what’s been typed and what’s been selected and learns to guess better as its used. If I type <kbd>a</kbd> and pick Abraham Lincoln’s Contacts entry, Quicksilver will start to guess it more often instead of the folder of the same name or "AirPort Utility" or "Adium" or other things that begin with "a".
 
-The matching algorithm that Quicksilver uses for selecting objects (it's not used for selecting actions) and how you can help it learn more efficiently are discussed below. 
+The matching algorithm that Quicksilver uses for selecting objects (it’s not used for selecting actions) and how you can help it learn more efficiently are discussed below. 
 
-Quicksilver includes a lot of things in its Catalog but to keep things fast it doesn't include everything on the system and unlike Spotlight it doesn't index the contents of objects, just their names. Lincoln's Contact entry may have his phone number and email address, but typing them in the first pane won't match the Contact. Quicksilver can navigate an iTunes music collection, but doesn't include all songs and artists in the Catalog. 
+Quicksilver includes a lot of things in its Catalog but to keep things fast it doesn’t include everything on the system and unlike Spotlight it doesn’t index the contents of objects, just their names. Lincoln’s Contact entry may have his phone number and email address, but typing them in the first pane won’t match the Contact. Quicksilver can navigate an iTunes music collection, but doesn’t include all songs and artists in the Catalog. 
 
 That’s not to say Quicksilver can’t use and manipulate these things. Once a parent object (in these example a contact or the iTunes apps) is selected, typing <kbd>→</kbd> will move into the object and the results list will show its children (the contact fields or music collection). The results list displays items with children by showing a > at the far right. Navigating like this is often referred to as "right-arrowing into an object". Similarly <kbd>←</kbd> will select the parent object. Quicksilver can navigate files and folders this way too. So while every file might not be indexed in the Catalog, the entire filesystem can be navigated using the arrow keys in Quicksilver. Since this is so common, the <kbd>/</kbd> key is a synonym for <kbd>→</kbd> and <kbd>⇧</kbd><kbd>/</kbd> (which is <kbd>?</kbd> on American keyboards) can be used for <kbd>←</kbd>.
 
@@ -155,7 +155,7 @@ By default Quicksilver shows the results list after a short delay. This behavior
 
 ## Dealing with Typos
 
-There are some subtle differences that are harder to explain than to use, but if you make a typo while searching there's no way to delete just a letter or two. The delete key <kbd>⌫</kbd> clears the whole search leaving Quicksilver at the current level and the escape key <kbd>⎋</kbd> will clear the whole search resetting Quicksilver back to the top level of navigation. The keys <kbd>⌃</kbd><kbd>U</kbd> and <kbd>⌘</kbd><kbd>X</kbd> will reset the search entirely, moving back to the top level. If a Quicksilver pane is in text mode these behave slightly differently, as shown below.
+There are some subtle differences that are harder to explain than to use, but if you make a typo while searching there’s no way to delete just a letter or two. The delete key <kbd>⌫</kbd> clears the whole search leaving Quicksilver at the current level and the escape key <kbd>⎋</kbd> will clear the whole search resetting Quicksilver back to the top level of navigation. The keys <kbd>⌃</kbd><kbd>U</kbd> and <kbd>⌘</kbd><kbd>X</kbd> will reset the search entirely, moving back to the top level. If a Quicksilver pane is in text mode these behave slightly differently, as shown below.
 
 | Key | Regular Mode | Text Mode |
 | --- | ------------ | --------- |
@@ -206,9 +206,9 @@ Collections can be browsed using <kbd>⌃</kbd><kbd>[</kbd> and <kbd>⌃</kbd><k
 
 ## Filtering the Results List
 
-The default behavior of Quicksilver is to **_filter_** the results list when searching. As keys are entered, things that don't match are removed from the results and the remaining items are sorted based on who well they match what was entered.
+The default behavior of Quicksilver is to **_filter_** the results list when searching. As keys are entered, things that don’t match are removed from the results and the remaining items are sorted based on who well they match what was entered.
 
-There's an often overlooked gear menu at the top right of the results list. It can change the search mode of the results list. Instead of filtering the results list can be set to snap to a match. The items remain sorted and as keys are typed the selected item is changed (and the list scrolled) but non-matching items aren't removed from the list. 
+There’s an often overlooked gear menu at the top right of the results list. It can change the search mode of the results list. Instead of filtering the results list can be set to snap to a match. The items remain sorted and as keys are typed the selected item is changed (and the list scrolled) but non-matching items aren’t removed from the list. 
 
 Sometimes these behaviors are known as **_narrowing_** (filtering) and **_selection_** (snapping).
 

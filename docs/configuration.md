@@ -14,7 +14,7 @@ Quicksilver has a configuration window that provides access to the Guide, Prefer
 
 2. In the main command window select one of the Internal Commands: Show Guide, Show Preferences, Show Trigger Preferences, QS Catalog Preferences, Show Plugin Preferences and use the Run action.
 
-3. Click the Quicksilver dock icon and Quicksilver's menu appears, look unde Quicksilver.
+3. Click the Quicksilver dock icon and Quicksilver’s menu appears, look unde Quicksilver.
 
 4. If the menu bar icon is enabled, a menu is available by clicking on it
 
@@ -28,7 +28,7 @@ Configuring new Quicksilver features is usually done by installing the relevant 
 
 Quicksilver’s Preferences are divided into sets at the left of the window. Those listed at the top are built-in to Quicksilver and those in the bottom section are enabled by installed plugins.
 
-The Application Preferences control the most fundamental aspects of Quicksilver as an application. Once you're hooked on Quicksilver you'll want to enable "Start at login". 
+The Application Preferences control the most fundamental aspects of Quicksilver as an application. Once you’re hooked on Quicksilver you’ll want to enable "Start at login". 
 
 Quicksilver shows an icon in the Dock like most applications, but many people prefer to disable this. Uncheck the box to disable the Dock icon. The ⌽ symbol indicates Quicksilver must be restarted before the change will take affect. The easy way to restart is to activate Quicksilver (<kbd>⌃</kbd><kbd>space</kbd>) and then type <kbd>⌃</kbd><kbd>⌘</kbd><kbd>Q</kbd>
 
@@ -44,7 +44,7 @@ The Appearance Preferences control how Quicksilver looks.
 
 The command window  supports various skins or themes, known as Interfaces and installed via plugins (all of which end with the word Interface). Select the Interface to use here via the popup list showing all installed Interfaces. See the Interface section below for details.
 
-The default interface is Primer and it shows a little more context information than other interfaces so it’s recommended for new users. The other builtin interface is Bezel interface; it's very popular and is shown throughout this manual. 
+The default interface is Primer and it shows a little more context information than other interfaces so it’s recommended for new users. The other builtin interface is Bezel interface; it’s very popular and is shown throughout this manual. 
 
 The Superfluous visual effects vary per interface but include the command window unzipping open and fading closed.
 
@@ -54,7 +54,7 @@ The Command Preferences allows configuration of the command window’s behavior.
 
 The top of the pane affects how you activate Quicksilver. The Keyboard Activation is the basic way to activate Quicksilver. The default is to type <kbd>⌃</kbd><kbd>space</kbd>, though as shown a common alternative.
 
-TODO: The shortcut is configurable in the Command Preferences Pane under Activation. Quicksilver defaulted to <kbd>⌘</kbd><kbd>space</kbd> for a long time and then in 10.4, Apple chose to use <kbd>⌘</kbd><kbd>space</kbd> for Spotllght. So Quicksilver changed its default to <kbd>⌃</kbd><kbd>space</kbd>. If you look at older posts on the Web you’ll often see <kbd>⌘</kbd><kbd>space</kbd> used to activate Quicksilver. Since I use Quicksilver a lot more often than Spotlight (and anything without <kbd>⌘</kbd> conflicts with Emacs), I use <kbd>⌘</kbd><kbd>space</kbd> for Quicksilver and <kbd>⌥</kbd><kbd>⌘</kbd><kbd>space</kbd> for Spotlight (set in the Spotlight System Preference pane of macOS). Another advantage is that many shortcuts used after activating Quicksilver use <kbd>⌘</kbd>, so using the same modifier key is easier. For example, <kbd>⌘</kbd><kbd>,</kbd> (that's <kbd>⌘</kbd><kbd>comma</kbd>) will open up Quicksilver’s Preferences (as it will in most applications). I find it easier to type <kbd>⌘</kbd><kbd>space</kbd> <kbd>⌘</kbd><kbd>,</kbd> than <kbd>⌃</kbd><kbd>space</kbd> <kbd>⌘</kbd><kbd>,</kbd> because I don’t have to change modifier keys.
+TODO: The shortcut is configurable in the Command Preferences Pane under Activation. Quicksilver defaulted to <kbd>⌘</kbd><kbd>space</kbd> for a long time and then in 10.4, Apple chose to use <kbd>⌘</kbd><kbd>space</kbd> for Spotllght. So Quicksilver changed its default to <kbd>⌃</kbd><kbd>space</kbd>. If you look at older posts on the Web you’ll often see <kbd>⌘</kbd><kbd>space</kbd> used to activate Quicksilver. Since I use Quicksilver a lot more often than Spotlight (and anything without <kbd>⌘</kbd> conflicts with Emacs), I use <kbd>⌘</kbd><kbd>space</kbd> for Quicksilver and <kbd>⌥</kbd><kbd>⌘</kbd><kbd>space</kbd> for Spotlight (set in the Spotlight System Preference pane of macOS). Another advantage is that many shortcuts used after activating Quicksilver use <kbd>⌘</kbd>, so using the same modifier key is easier. For example, <kbd>⌘</kbd><kbd>,</kbd> (that’s <kbd>⌘</kbd><kbd>comma</kbd>) will open up Quicksilver’s Preferences (as it will in most applications). I find it easier to type <kbd>⌘</kbd><kbd>space</kbd> <kbd>⌘</kbd><kbd>,</kbd> than <kbd>⌃</kbd><kbd>space</kbd> <kbd>⌘</kbd><kbd>,</kbd> because I don’t have to change modifier keys.
 
 “Modifier-only Activation” allows you to activate Quicksilver by single or double presses of modifier keys such as <kbd>⌃</kbd>, <kbd>⌥</kbd>, <kbd>⇧</kbd>, <kbd>⌘</kbd> or even <kbd>fn</kbd> on a laptop. Some applications can call for secure text entry and this can interfere with modifier only activation. If you use Visor and a double shift modifier isn’t working for you, open Terminal.app and in the File menu enable “Secure Keyboard Entry”. There have also been reports that Quicken Scheduler app that runs in the background as a login item to do scheduled downloads can also interfere with modifier only activation.
 

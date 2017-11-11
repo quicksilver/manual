@@ -34,7 +34,7 @@ A text argument in the third pane will be sent as both the subject and body of t
 
 Instant Message addresses function like email addresses. All the text actions work but there are also two IM Account actions. **IM** opens an IM chat window in the IM program. **IM Item...** takes text or a file in the third pane to be sent via the IM program. The IM program to use is specified in the Handlers Preference pane based on plugins installed. Currently there are plugins for iChat, and Adium.
 
-Quicksilver chooses default actions based on the type of object in the first pane. Described above is how useful this is for contact fields to be treated as text so those actions are available. Quicksilver also treats contacts as other field types (Email Addresses, IM Accounts, but not URLs) if and only if they are set in the Contacts. So if a contact has an email address sent, **Compose Email** might be the default action if it's ranked higher than **Show Contact** in the Actions Preferences. But if the contact selected in the first pane doesn't have an email address set the action might be **Show Contact** (assuming it's the default).
+Quicksilver chooses default actions based on the type of object in the first pane. Described above is how useful this is for contact fields to be treated as text so those actions are available. Quicksilver also treats contacts as other field types (Email Addresses, IM Accounts, but not URLs) if and only if they are set in the Contacts. So if a contact has an email address sent, **Compose Email** might be the default action if it’s ranked higher than **Show Contact** in the Actions Preferences. But if the contact selected in the first pane doesn’t have an email address set the action might be **Show Contact** (assuming it’s the default).
 
 ## Entourage
 
@@ -44,7 +44,7 @@ Install the Entourage 2004 Module plugin, start Entourage and bring up the prefe
 
 Activate Quicksilver and start typing the name of a contact to bring it up in the first pane. There is a Show Contact action that will bring it up in Entourage. At least in B51 typing <kbd>→</kbd> will not show the details of the contact. There is no Edit Contact action for Entourage. Other actions that do Email and IM should work for contacts as well. See the email section for details about sending email from Quicksilver using Entourage. 
 
-Entourage 2008 changed some things and Quicksilver is no longer able to catalog contacts stored in it. However, Entourage 2008 now has the ability to sync with the Address Book and Quicksilver's Apple Address Book Module can be used to find contacts in it. In Entourage 2008 Preferences under General Preferences in Sync Services, check the option to "Synchronize contacts with Address Book and .Mac" and select Address Book (On My Computer) from the drop down.
+Entourage 2008 changed some things and Quicksilver is no longer able to catalog contacts stored in it. However, Entourage 2008 now has the ability to sync with the Address Book and Quicksilver’s Apple Address Book Module can be used to find contacts in it. In Entourage 2008 Preferences under General Preferences in Sync Services, check the option to "Synchronize contacts with Address Book and .Mac" and select Address Book (On My Computer) from the drop down.
 
 ## Now Contact
 

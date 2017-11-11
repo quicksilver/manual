@@ -50,9 +50,9 @@ The plugin also adds a preferences pane in Quicksilver with some iTunes specific
 
 If the Show Artwork option is checked then Quicksilver looks in the song file for album art and displays it in the command window. 
 
-If the art isn’t displaying for mp3 files that do have art it's probably because the mp3 files use an older version of the ID3 tags that store metadata. To upgrade, select the tracks in iTunes and in iTune's Advanced menu choose Convert ID3 Tags…. (One person reported that he had to convert before adding artwork to the file and if the art was already there he had to remove it, convert and then re-add the art). 
+If the art isn’t displaying for mp3 files that do have art it’s probably because the mp3 files use an older version of the ID3 tags that store metadata. To upgrade, select the tracks in iTunes and in iTunes’ Advanced menu choose Convert ID3 Tags…. (One person reported that he had to convert before adding artwork to the file and if the art was already there he had to remove it, convert and then re-add the art). 
 
-The new feature in iTunes 7 to download artwork stores it in a new database (not inside the actual MP3 or AAC files) and as of B51 Quicksilver's iTunes Module can’t display it. However, if there isn’t art in the song file Quicksilver can use one of the online art services to find the album. The plugins that do this are: Clutter Artwork, Synergy Artwork, Sofa Artwork and Music ARTchive Artwork. Obviously if the services are unavailable these plugins won’t work.
+The new feature in iTunes 7 to download artwork stores it in a new database (not inside the actual MP3 or AAC files) and as of B51 Quicksilver’s iTunes Module can’t display it. However, if there isn’t art in the song file Quicksilver can use one of the online art services to find the album. The plugins that do this are: Clutter Artwork, Synergy Artwork, Sofa Artwork and Music ARTchive Artwork. Obviously if the services are unavailable these plugins won’t work.
 
 The Show ~Unknown Entries option does TODO.
 

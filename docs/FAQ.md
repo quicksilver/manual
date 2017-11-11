@@ -14,9 +14,9 @@ you can check it’s size. I have my clipboard history set to 100 and the file i
 
 If you open the drawer for catalog sources, in the Contents tab you’ll find all the items found for that source. Clicking on the headings in this tab will sort the list. Large catalog sources (500 or more) will take a long time to sort and use lots of memory. If I accidentally sort my Documents with 2000 items I ultimately force quit Quicksilver since it uses 60-80% CPU and several hundred MB of real memory. Be careful as the sort order applies globally.  If you sort a small source it works fine, if you then (even accidentally) click on a large source it will eat up resources. A Quicksilver restart resets the contents tab to be unsorted.
 
-## Quicksilver doesn't find my files
+## Quicksilver doesn’t find my files
 
-By default Quicksilver finds files on your Desktop and in your Documents folder but it doesn't scan very far into those locations. It scans things on the Desktop but not inside folders on the Desktop, that is it scans the Desktop to a depth of 1. Quicksilver scans the ~/Documents folder to a depth of 2. To scan deeper, clone the source so it's in the Custom set in the catalog and editable. To do this, select the Users set and the Documents source, open the drawer and select the Attributes tab. Click on Create Copy to create a new source in Custom named Documents. Select the new source and click on the  button to show a drawer with three tabs. Select the Source Options tab and select the depth. Do not just set it to infinite, the catalog will be too large and Quicksilver will slow to a crawl. See the Catalog section for some tips.
+By default Quicksilver finds files on your Desktop and in your Documents folder but it doesn’t scan very far into those locations. It scans things on the Desktop but not inside folders on the Desktop, that is it scans the Desktop to a depth of 1. Quicksilver scans the ~/Documents folder to a depth of 2. To scan deeper, clone the source so it’s in the Custom set in the catalog and editable. To do this, select the Users set and the Documents source, open the drawer and select the Attributes tab. Click on Create Copy to create a new source in Custom named Documents. Select the new source and click on the  button to show a drawer with three tabs. Select the Source Options tab and select the depth. Do not just set it to infinite, the catalog will be too large and Quicksilver will slow to a crawl. See the Catalog section for some tips.
 
 ## Quicksilver plays or shows notifications for the wrong iTunes track
 
@@ -52,11 +52,11 @@ If the TextMate Ranker is installed, uninstall it and restart Quicksilver.  It�
 
 ## Triggers don’t save
 
-TODO: There are usually 3 things that come up with triggers that don't save.
+TODO: There are usually 3 things that come up with triggers that don’t save.
 
-1. So-called dynamic triggers don't save.  That is the something like Mail (**Get New Mail**) won't save because the **Get New** action come from QS inspecting Mail.app (it's not listed in the actions prefs).  Or a trigger using the *Menu Bar Items...* action with the third pane filled in, won't save.
-2. Triggers are saved in `~/Library/Application Support/Quicksilver/Triggers.plist` if the permissions of that file or directory don't allow you to write, then no trigger will be saved.  There have also been reports of this file becoming corrupted.
-3. If you have triggers using actions from some plugin and then uninstall that plugin, the triggers remain and QS can be confused. Sometimes a particular trigger doesn't display, sometimes only one of many triggers appears in the prefs. To fix, reinstall the needed plugins, delete the related triggers, then remove the plugin.
+1. So-called dynamic triggers don’t save.  That is the something like Mail (**Get New Mail**) won’t save because the **Get New** action come from QS inspecting Mail.app (it’s not listed in the actions prefs).  Or a trigger using the *Menu Bar Items...* action with the third pane filled in, won’t save.
+2. Triggers are saved in `~/Library/Application Support/Quicksilver/Triggers.plist` if the permissions of that file or directory don’t allow you to write, then no trigger will be saved.  There have also been reports of this file becoming corrupted.
+3. If you have triggers using actions from some plugin and then uninstall that plugin, the triggers remain and QS can be confused. Sometimes a particular trigger doesn’t display, sometimes only one of many triggers appears in the prefs. To fix, reinstall the needed plugins, delete the related triggers, then remove the plugin.
 
 ## Leopard Specific Things
 
@@ -64,13 +64,13 @@ TODO: There are usually 3 things that come up with triggers that don't save.
 
 Uncheck the backup drive in Preferences > Catalog > Devices > Disks > Show Info > Contents. Then rescan the catalog by clicking the curved arrow button at the bottom of the catalog or by activating QS with control-space (or cmd-space or whatever you use) and then typing cmd-R. Also make sure Find All Applications is not checked in the catalog, that scans every connected drive.
 
-### LockScreen in Extra Scripts doesn't work
+### LockScreen in Extra Scripts doesn’t work
 
-Start the screen saver and have 'Require password after ScreenSaver' in your Security prefs
+Start the screen saver and have 'Require password after ScreenSaver’ in your Security prefs
 
-### iCal Plugin doesn't give access to other calendars
+### iCal Plugin doesn’t give access to other calendars
 
-### Show Menu Items doesn't work for some applications
+### Show Menu Items doesn’t work for some applications
 
 Fails: TextMate, NetNewsWire
 

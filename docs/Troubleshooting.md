@@ -8,13 +8,13 @@ Is the catalog source, action, trigger enabled?
 
 Check Console
 
-Applications and system processes often write useful debugging information to log files. Different things write to different log files, but you can use /Applications/Utilities/Console.app to read all of them. Start Console.app and you'll see the console.log displayed, most applications write their information to this log. If there isn't a left hand pane in the window click the Logs button in the toolbar to make it appear (or use the Show Log List command from the View menu). Make sure the console.log is selected, that's where Quicksilver writes all its information. Since so many things write to the console.log it's useful to filter the display to just what you're looking for, in this case type "Quicksilver" into the Filter box in the top right. Now you can see the Quicksilver log messages. Note that all the messages are preceded with a date and time to make finding relevant messages easier. Sometimes non-Quicksilver messages are relevant to diagnosing a problem, so after finding when something started failing you might unfilter the results and see if anything is reporting problems at the same time.
+Applications and system processes often write useful debugging information to log files. Different things write to different log files, but you can use /Applications/Utilities/Console.app to read all of them. Start Console.app and you’ll see the console.log displayed, most applications write their information to this log. If there isn’t a left hand pane in the window click the Logs button in the toolbar to make it appear (or use the Show Log List command from the View menu). Make sure the console.log is selected, that’s where Quicksilver writes all its information. Since so many things write to the console.log it’s useful to filter the display to just what you’re looking for, in this case type "Quicksilver" into the Filter box in the top right. Now you can see the Quicksilver log messages. Note that all the messages are preceded with a date and time to make finding relevant messages easier. Sometimes non-Quicksilver messages are relevant to diagnosing a problem, so after finding when something started failing you might unfilter the results and see if anything is reporting problems at the same time.
 
 
 
 Task viewer (<kbd>⌘</kbd><kbd>K</kbd>) - gear menu invisible in Cube
 
-where's the verbose debugging info you're seeing? you hold down option while starting up and it starts spitting out lots of info to console
+where’s the verbose debugging info you’re seeing? you hold down option while starting up and it starts spitting out lots of info to console
 
 Some things (oddly) require being administrator to work correctly
 
