@@ -22,9 +22,9 @@ The **Large Type** action will show the text in a giant window visible from acro
 
 The **Display Dialog** action is similar to the **Large Type** action but it uses a standard dialog box with an OK button. The advantage is that it can be moved around and it will say visible until the OK button is clicked. It is disabled by default, enabled it in the Action preferences.
 
-The **Speak Text (Say)** action uses OS X’s speech synthesizer to speak the text out loud. It is disabled by default, enable it in the Action preferences. The voice used is set in the Speech System Preferences in the Text to Speech tab. Try it with the **Run after Delay…** action to create a voice alarm. See the Command Objects and Droplets section for more details. I thought it might be useful for pronouncing foreign words but my attempts at Japanese and French with B51 didn’t work very well.
+The **Speak Text (Say)** action uses macOS’s speech synthesizer to speak the text out loud. It is disabled by default, enable it in the Action preferences. The voice used is set in the Speech System Preferences in the Text to Speech tab. Try it with the **Run after Delay…** action to create a voice alarm. See the Command Objects and Droplets section for more details. I thought it might be useful for pronouncing foreign words but my attempts at Japanese and French with B51 didn’t work very well.
 
-System Services are some of the more underutilized features of OS X. Applications register features that are available system-wide in every application’s menu. Many services are only enabled while text is selected. The Services Menu Module plugin makes all the system Services available in Quicksilver.  E.g., Sticky Notes users will like the **Make New Sticky Note** action.
+System Services are some of the more underutilized features of macOS. Applications register features that are available system-wide in every application’s menu. Many services are only enabled while text is selected. The Services Menu Module plugin makes all the system Services available in Quicksilver.  E.g., Sticky Notes users will like the **Make New Sticky Note** action.
 
 The Web Searches section describes using the Web Search Module plugin. With text in the first pane, use the **Find With…** action and choose a saved web search in the  third pane. The search results appear in the default browser. See the Web Searches section for configuration details and how to make a trigger with the Current Selection proxy object.
 
@@ -36,7 +36,7 @@ The [Calendar](Calendar.md) section describes creating calendar events and to-do
 
 ## Dictionary
 
-The Dictionary Module plugin provides access to the OS X built-in dictionary. Enter a word in the object pane and use either the **Dictionary** or **Thesaurus** actions to access OS X’s dictionary. Regardless of how the Dictionary preferences are configured, the **Dictionary** action shows the definition in a smaller panel (shown here).
+The Dictionary Module plugin provides access to the macOS built-in dictionary. Enter a word in the object pane and use either the **Dictionary** or **Thesaurus** actions to access macOS’s dictionary. Regardless of how the Dictionary preferences are configured, the **Dictionary** action shows the definition in a smaller panel (shown here).
 
 The Services Menu Module plugin makes **Look Up in Dictionary** available and is another way to do the above. **Look Up in Dictionary** opens the Dictionary application with the full window. Unfortunately there is a bug in 10.4 so that if the Dictionary application isn’t already running, it’s opened but the word to lookup is not entered automatically. It works fine if the Dictionary is already running and the Dictionary action seems unaffected by this bug. I have a trigger for the proxy object Current Selection with the **Look Up in Dictionary** action bound to <kbd>⇧</kbd><kbd>⌃</kbd><kbd>⌘</kbd><kbd>D</kbd> for those applications (e.g., Preview) that don’t support the Cocoa key binding of <kbd>⌃</kbd><kbd>⌘</kbd><kbd>D</kbd>. 
 

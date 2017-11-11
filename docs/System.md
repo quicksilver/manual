@@ -22,13 +22,13 @@ In the Catalog under Quicksilver, Internal Commands are the Turn AirPort On and 
 
 With the Network Location Module plugin the locations you’ve configured in the Network System Preference pane are available in the Catalog (under System, Configuration, Network Locations). If you select one in the object pane you can use the **Switch to Location** action to use it. If you select the Network Locations (Catalog) object you can type <kbd>→</kbd> to get a results list of all configured network locations.
 
-There are several OS X utilities that come in handy when dealing with networking that are easily accessed with Quicksilver. The Applications catalog source includes indexing in `/Applications` down 3 levels so by default you can get to AirPort Admin Utility, AirPort Setup Assistant and Internet Connect. The default action for any of these applications should be **Open**. The Network Preference Pane is available in the catalog under System, Configuration, Preference Panes, System Preferences (System).
+There are several macOS utilities that come in handy when dealing with networking that are easily accessed with Quicksilver. The Applications catalog source includes indexing in `/Applications` down 3 levels so by default you can get to AirPort Admin Utility, AirPort Setup Assistant and Internet Connect. The default action for any of these applications should be **Open**. The Network Preference Pane is available in the catalog under System, Configuration, Preference Panes, System Preferences (System).
 
 ## Configuration
 
-Quicksilver includes the OS X System Preferences in the Catalog under System, Configuration. It will find preference panes in `/System/Library/PreferencePanes/`, `/Library/PreferencePanes/` and `~/Library/PreferencePanes/` and you can include or exclude these in the Catalog as groups if you want. The individual preferences panes are in the catalog, so you can bring them up directly. You can also select the Preference Panes (Catalog) object or the System Preferences.app as the object and type <kbd>→</kbd> to see a list of all preference panes in a results list. With a preference pane as the object, you’ll most likely want to use the **Open** action to bring up the preference pane, but they are treated like files and many other actions are available. 
+Quicksilver includes the macOS System Preferences in the Catalog under System, Configuration. It will find preference panes in `/System/Library/PreferencePanes/`, `/Library/PreferencePanes/` and `~/Library/PreferencePanes/` and you can include or exclude these in the Catalog as groups if you want. The individual preferences panes are in the catalog, so you can bring them up directly. You can also select the Preference Panes (Catalog) object or the System Preferences.app as the object and type <kbd>→</kbd> to see a list of all preference panes in a results list. With a preference pane as the object, you’ll most likely want to use the **Open** action to bring up the preference pane, but they are treated like files and many other actions are available. 
 
-With the User Accounts Module plugin installed the user accounts on your system are in the Catalog (under System, Configuration, User Accounts) and there is a **Switch to User** action. This invokes OS X’s fast user switching technology. If you select User Accounts(Catalog) object and type <kbd>→</kbd> you get a results list of all user accounts on the system. There’s also a Fast Logout.sh object installed with the Extra Scripts plugin. If you use the **Run […]** action from the Terminal Module plugin with it you will use fast user logout which basically just locks the screen but leaves everything in your session running as if you had done fast user switching. If you do this often create a trigger for it.
+With the User Accounts Module plugin installed the user accounts on your system are in the Catalog (under System, Configuration, User Accounts) and there is a **Switch to User** action. This invokes macOS’s fast user switching technology. If you select User Accounts(Catalog) object and type <kbd>→</kbd> you get a results list of all user accounts on the system. There’s also a Fast Logout.sh object installed with the Extra Scripts plugin. If you use the **Run […]** action from the Terminal Module plugin with it you will use fast user logout which basically just locks the screen but leaves everything in your session running as if you had done fast user switching. If you do this often create a trigger for it.
 
 With the Keychain Module plugin installed your Keychains are available in the Catalog. They appear in the Catalog under Modules, Keychains. If you select one of your keychains as the object, you can type <kbd>→</kbd> to see the individual items in a results list. With a keychain item as the object you have three primary actions you’ll want to use: **Copy Password**, **Paste Password**, and **Get Password**. All three will open a Confirm Access to Keychain prompt, I always choose Allow Once. The first will copy the password to the clipboard, the second will paste it directly into the current application and the third will open a new command window with the password as the text object so you can choose any action you want. Accessing passwords using these actions should be more secure than keeping them as text in triggers, the shelf or clipboard, though if you use **Copy Password** you’re copying them to the clipboard anyway. **Paste Password** (unlike **Paste**) does not put a copy on the clipboard. If you use **Get Password** and then **Type Text** (instead of **Paste**) you will also avoid making copies on the clipboard. 
 
@@ -43,7 +43,7 @@ The System Hotkey Commands plugin creates Catalog entries for Dashboard and Expo
 | Desktop | Exposé Desktop |
 | Dashboard | Show Dashboard |
 
-While there are other actions available I can’t imagine wanting to use anything other than **Run**. If you are annoyed that OS X doesn’t allow you to bind these to more keys, configure a trigger to access these any way you want.
+While there are other actions available I can’t imagine wanting to use anything other than **Run**. If you are annoyed that macOS doesn’t allow you to bind these to more keys, configure a trigger to access these any way you want.
 
 ## Extra Scripts
 
@@ -69,7 +69,7 @@ The Extra Scripts plugin is really just a catch-all of various scripts, but most
 	- Get IP - shows the result in Large Type
 	- Get External IP - shows the result in Large Type
 - Processes:
-	- Hide Others - most OS X applications have this as a shortcut on <kbd>⌥</kbd><kbd>⌘</kbd><kbd>H</kbd>
+	- Hide Others - most macOS applications have this as a shortcut on <kbd>⌥</kbd><kbd>⌘</kbd><kbd>H</kbd>
 	- Show All
 	- Quit Visible Apps
 	- LockScreen - runs the screen saver and makes you type a password to get back

@@ -2,8 +2,8 @@
 
 ## Requirements
 
-* The latest version runs on OS X 10.9+
-* Previous versions are available for older versions of OS X, including for PPC hardware.
+* The latest version runs on macOS 10.9+
+* Previous versions are available for older versions of macOS, including for PPC hardware.
 
 ## Installing Quicksilver
 
@@ -19,7 +19,7 @@ When Quicksilver starts it contacts qs0.qsapp.com to check for new versions. A s
 
 ## Support Files
 
-The Quicksilver.app is usually installed in `/Applications/` or `~/Applications/`. Like most OS X applications Quicksilver stores its configuration information in the user's `~/Library` folder. As of 10.8, OS X hides this folder from the Finder by default. The Quicksilver action **Make Visible** from the File Attributes Plugin can be used to let the Finder show it. When first used, the following per user files and folders are created:
+The Quicksilver.app is usually installed in `/Applications/` or `~/Applications/`. Like most macOS applications Quicksilver stores its configuration information in the user's `~/Library` folder. As of 10.8, macOS hides this folder from the Finder by default. The Quicksilver action **Make Visible** from the File Attributes Plugin can be used to let the Finder show it. When first used, the following per user files and folders are created:
 
 - `~/Library/Application Support/Quicksilver/`
     - `Actions.plist` - list of installed actions

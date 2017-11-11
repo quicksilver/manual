@@ -40,7 +40,7 @@ Mail.app keeps a list of email addresses that have been sent to. The list is vie
 
 Quicksilver can't navigate email in Microsoft's Entourage but it can send email using the standard email actions: **Compose Email**, **Email Item…**, and **Email To…**.
 
-Install the Entourage 2004 Module plugin. In Quicksilver's Preferences under Handlers choose Microsoft Entourage for Email. You may also want to set the  default Mail application for the system and in OS X this is counterintuitively set in the General tab of the Mail.app preferences. At least one person has the email actions working with Entourage 2008 using the Entourage 2004 Module plugin.
+Install the Entourage 2004 Module plugin. In Quicksilver's Preferences under Handlers choose Microsoft Entourage for Email. You may also want to set the  default Mail application for the system and in macOS this is counterintuitively set in the General tab of the Mail.app preferences. At least one person has the email actions working with Entourage 2008 using the Entourage 2004 Module plugin.
 
 To use contacts stored in Entourage see the Entourage section under Contacts.
 

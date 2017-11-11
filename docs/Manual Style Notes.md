@@ -12,7 +12,7 @@ The Features section covers all the plugins, in detail. Each section includes ge
 
 - Explain explicit installation steps for each feature at the top of the section. include which plugins to install, everything that plugin installs (actions, handlers, an advanced preference pane, a catalog source, etc.) and how to configure them (e.g., if an action is installed but disabled by default, tell the user to enable it).. 
 - Explain what Quicksilver does, remember that it customizes itself for each user so be explicit about what the user types and Quicksilver's behavior and why the user might see different behavior if they type the same thing. Remember that people  rank actions differently particularly if different plugins are installed and catalogs are configured differently. 
-- People come to Quicksilver with very different skill levels. Some are new to OS X and don't know details of how to install .dmg files or other common conventions. Remember that people use keyboards in different languages with keys in different places (e.g., ` and ~ behave the same because they're on the same key on US keyboards).
+- People come to Quicksilver with very different skill levels. Some are new to macOS and don't know details of how to install .dmg files or other common conventions. Remember that people use keyboards in different languages with keys in different places (e.g., ` and ~ behave the same because they're on the same key on US keyboards).
 - When describing new features, include the version number it was added, e.g., "As of 1.4.1 QS ..." People using older versions will know something won't apply to them. This version decoration can removed as older versions not supporting the feature are unsupported.
 - Including details of how to avoid common problems. E.g., don't add a catalog source that scans to infinite depth because it will use a lot of memory and make QS slow.
 - Images of example commands should all be using the Bezel interface using the default colors. It's popular, built-in and smaller than Primer. Obviously use other interfaces if it's important for some feature/concept.
@@ -20,7 +20,7 @@ The Features section covers all the plugins, in detail. Each section includes ge
 - Use `code` for file names and command line tools.
 - Use `<kbd>` for input text, surrounding each key individually. E.g, <kbd>⌘</kbd><kbd>;</kbd>, <kbd>⌥</kbd><kbd>⌘</kbd><kbd>S</kbd>, <kbd>space</kbd>, <kbd>return</kbd>, and spelling out input strings  <kbd>D</kbd><kbd>e</kbd><kbd>s</kbd><kbd>k</kbd>
 - Use the unicode symbols for various keys (as they appear in menu shortcuts). 
-	- The order for modifiers should match what OS X does: <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd> 
+	- The order for modifiers should match what macOS does: <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd> 
 	- Use these for the arrow keys: <kbd>→</kbd>, <kbd>←</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd> and <kbd>⌫</kbd> for delete and <kbd>⎋</kbd> for esc
 	- The Quicksilver preference pane has buttons on the bottom bar, use these for them: ↻ ⓘ
 - Use TODO to tag text to be changed/added.

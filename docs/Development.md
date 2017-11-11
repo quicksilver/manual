@@ -73,7 +73,7 @@ Here’s another function.  It will send the contents of the Emacs region to Qui
 
 ## Developer Documentation
 
-If you’ve installed the OS X Developer Tools then you probably want to install Quicksilver’s Developer Module plugin. This adds to the catalog under Modules, Developer:
+If you’ve installed the macOS Developer Tools then you probably want to install Quicksilver’s Developer Module plugin. This adds to the catalog under Modules, Developer:
 
 - applications under `/Developer/Applications`
 - documents under `/Developer/ADC Reference Library/documentation/`

@@ -16,8 +16,8 @@ All this (and more) makes Quicksilver a consistent interface for my Mac and that
 
 ## Requirements
 
-* The latest version runs on OS X 10.9+
-* Previous versions are available for older versions of OS X, including for PPC hardware.
+* The latest version runs on macOS 10.9+
+* Previous versions are available for older versions of macOS, including for PPC hardware.
 
 ## Installing Quicksilver
 
@@ -33,7 +33,7 @@ When Quicksilver starts it contacts qs0.qsapp.com to check for new versions. A s
 
 ## Support Files
 
-The Quicksilver.app is usually installed in `/Applications/` or `~/Applications/`. Like most OS X applications Quicksilver stores its configuration information in the user's `~/Library` folder. As of 10.8, OS X hides this folder from the Finder by default. The Quicksilver action **Make Visible** from the File Attributes Plugin can be used to let the Finder show it. When first used, the following per user files and folders are created:
+The Quicksilver.app is usually installed in `/Applications/` or `~/Applications/`. Like most macOS applications Quicksilver stores its configuration information in the user's `~/Library` folder. As of 10.8, macOS hides this folder from the Finder by default. The Quicksilver action **Make Visible** from the File Attributes Plugin can be used to let the Finder show it. When first used, the following per user files and folders are created:
 
 - `~/Library/Application Support/Quicksilver/`
     - `Actions.plist` - list of installed actions
@@ -131,7 +131,7 @@ Quicksilver's matching algorithm makes finding something specific very efficient
 
 ## Activating Quicksilver
 
-OS X uses the term activate to mean switching to an application (starting it if necessary).  In fact there's a Quicksilver action called Activate that does just that. The menu bar show the menus of the active application. But Quicksilver runs in the background and unless it's Preferences are open, it's not the active application (it's menu isn't in the menu bar). Activating Quicksilver, that is making it ready to use, is typically done by using the keyboard shortcut (by default <kbd>⌃</kbd><kbd>space</kbd>) to bring up the command window. The first pane is selected and ready to find something in the Catalog via typing.
+macOS uses the term activate to mean switching to an application (starting it if necessary).  In fact there's a Quicksilver action called Activate that does just that. The menu bar show the menus of the active application. But Quicksilver runs in the background and unless it's Preferences are open, it's not the active application (it's menu isn't in the menu bar). Activating Quicksilver, that is making it ready to use, is typically done by using the keyboard shortcut (by default <kbd>⌃</kbd><kbd>space</kbd>) to bring up the command window. The first pane is selected and ready to find something in the Catalog via typing.
 
 ## Selecting Items
 
