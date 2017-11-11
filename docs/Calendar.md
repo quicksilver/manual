@@ -4,9 +4,9 @@ Quicksilver has some limited support for creating calendar events and to-do’s 
 
 ## iCal
 
-The iCal Module plugin installs two actions: **Create iCal Event** and **Create iCal To-Do**. Using either of these actions will open iCal if it’s not already running though won’t open the window if it’s hidden or closed. As of B51 the features enabled by the plugin are limited. There’s no way to see or interact with existing events and to-dos, typing → to move into iCal, does nothing.
+The iCal Module plugin installs two actions: **Create iCal Event** and **Create iCal To-Do**. Using either of these actions will open iCal if it’s not already running though won’t open the window if it’s hidden or closed. As of B51 the features enabled by the plugin are limited. There’s no way to see or interact with existing events and to-dos, typing <kbd>→</kbd> to move into iCal, does nothing.
 
-To create a new to-do, activate Quicksilver, enter text-mode by typing . or ' and enter the to-do text. Tab to the second pane and choose the **Create iCal To-Do** action, tab to the third pane and choose the calendar for the to-do.
+To create a new to-do, activate Quicksilver, enter text-mode by typing <kbd>.</kbd> or <kbd>'</kbd> and enter the to-do text. Tab to the second pane and choose the **Create iCal To-Do** action, tab to the third pane and choose the calendar for the to-do.
 
 A specially formatted to-do text allows a priority and a due date to be entered.  Precede the text with zero to three exclamation marks to set the priority in iCal. Zero !’s sets a priority of None, ! is Not important, !! is Important, and !!! is Very important. A due date is set by  preceding the text (and any priority !’s) with a date and two hyphens. The date is somewhat flexible, allowing `8/1`, `8/1/2006`, `tue`, and `next wed`. In the example image I use the text: `8/1--!Upload User Manual`. As of B51 it seems it always uses a US-centric date format, *month*/*date*, even if the system is set to a European convention of *date*/*month*. The only work around for this is to use month names such as `Feb`.
 

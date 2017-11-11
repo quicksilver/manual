@@ -58,7 +58,7 @@ TODO: The shortcut is configurable in the Command Preferences Pane under Activat
 
 “Modifier-only Activation” allows you to activate Quicksilver by single or double presses of modifier keys such as <kbd>⌃</kbd>, <kbd>⌥</kbd>, <kbd>⇧</kbd>, <kbd>⌘</kbd> or even <kbd>fn</kbd> on a laptop. Some applications can call for secure text entry and this can interfere with modifier only activation. If you use Visor and a double shift modifier isn’t working for you, open Terminal.app and in the File menu enable “Secure Keyboard Entry”. There have also been reports that Quicken Scheduler app that runs in the background as a login item to do scheduled downloads can also interfere with modifier only activation.
 
-“Hide if pressed when already visible” affects what happens if you activate Quicksilver when it’s already active. Regardless of the setting of this option, typing esc will close the command window.
+“Hide if pressed when already visible” affects what happens if you activate Quicksilver when it’s already active. Regardless of the setting of this option, typing <kbd>⎋</kbd> will close the command window.
 
 The “Alternative Services Menu Key” is how to change the shortcut assigned to the Quicksilver service Get Current Selection. The default value is <kbd>⌘</kbd><kbd>esc</kbd>, so you might want to change it if you use Front Row as described above in [Invoking Quicksilver](introduction#invoking-quicksilver).
 

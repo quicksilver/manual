@@ -10,7 +10,7 @@ There are also two proxy objects, Current iPhoto Selection and Selected iPhoto A
 
 ## Slideshow
 
-For this section you’ll need the Slideshow Action plugin. It installs two different actions called **Slideshow** that make use of the new slideshow feature added to the Finder in 10.4. One takes an image file or folder as the object, the other works on iPhoto albums and photos (which you’ll need the iPhoto Module plugin to access). As in any Finder slideshow typing esc will cancel the slideshow and moving the mouse will bring up some controls. Note this is different than the **iPhoto Slideshow** action which uses iPhoto slideshow capabilities (notably music and the now ubiquitous Ken Burns effect). 
+For this section you’ll need the Slideshow Action plugin. It installs two different actions called **Slideshow** that make use of the new slideshow feature added to the Finder in 10.4. One takes an image file or folder as the object, the other works on iPhoto albums and photos (which you’ll need the iPhoto Module plugin to access). As in any Finder slideshow typing <kbd>⎋</kbd> will cancel the slideshow and moving the mouse will bring up some controls. Note this is different than the **iPhoto Slideshow** action which uses iPhoto slideshow capabilities (notably music and the now ubiquitous Ken Burns effect). 
 
 ## Desktop Picture Action
 
