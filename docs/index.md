@@ -6,40 +6,6 @@ _Quicksilver is a powerful interface for your Mac, letting you perform countless
 
 ![Quicksilver Interface](images/quicksilver_interface.png)
 
-## Introduction
-
-- [Introduction](introduction.md)
-
-## Configuration
-
-- [Configuration](configuration.md)
-
-## Features
-
-- [Files and Folders](Files and Folders.md)
-- [Applications and Processes](Applications and Processes.md)
-- [iTunes](iTunes.md)
-- [Contacts](Contacts.md)
-- [Mail](Mail.md)
-- [Chat](Chat.md)
-- [Calendar](Calendar.md)
-- [Web](Web.md)
-- [Text](Text.md)
-- [Clipboard and Shelf](Clipboard and Shelf.md)
-- [Note Taking Applications](Note Taking Applications.md)
-- [Images](Images.md)
-- [System](System.md)
-- [Development](Development.md)
-
-## Appendix
-
-- [FAQ](FAQ.md)
-- [Troubleshooting](Troubleshooting.md)
-- [Extending Quicksilver](Extending Quicksilver.md)
-- [Change Log](https://qsapp.com/changelog.php)
-- [Random Notes](Random Notes.md)
-- [Manual Style Notes](Manual Style Notes.md)
-
 # How To Read this Manual
 
 Quicksilver’s strength is that it integrates with so many different aspects of macOS, but that also makes it difficult to explain in an order that works for every user while avoiding duplication. The table below describes how this manual is organized and how new and experienced users should use it to learn about Quicksilver.
