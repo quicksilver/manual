@@ -21,15 +21,15 @@ This will run a web server at <http://localhost:8000/>. The site should reload a
 
 ## Updating the Live Manual ##
 
-MkDocs has been installed into the virtual environment in `/data/venv`.
-
 The manual repository has been cloned into `/data/manual`.
+
+MkDocs has been installed into a virtual environment in `/data/manual/venv`.
 
 Publishing the latest version should be as simple as
 
     $ cd /data/manaul
     $ git pull
-    $ /data/venv/bin/mkdocs build
+    $ venv/bin/mkdocs build
 
 [MkDocs]: http://www.mkdocs.org/
 [Homebrew]: https://brew.sh/
