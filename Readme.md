@@ -13,7 +13,7 @@ You can optionally install MkDocs to see a live preview of the site as you work.
     $ cd <your directory for projects>
     $ git clone <your fork of this repo>
     $ cd manual
-    $ virtualenv venv
+    $ virtualenv -p python3 venv
     $ venv/bin/pip install -r requirements.txt
     $ venv/bin/mkdocs serve
 
