@@ -1,0 +1,26 @@
+site_name: Quicksilver Manual
+pages:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Configuration: configuration.md
+  - Features:
+    - Files and Folders.md
+    - Applications and Processes.md
+    - iTunes.md
+    - Contacts.md
+    - Mail.md
+    - Chat.md
+    - Calendar.md
+    - Web.md
+    - Text.md
+    - Clipboard and Shelf.md
+    - Note Taking Applications.md
+    - Images.md
+    - System.md
+    - Development.md
+  - Appendix:
+    - FAQ.md
+    - Troubleshooting.md
+    - Extending Quicksilver.md
+    - Random Notes.md
+    - Manual Style Notes.md

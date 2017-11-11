@@ -1,0 +1,60 @@
+# Quicksilver Manual
+
+_Quicksilver is a powerful interface for your Mac, letting you perform countless actions entirely with the keyboard._
+
+[Download Quicksilver](https://qsapp.com/download.php)
+
+![Quicksilver Interface](images/quicksilver_interface.png)
+
+## Introduction
+
+- [Introduction](introduction.md)
+
+## Configuration
+
+- [Configuration](configuration.md)
+
+## Features
+
+- [Files and Folders](Files and Folders.md)
+- [Applications and Processes](Applications and Processes.md)
+- [iTunes](iTunes.md)
+- [Contacts](Contacts.md)
+- [Mail](Mail.md)
+- [Chat](Chat.md)
+- [Calendar](Calendar.md)
+- [Web](Web.md)
+- [Text](Text.md)
+- [Clipboard and Shelf](Clipboard and Shelf.md)
+- [Note Taking Applications](Note Taking Applications.md)
+- [Images](Images.md)
+- [System](System.md)
+- [Development](Development.md)
+
+## Appendix
+
+- [FAQ](FAQ.md)
+- [Troubleshooting](Troubleshooting.md)
+- [Extending Quicksilver](Extending Quicksilver.md)
+- [Change Log](https://qsapp.com/changelog.php)
+- [Random Notes](Random Notes.md)
+- [Manual Style Notes](Manual Style Notes.md)
+
+# How To Read this Manual
+
+Quicksilver’s strength is that it integrates with so many different aspects of OS X, but that also makes it difficult to explain in an order that works for every user while avoiding duplication. The table below describes how this manual is organized and how new and experienced users should use it to learn about Quicksilver.
+
+The first section is an introduction and introduces concepts and terminology used throughout the rest of the manual. 
+
+The next section covers the preferences in detail. New users should skip over things that don't interest them. 
+
+The third section is the bulk of this manual and covers all the plugins. Rather than cover each of the dozens of plugins in alphabetical or some other arbitrary order, it is organized around topics such as working with files, contacts, email, or web browsers (roughly the Plugin Preferences categories). Grouping similar plugin information together avoids duplication and makes it easier to compare features (e.g., how Quicksilver supports different web browsers). 
+
+Each section includes general usage and configuration instructions, as well as troubleshooting hints and tips for using features more efficiently using advanced Quicksilver features. New users should be able to start using the features quickly and experienced users will probably find something new about many features. 
+
+| Section | Topics | New Users | Experienced Users |
+| ---- | ------ | --------- | ----------------- |
+| Introduction | Introduction, installation, basic usage | Read thoroughly | Skim |
+| Configuration | Preferences and configuration | Skim, refer back to when needed | Read thoroughly |
+| Features | Plugins grouped by categories | Read sections of interest. Look up unfamiliar things in Part I and II | Read sections of interest |
+| Appendix | Troubleshooting and extending | Read as needed | Read as needed |
