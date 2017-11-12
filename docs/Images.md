@@ -4,7 +4,7 @@
 
 The iPhoto Module plugin adds two actions and enables you to <kbd>→</kbd> into iPhoto.app to see everything in iPhoto’s left pane: the library, rolls, folders, albums, smart albums and slideshows. The **Show Album** action will open the selected item in iPhoto. The **iPhoto Slideshow** action will use iPhoto to play the slideshow (as opposed to the Finder’s slideshow ability). If you use it on an album or other non-slideshow object, it will create a new slideshow but not save it. It’s the equivalent of using the Play button in iPhoto as opposed to the +Slideshow button. Both actions will start iPhoto if it’s not running, but note that you can navigate through your iPhoto collection without starting iPhoto. 
 
-You can also use <kbd>→</kbd> to  navigate down to an individual image. You can use actions such as **Email to…** or **Set Desktop Picture** actions among others. Note that the **Set Comment…** action (from the File Attribute Action plugin) can be used to set the Spotlight comment of images, but this is different than the comment you can set for a image in iPhoto. 
+You can also use <kbd>→</kbd> to  navigate down to an individual image. You can use actions such as **E-mail to…** or **Set Desktop Picture** actions among others. Note that the **Set Comment…** action (from the File Attribute Action plugin) can be used to set the Spotlight comment of images, but this is different than the comment you can set for a image in iPhoto. 
 
 There are also two proxy objects, Current iPhoto Selection and Selected iPhoto Album which are useful for creating triggers.
 

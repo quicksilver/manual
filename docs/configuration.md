@@ -186,7 +186,7 @@ TODO
 
 Quicksilver not only makes it easier to work with a variety of applications, it sometimes uses other applications to perform commands. These are configurable in the Handlers Preferences pane.  The list of handlers varies based on which plugins are installed. Shown here are all the handlers available as of B51.
 
-- **Email** - Mail program to use for Email actions (Mail, Gmail, Entourage, or Mailsmith).
+- **E-mail** - Mail program to use for E-mail actions (Mail, Gmail, Entourage, or Mailsmith).
 - **Instant Messaging** - IM program to use for IM and chat actions (iChat or Adium).
 - **Command Line Interface** - Terminal program to use (either Terminal or iTerm) for Terminal actions .
 - **String Ranker** - The TextMate Ranker plugin installs a different matching algorithm that can be selected here. See the TextMate Ranker section for details. As of B51 it’s known to cause problems selecting things in the 3rd pane.
@@ -352,7 +352,7 @@ If you create a lot of keyboard triggers it’s probably best to use some system
 
 While it does involve switching between keyboard and mouse, the Quicksilver command window can be a convenient drag & drop source or target. E.g., with an Open File dialog up from some application, rather than navigating in that window you can activate Quicksilver, type to select the file you want to open and then drag it from the first pane into the Open File dialog. To make this a little more seamless there is an [AppleScript Action](docs.blacktree.com/quicksilver/applescript_open_and_save_selection) you can download from the Quicksilver site that add an action to send the file to an open or save dialog, so you can avoid the dragging. To move a file from the desktop to a folder, activate Quicksilver and bring up the folder in the first pane; then just drag the file from the desktop to the folder in the first pane.
 
-You can bring up an email address and drag it into the To: or CC: field of a mail message. Mail.app doesn’t recognize nicknames in it’s matching so using Quicksilver for this might be convenient. Note you have to drag an email address for this to work, not a contact. You can also drag a file into a message as an attachment.
+You can bring up an e-mail address and drag it into the To: or CC: field of a mail message. Mail.app doesn’t recognize nicknames in it’s matching so using Quicksilver for this might be convenient. Note you have to drag an e-mail address for this to work, not a contact. You can also drag a file into a message as an attachment.
 
 If the application you’re dropping into doesn’t accept the item your dragging from Quicksilver you’ll probably get the name of the item dropped in. E.g., if you drag a file into a web form you’ll find the file name with its full path entered into the form. Do the same thing with a contact to make sure you get a difficult name spelled correctly. Drag a postal address from a contact into a document or a field in an online mapping service (note, the newlines might prevent a web field from getting more than the street address). With proxy objects you can drag the Current Web Page URL or the iTunes Track Now Playing.
 
@@ -369,7 +369,7 @@ Dragging triggers work well with the Mouse Trigger Dragged Object proxy object. 
 
 Here are some more advanced ones that might require additional plugins:
 
-- Mouse Trigger Dragged Object (**Email to…(**Compose**)**)
+- Mouse Trigger Dragged Object (**E-mail to…(**Compose**)**)
 - Mouse Trigger Dragged Object (**Compress (**Create Archive**)**)
 - Mouse Trigger Dragged Object (**Set Desktop Picture**)
 - Mouse Trigger Dragged Object (**Add Tags...**) tags
@@ -413,11 +413,11 @@ The Constellation preference pane allows you to customize the look of the menu. 
 
 TODO: The trigger set is not installed in B51, will it come back? Should I remove the following 3 paragraphs?
 
-The Constellation plugin installs a trigger set called, Constellation. There are three pre-configured triggers: Show Radial Menu for iTunes (on <kbd>F6</kbd>), Show Menu Bar Contents (Change Helper) (on <kbd>F7</kbd>) and Email Dragged Items (on mouse drag and drop into the lower-right corner). The first shows choices as if you had typed <kbd>→</kbd> into iTunes (Recent Tracks, Browse Artists, Genres, Albums, etc.). It’s just the iTunes object with the **Show Radial Menu** action. You can click on these to open other radial menus to browse your music library. With album art showing it’s very pretty. Control-clicking brings up an action menu with Play and Party Shuffle actions.
+The Constellation plugin installs a trigger set called, Constellation. There are three pre-configured triggers: Show Radial Menu for iTunes (on <kbd>F6</kbd>), Show Menu Bar Contents (Change Helper) (on <kbd>F7</kbd>) and E-mail Dragged Items (on mouse drag and drop into the lower-right corner). The first shows choices as if you had typed <kbd>→</kbd> into iTunes (Recent Tracks, Browse Artists, Genres, Albums, etc.). It’s just the iTunes object with the **Show Radial Menu** action. You can click on these to open other radial menus to browse your music library. With album art showing it’s very pretty. Control-clicking brings up an action menu with Play and Party Shuffle actions.
 
 The second pre-configured trigger pops up a menu that shows the current application’s menu items (like File, Edit, etc.). If you like the idea of radial menus you’ll like this. It’s somewhat special in that there seems to be no way to create this yourself. It’s like the **Show Menu Items** action but in a radial menu. Note: this trigger only works if the Missing Object Selection Handler is set to Constellation. The problem is that setting it to Constellation can (as of B51) cause Quicksilver to crash on some occasions (see Bug 1017). In particular I have problems when using Web Search triggers with a blank third pane. My understanding is that this handler was originally a hack and I suspect it will be removed in a future version of Quicksilver.
 
-With the third pre-configured trigger you drag text or a file to the lower right corner and it pops up a radial menu of Contacts to send to. It’s populated the same as the results list in the third pane of a command with the **Email to…(Compose)** action so it’s a list of commonly used contacts. The trigger is the proxy object Mouse Trigger Dragged Object with the action **Email to…(Compose)** but it pops up this radial menu (which with pictures in your Contacts entries is very pretty).
+With the third pre-configured trigger you drag text or a file to the lower right corner and it pops up a radial menu of Contacts to send to. It’s populated the same as the results list in the third pane of a command with the **E-mail to…(Compose)** action so it’s a list of commonly used contacts. The trigger is the proxy object Mouse Trigger Dragged Object with the action **E-mail to…(Compose)** but it pops up this radial menu (which with pictures in your Contacts entries is very pretty).
 
 Those are the basics. You can of course use radial menus for lots of things and create your own triggers for commonly used ones (these will be in the Custom trigger set, not the Constellation trigger set). If you create triggers you probably want them bound to the mouse or at least to shortcuts easily typed with your non-mouse hand. What I think works well for radial menus are things that don’t change position (which isn’t so easy to arrange for) so you can learn them and things with clearly differentiated icons so you can recognize them quickly.
 

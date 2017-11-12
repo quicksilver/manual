@@ -14,7 +14,7 @@ The first section is an introduction and introduces concepts and terminology use
 
 The next section covers the preferences in detail. New users should skip over things that don’t interest them. 
 
-The third section is the bulk of this manual and covers all the plugins. Rather than cover each of the dozens of plugins in alphabetical or some other arbitrary order, it is organized around topics such as working with files, contacts, email, or web browsers (roughly the Plugin Preferences categories). Grouping similar plugin information together avoids duplication and makes it easier to compare features (e.g., how Quicksilver supports different web browsers). 
+The third section is the bulk of this manual and covers all the plugins. Rather than cover each of the dozens of plugins in alphabetical or some other arbitrary order, it is organized around topics such as working with files, contacts, e-mail, or web browsers (roughly the Plugin Preferences categories). Grouping similar plugin information together avoids duplication and makes it easier to compare features (e.g., how Quicksilver supports different web browsers). 
 
 Each section includes general usage and configuration instructions, as well as troubleshooting hints and tips for using features more efficiently using advanced Quicksilver features. New users should be able to start using the features quickly and experienced users will probably find something new about many features. 
 

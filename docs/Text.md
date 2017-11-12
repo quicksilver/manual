@@ -16,7 +16,7 @@ The **Type Text** action is similar to the Paste action, but will not put a copy
 
 Most copy and paste commands on the mac preserve the formatting of the source, but this isn’t always wanted. A clever way around this is to use the command line tools `pbpaste` and `pbcopy` to take what’s already on the clipboard and copy it again but without the formatting. These are used from a Terminal shell but the Terminal Module’s **Run Command in Shell** action can be used instead; which means a trigger can be created for it. Create a trigger with `pbpaste | pbcopy` in the first pane and **Run Command in Shell** as the action. I have this bound to <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd>. I also renamed the trigger to be Remove Copy Formatting.
 
-In addition to **Run Command in Shell**, small scripts can be entered in the first pane and run in a new Terminal window with the **Run a Text Command in Terminal** action. This is an easy way to run the top command and if used often makes a good trigger. Enter multiple commands to run by separating them with a new newline entered with <kbd>⌥</kbd><kbd>return</kbd>. For AppleScripts instead of shell scripts use the **Run as AppleScript** action. Use these with <kbd>⌘</kbd><kbd>⎋</kbd> to easily run scripts from email messages or posted on forums (but of course, use with caution).
+In addition to **Run Command in Shell**, small scripts can be entered in the first pane and run in a new Terminal window with the **Run a Text Command in Terminal** action. This is an easy way to run the top command and if used often makes a good trigger. Enter multiple commands to run by separating them with a new newline entered with <kbd>⌥</kbd><kbd>return</kbd>. For AppleScripts instead of shell scripts use the **Run as AppleScript** action. Use these with <kbd>⌘</kbd><kbd>⎋</kbd> to easily run scripts from e-mail messages or posted on forums (but of course, use with caution).
 
 The **Large Type** action will show the text in a giant window visible from across the room. Click anywhere to close it. It’s great when looking up a phone number. The more text there is to display, the  smaller it gets. Some use it to view lyrics highlighted on a web page.
 
@@ -28,7 +28,7 @@ System Services are some of the more underutilized features of macOS. Applicatio
 
 The Web Searches section describes using the Web Search Module plugin. With text in the first pane, use the **Find With…** action and choose a saved web search in the  third pane. The search results appear in the default browser. See the Web Searches section for configuration details and how to make a trigger with the Current Selection proxy object.
 
-The [Mail](Mail.md) section describes various email actions from the Mail Support plugin. The three **Email To…** actions (in **Compose**, **Send** and **Send Directly** variations) send text in the first pane to a contact or email address in the third pane. See the [Mail](Mail.md) section for details on configuration and the differences in the three variations.
+The [Mail](Mail.md) section describes various e-mail actions from the Mail Support plugin. The three **E-mail To…** actions (in **Compose**, **Send** and **Send Directly** variations) send text in the first pane to a contact or e-mail address in the third pane. See the [Mail](Mail.md) section for details on configuration and the differences in the three variations.
 
 The [Chat](Chat.md) section describes the instant messager actions. **IM to Account…** sends the text in the first pane as an instant message to a contact or IM account in the third pane. The iChat plugin supports setting the away message to text in the first pane with the **Set iChat Status** action. 
 
@@ -64,7 +64,7 @@ The BBEdit Module plugin adds one action which works on text lines. Use **Select
 
 ## Specially Formatted Text
 
-The above actions work for all text, but Quicksilver recognizes some text forms and provides more actions for them and often chooses a special default action. E.g., if the text in the first pane looks like an email address (i.e., `text@text.text`, with at least one @ and one period) then the **Email item…** actions are available. If the text looks like an URL, then the **Open URL** action is available. Depending on how the actions are ranked in the Actions Preferences these might become the default actions. In these cases the background of the pane changes to include a faint version of the email or URL icons. These are the only two special forms that Quicksilver recognizes that I know of, but see below for how to perform math calculations.
+The above actions work for all text, but Quicksilver recognizes some text forms and provides more actions for them and often chooses a special default action. E.g., if the text in the first pane looks like an e-mail address (i.e., `text@text.text`, with at least one @ and one period) then the **E-mail item…** actions are available. If the text looks like an URL, then the **Open URL** action is available. Depending on how the actions are ranked in the Actions Preferences these might become the default actions. In these cases the background of the pane changes to include a faint version of the e-mail or URL icons. These are the only two special forms that Quicksilver recognizes that I know of, but see below for how to perform math calculations.
 
 ## Math Calculations
 

@@ -62,7 +62,7 @@ If you are an Emacs user, here’s an Emacs command to pass the current file (of
          (error "Not visiting a file or file doesn’t exist"))))
 ```
 
-Here’s another function.  It will send the contents of the Emacs region to Quicksilver as text. With the text in the first pane you can do whatever Quicksilver can do with it, e.g., the **Find With…** action or the **Email to…** actions. I bind it to “C-c w” using: `(global-set-key "\C-cw" 'region-to-quicksilver)`
+Here’s another function.  It will send the contents of the Emacs region to Quicksilver as text. With the text in the first pane you can do whatever Quicksilver can do with it, e.g., the **Find With…** action or the **E-mail to…** actions. I bind it to “C-c w” using: `(global-set-key "\C-cw" 'region-to-quicksilver)`
 
 ```emacs-lisp
 (defun region-to-quicksilver (start end)

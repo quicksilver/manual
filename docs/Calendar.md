@@ -1,6 +1,6 @@
 # Calendar
 
-Quicksilver has some limited support for creating calendar events and to-do’s in iCal and Google Calendar. As of B51 the Entourage Module plugin only supports contacts and email but not calendars. Entourage 2008 can be configured to sync with iCal, see the Entourage section in Contacts, the option is in the same place as the option to sync with Address Book. Another option is to manage a text file of todos. See the Text section for the description of the Text Manipulation Actions plugin for some tips.
+Quicksilver has some limited support for creating calendar events and to-do’s in iCal and Google Calendar. As of B51 the Entourage Module plugin only supports contacts and e-mail but not calendars. Entourage 2008 can be configured to sync with iCal, see the Entourage section in Contacts, the option is in the same place as the option to sync with Address Book. Another option is to manage a text file of todos. See the Text section for the description of the Text Manipulation Actions plugin for some tips.
 
 ## iCal
 

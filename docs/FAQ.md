@@ -36,7 +36,7 @@ The other cause is if you’re running Little Snitch which is a reverse firewall
 
 ## Doesn’t Spotlight make Quicksilver unnecessary?
 
-No, they do different things and are in fact complementary. Spotlight scans inside files (and their metadata) so you can search their contents. Quicksilver only looks at file names and inside some things like contacts and bookmarks and lets you do more than just open them (e.g., email a file to a contact). Since Quicksilver’s index is smaller than Spotlight’s and because it learns from your previous searches Quicksilver often finds things faster than Spotlight. The Quicksilver Spotlight Module provides a Quicksilver interface to spotlight by adding 3 actions that work on a text subject.
+No, they do different things and are in fact complementary. Spotlight scans inside files (and their metadata) so you can search their contents. Quicksilver only looks at file names and inside some things like contacts and bookmarks and lets you do more than just open them (e.g., e-mail a file to a contact). Since Quicksilver’s index is smaller than Spotlight’s and because it learns from your previous searches Quicksilver often finds things faster than Spotlight. The Quicksilver Spotlight Module provides a Quicksilver interface to spotlight by adding 3 actions that work on a text subject.
 
 ## I don’t see feature X
 
@@ -48,7 +48,7 @@ If you downloaded it with Safari, look to see if the downloaded file’s name en
 
 ## The third pane is empty
 
-If the TextMate Ranker is installed, uninstall it and restart Quicksilver.  It’s known to break selecting items in the third pane, e.g., when using the **Open With…** or **Email to…** actions.  If you’re trying to get contacts, make sure the correct plugin is installed (e.g., Contacts) and check that they are enabled in the catalog (can you get to them in the first pane?).
+If the TextMate Ranker is installed, uninstall it and restart Quicksilver.  It’s known to break selecting items in the third pane, e.g., when using the **Open With…** or **E-mail to…** actions.  If you’re trying to get contacts, make sure the correct plugin is installed (e.g., Contacts) and check that they are enabled in the catalog (can you get to them in the first pane?).
 
 ## Triggers don’t save
 

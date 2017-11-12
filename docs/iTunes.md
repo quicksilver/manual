@@ -36,7 +36,7 @@ There are two other iTunes proxy objects and they work with things selected in t
 
 The default action for a track, album, artist, or genre is **Play**. Selecting an individual track and playing it will have iTunes do just that (Quicksilver doesn’t play it, iTunes does), starting iTunes if necessary. Selecting a set of tracks (either with the comma trick or by picking an album or artist) creates a playlist in iTunes called Quicksilver, populates it and starts playing it. There are also iTunes specific actions for **Play in Party Shuffle**, **Play in Next Party Shuffle** and **Add to End of Party Shuffle**. See the iTunes documentation for how to use Party Shuffle.
 
-The iTunes **Play** and various Party Shuffle actions are probably the most commonly used, but since a track is also a file, all the file actions are accessible as well. Choosing **Open** will play the song just as **Play** does. **Reveal** will open a Finder window showing the track file in its folder. Anything Quicksilver can do to a file, it can do to a track, email it to a friend, add a tag, compress it, etc.
+The iTunes **Play** and various Party Shuffle actions are probably the most commonly used, but since a track is also a file, all the file actions are accessible as well. Choosing **Open** will play the song just as **Play** does. **Reveal** will open a Finder window showing the track file in its folder. Anything Quicksilver can do to a file, it can do to a track, e-mail it to a friend, add a tag, compress it, etc.
 
 ## Controlling iTunes and Triggers
 
