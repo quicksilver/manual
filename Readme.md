@@ -19,6 +19,8 @@ You can optionally install MkDocs to see a live preview of the site as you work.
 
 This will run a web server at <http://localhost:8000/>. The site should reload automatically whenever you update content or configuration.
 
+Be sure to review the Style Guide (included in the manual) before starting.
+
 ## Updating the Live Manual ##
 
 The manual repository has been cloned into `/data/manual`.
