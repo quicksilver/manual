@@ -1,6 +1,6 @@
 # Mail
 
-Quicksilver has several common e-mail actions (**Compose E-mail**, **E-mail to…**, **E-mail Item…**) that are described in detail in this section and also mentioned in [Files and Folders](Files and Folders.md) and [Contacts](Contacts.md). They are defined in the E-mail Support plugin which is normally hidden but can be seen by <kbd>⌥</kbd>-clicking on the All Plugins set in the Plugin preferences.
+Quicksilver has several common e-mail actions (**Compose E-mail**, **E-mail To…**, **E-mail Item…**) that are described in detail in this section and also mentioned in [Files and Folders](Files and Folders.md) and [Contacts](Contacts.md). They are defined in the E-mail Support plugin which is normally hidden but can be seen by <kbd>⌥</kbd>-clicking on the All Plugins set in the Plugin preferences.
 
 Quicksilver supports specific e-mail applications via the Apple Mail Module, Gmail Module, Entourage 2004 Module and Mailsmith Module plugins. These plugins should all install the E-mail Support plugin if needed. If the e-mail actions don’t appear in the action pane, check that they are enabled in the Actions preferences. If they aren’t listed at all or the E-mail handler described below doesn’t appear in the Handlers Preferenece, install the Apple Mail Module plugin which will certainly install it.
 
@@ -56,7 +56,7 @@ The only mail support Quicksilver has for MailSmith is to use it to send e-mail 
 
 ## Other Mail Applications
 
-In Quicksilver’s Preferences under Handlers there is an option “Default”. This refers to the system default mail program which can be set in the Mail.app Preferences in the General tab under Default E-mail Reader. This sets the **Compose E-mail** action to use whatever application handles mailto: URLs. TODO: do the **E-mail to…** and **E-mail item…** actions work? Does the comma trick work?
+In Quicksilver’s Preferences under Handlers there is an option “Default”. This refers to the system default mail program which can be set in the Mail.app Preferences in the General tab under Default E-mail Reader. This sets the **Compose E-mail** action to use whatever application handles mailto: URLs. TODO: do the **E-mail To…** and **E-mail Item…** actions work? Does the comma trick work?
 
 ## Teleflip
 

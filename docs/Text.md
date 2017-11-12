@@ -64,7 +64,7 @@ The BBEdit Module plugin adds one action which works on text lines. Use **Select
 
 ## Specially Formatted Text
 
-The above actions work for all text, but Quicksilver recognizes some text forms and provides more actions for them and often chooses a special default action. E.g., if the text in the first pane looks like an e-mail address (i.e., `text@text.text`, with at least one @ and one period) then the **E-mail item…** actions are available. If the text looks like an URL, then the **Open URL** action is available. Depending on how the actions are ranked in the Actions Preferences these might become the default actions. In these cases the background of the pane changes to include a faint version of the e-mail or URL icons. These are the only two special forms that Quicksilver recognizes that I know of, but see below for how to perform math calculations.
+The above actions work for all text, but Quicksilver recognizes some text forms and provides more actions for them and often chooses a special default action. E.g., if the text in the first pane looks like an e-mail address (i.e., `text@text.text`, with at least one @ and one period) then the **E-mail Item…** actions are available. If the text looks like an URL, then the **Open URL** action is available. Depending on how the actions are ranked in the Actions Preferences these might become the default actions. In these cases the background of the pane changes to include a faint version of the e-mail or URL icons. These are the only two special forms that Quicksilver recognizes that I know of, but see below for how to perform math calculations.
 
 ## Math Calculations
 

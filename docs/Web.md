@@ -57,7 +57,7 @@ For each link in the page there are two lines shown. The first is the text of th
 
 This seems like a very cool feature in search of a good use case. In the example here I’m browsing the Quicksilver online documentation. I can get to links marked Tutorials and Overview, but there is a lot of other stuff in there and it’s a little awkward to browse. Still if I know I’m looking for Tutorials I can just type it in and Quicksilver’s matching algorithm will find it. A good use case is searching documentation such as for Python, for example, right-arrow into https://docs.python.org/2/library/index.html and search for “regex”.
 
-I have a bookmark for the root of the [Quicksilver Google Group](https://groups.google.com/forum/#!forum/blacktree-quicksilver). If I want to send someone the URL of the FAQ I know is on that page, I could bring up the bookmark in the first pane, type <kbd>→</kbd> to see the links, type faq to bring up that link and use the **Paste** or one of the **E-mail to…** actions. While it’s a contrived example it is almost convenient enough to use. 
+I have a bookmark for the root of the [Quicksilver Google Group](https://groups.google.com/forum/#!forum/blacktree-quicksilver). If I want to send someone the URL of the FAQ I know is on that page, I could bring up the bookmark in the first pane, type <kbd>→</kbd> to see the links, type faq to bring up that link and use the **Paste** or one of the **E-mail To…** actions. While it’s a contrived example it is almost convenient enough to use. 
 
 TODO: what plugin enables this? is it safari? is it browser specific?
 

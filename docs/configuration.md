@@ -369,7 +369,7 @@ Dragging triggers work well with the Mouse Trigger Dragged Object proxy object. 
 
 Here are some more advanced ones that might require additional plugins:
 
-- Mouse Trigger Dragged Object (**E-mail to…(**Compose**)**)
+- Mouse Trigger Dragged Object (**E-mail To…(**Compose**)**)
 - Mouse Trigger Dragged Object (**Compress (**Create Archive**)**)
 - Mouse Trigger Dragged Object (**Set Desktop Picture**)
 - Mouse Trigger Dragged Object (**Add Tags...**) tags
@@ -417,7 +417,7 @@ The Constellation plugin installs a trigger set called, Constellation. There are
 
 The second pre-configured trigger pops up a menu that shows the current application’s menu items (like File, Edit, etc.). If you like the idea of radial menus you’ll like this. It’s somewhat special in that there seems to be no way to create this yourself. It’s like the **Show Menu Items** action but in a radial menu. Note: this trigger only works if the Missing Object Selection Handler is set to Constellation. The problem is that setting it to Constellation can (as of B51) cause Quicksilver to crash on some occasions (see Bug 1017). In particular I have problems when using Web Search triggers with a blank third pane. My understanding is that this handler was originally a hack and I suspect it will be removed in a future version of Quicksilver.
 
-With the third pre-configured trigger you drag text or a file to the lower right corner and it pops up a radial menu of Contacts to send to. It’s populated the same as the results list in the third pane of a command with the **E-mail to…(Compose)** action so it’s a list of commonly used contacts. The trigger is the proxy object Mouse Trigger Dragged Object with the action **E-mail to…(Compose)** but it pops up this radial menu (which with pictures in your Contacts entries is very pretty).
+With the third pre-configured trigger you drag text or a file to the lower right corner and it pops up a radial menu of Contacts to send to. It’s populated the same as the results list in the third pane of a command with the **E-mail To…(Compose)** action so it’s a list of commonly used contacts. The trigger is the proxy object Mouse Trigger Dragged Object with the action **E-mail To…(Compose)** but it pops up this radial menu (which with pictures in your Contacts entries is very pretty).
 
 Those are the basics. You can of course use radial menus for lots of things and create your own triggers for commonly used ones (these will be in the Custom trigger set, not the Constellation trigger set). If you create triggers you probably want them bound to the mouse or at least to shortcuts easily typed with your non-mouse hand. What I think works well for radial menus are things that don’t change position (which isn’t so easy to arrange for) so you can learn them and things with clearly differentiated icons so you can recognize them quickly.
 
