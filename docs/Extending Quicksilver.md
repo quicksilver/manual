@@ -6,7 +6,7 @@ But that’s not to say there isn’t a way to do it from Quicksilver. You can f
 
 Set the icon of the script and it appears in the QS pane.
 
-have you got QS > Preferences > Advanced > “run commands in background” turned on? If you have turn it off and try again.
+have you got QS → Preferences → Advanced → “run commands in background” turned on? If you have turn it off and try again.
 
 Action for large text Growl notifications:
 http://blacktree.cocoaforge.com/forums/viewtopic.php?t=4474

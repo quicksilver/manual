@@ -36,6 +36,7 @@ The Features section covers all the plugins, in detail. Each section includes ge
   	* Use these where appropriate: <kbd>→</kbd>, <kbd>←</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>⌫</kbd>, and <kbd>⎋</kbd>. If you don’t know how to type the character that represents a particular key, you can almost certainly find it somewhere else in this manual and copy it.
   	* The Quicksilver preference pane has buttons on the bottom bar. Use these when referring to them: ↻ ⓘ
   * Put images in the `images` directory.
+  * Describe the location of something in the preferences using arrows. For example, Preferences → General → Actions
 
 ## Keep in Mind
 

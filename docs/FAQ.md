@@ -62,7 +62,7 @@ TODO: There are usually 3 things that come up with triggers that don’t save.
 
 ### Removing Time Machine items from Catalog
 
-Uncheck the backup drive in Preferences > Catalog > Devices > Disks > Show Info > Contents. Then rescan the catalog by clicking the curved arrow button at the bottom of the catalog or by activating QS with <kbd>⌃</kbd><kbd>Space</kbd> (or <kbd>⌘</kbd><kbd>Space</kbd> or whatever you use) and then typing <kbd>⌘</kbd><kbd>R</kbd>. Also make sure Find All Applications is not checked in the catalog, that scans every connected drive.
+Uncheck the backup drive in Preferences → Catalog → Devices → Disks → Show Info → Contents. Then rescan the catalog by clicking the curved arrow button at the bottom of the catalog or by activating QS with <kbd>⌃</kbd><kbd>Space</kbd> (or <kbd>⌘</kbd><kbd>Space</kbd> or whatever you use) and then typing <kbd>⌘</kbd><kbd>R</kbd>. Also make sure Find All Applications is not checked in the catalog, that scans every connected drive.
 
 ### LockScreen in Extra Scripts doesn’t work
 
