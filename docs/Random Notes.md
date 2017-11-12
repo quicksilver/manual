@@ -14,7 +14,7 @@ If the results list is appearing slowly go to the Command preference pane and se
 
 You can type the beginning of what you want and then <kbd>↓</kbd> into through the results list. <kbd>↑</kbd> and <kbd>Page-Up</kbd> and <kbd>Page-Down</kbd> and <kbd>Home</kbd> and <kbd>End</kbd> work as well. People like this method because it’s not using the mouse, so it’s faster (you don’t have to move your hand to the mouse).
 
-Even faster is to configure the “Spacebar behavior” in the Command Preference Pane to “Select Next Result”. Now <kbd>space</kbd> acts like <kbd>↓</kbd> and you don’t have to move your hand to the arrow-keys (<kbd>space</kbd> is right under your thumb).
+Even faster is to configure the “Spacebar behavior” in the Command Preference Pane to “Select Next Result”. Now <kbd>Space</kbd> acts like <kbd>↓</kbd> and you don’t have to move your hand to the arrow-keys (<kbd>Space</kbd> is right under your thumb).
 
 You can explicitly assign default choices for a sequence of letters you type. Say you have a “Documents” folder and a `document1.txt` file. Type <kbd>D</kbd> and they both appear. In the results list right-click on Documents and choose “Set as Default for D” (for this to work it can’t be the first choice in the list, since it’s already the default)). Now activate QS again and type <kbd>D</kbd><kbd>O</kbd><kbd>C</kbd><kbd>U</kbd> and set that as the default for `document1.txt`. Now you can always choose “Documents” by typing <kbd>D</kbd> and `document1.txt` by typing <kbd>D</kbd><kbd>O</kbd><kbd>C</kbd><kbd>U</kbd>.
 

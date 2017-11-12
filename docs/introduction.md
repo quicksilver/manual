@@ -25,9 +25,9 @@ All this (and more) makes Quicksilver a consistent interface for my Mac and that
 2. Open the `.dmg` file and drag Quicksilver to your Applications folder.
 3. Drag the Quicksilver volume to the trash and delete the `.dmg` file.
 
-On first launch, Quicksilver presents some setup options (it can be rerun later with the Run Setup button in the Application Preferences). Choose a shortcut that activates the Quicksilver command window, or just accept the default, <kbd>⌃</kbd><kbd>space</kbd>. Quicksilver scans your computer for applications to recommend plugins to install. If the Contacts plugin is installed, the system will ask if you want to give Quicksilver access to your Contacts, click OK.
+On first launch, Quicksilver presents some setup options (it can be rerun later with the Run Setup button in the Application Preferences). Choose a shortcut that activates the Quicksilver command window, or just accept the default, <kbd>⌃</kbd><kbd>Space</kbd>. Quicksilver scans your computer for applications to recommend plugins to install. If the Contacts plugin is installed, the system will ask if you want to give Quicksilver access to your Contacts, click OK.
 
-Initially, Quicksilver shows no windows when it is running. Activate Quicksilver using the shortcut <kbd>⌃</kbd><kbd>space</kbd> (if you accepted the default).
+Initially, Quicksilver shows no windows when it is running. Activate Quicksilver using the shortcut <kbd>⌃</kbd><kbd>Space</kbd> (if you accepted the default).
 
 When Quicksilver starts it contacts qs0.qsapp.com to check for new versions. A security program like Little Snitch that monitors outgoing network connections might warn about this. It’s perfectly normal and benign.
 
@@ -57,13 +57,13 @@ Move the application file to the trash. This leaves the configuration files. If 
 
 # Working with Quicksilver
 
-When I want to do something on my Mac, my first reaction is to use Quicksilver. Whether I want to send an e-mail, search for something on the web, open a bookmark, file, or an application, revisit a web page I looked at yesterday, pause iTunes, find a song, or virtually anything else, I type <kbd>⌃</kbd><kbd>space</kbd> and activate Quicksilver to do it. That makes Quicksilver very powerful, but also a little difficult to explain. I’ll use an example of sending e-mail to my friend Ashish.
+When I want to do something on my Mac, my first reaction is to use Quicksilver. Whether I want to send an e-mail, search for something on the web, open a bookmark, file, or an application, revisit a web page I looked at yesterday, pause iTunes, find a song, or virtually anything else, I type <kbd>⌃</kbd><kbd>Space</kbd> and activate Quicksilver to do it. That makes Quicksilver very powerful, but also a little difficult to explain. I’ll use an example of sending e-mail to my friend Ashish.
 
 First, I could open Mail, type <kbd>⌘</kbd><kbd>N</kbd> to open a new message, type enough of Ashish to have her address appear in the To: field and then <kbd>⇥</kbd> to the Subject and continue writing the message. I could instead open Contacts, search for Ashish’s card, and <kbd>⌃</kbd>-click (or right-click) on the e-mail address and choose Send E-mail. 
 
-This is how I do it using Quicksilver. I type <kbd>⌃</kbd><kbd>space</kbd><kbd>A</kbd><kbd>Return</kbd>. That’s it. 
+This is how I do it using Quicksilver. I type <kbd>⌃</kbd><kbd>Space</kbd><kbd>A</kbd><kbd>Return</kbd>. That’s it. 
 
-Let’s walk through that. <kbd>⌃</kbd><kbd>space</kbd> at any time, in any application, activates Quicksilver bringing up the two pane window shown here. 
+Let’s walk through that. <kbd>⌃</kbd><kbd>Space</kbd> at any time, in any application, activates Quicksilver bringing up the two pane window shown here. 
 
 When I type <kbd>A</kbd>, Ashish appears in the first pane because I often send her e-mail. Her picture appears because I have her picture in her Contacts entry (mostly because Quicksilver makes such good use of it). Also another window appears with other choices. If I kept typing, those would change to be some other choice, but since Ashish is what I want, I’m done. The second pane shows the **Compose E-mail** action which is what I want to do. This appears because it’s the most common thing I do with contacts. Typing <kbd>↩</kbd> performs the selected action so I see a new Compose Message window appear from Mail.app with Ashish’s address filled in.
 
@@ -85,7 +85,7 @@ These are the modifier key abbreviations used:
 
 Combinations are achieved by holding down one or more modifier keys and typing another key such as a letter, number or punctuation character. E.g., <kbd>⌘</kbd><kbd>;</kbd>, <kbd>⌥</kbd><kbd>⌘</kbd><kbd>S</kbd>, etc. The arrow keys are shown as: <kbd>→</kbd>, <kbd>←</kbd>, <kbd>↑</kbd>, and <kbd>↓</kbd>.
 
-The Quicksilver application runs in the background. Typically there is no menu, dock icon, menu bar icon or other indication of Quicksilver on screen until it is **_activated_** with the shortcut <kbd>⌃</kbd><kbd>space</kbd>, though there are preferences to change this. Preferences are available by typing <kbd>⌘</kbd><kbd>,</kbd> when Quicksilver is activated (this is the Mac standard shortcut for opening Preferences).
+The Quicksilver application runs in the background. Typically there is no menu, dock icon, menu bar icon or other indication of Quicksilver on screen until it is **_activated_** with the shortcut <kbd>⌃</kbd><kbd>Space</kbd>, though there are preferences to change this. Preferences are available by typing <kbd>⌘</kbd><kbd>,</kbd> when Quicksilver is activated (this is the Mac standard shortcut for opening Preferences).
 
 ![Command Window Terms](images/command_window_terms.png)
 
@@ -121,7 +121,7 @@ Objects, actions and arguments are selected by typing. As each letter is typed t
 
 Some items have **_Children_**, e.g., folders have files, contacts have phone numbers and addresses, musical artists have albums, etc. When an item has children there is a > on the right side of the item in the results list. View the children (e.g., go into a folder) by typing <kbd>→</kbd> or <kbd>/</kbd>. The object then changes to the top child and the results list shows the other children. Navigate these by using the <kbd>↑</kbd> and <kbd>↓</kbd> arrows or better yet by typing to match against this list. This is an easy way to navigate folder hierarchies, or any other hierarchies.
 
-Quicksilver’s matching algorithm makes finding something specific very efficient and Quicksilver’s ability to perform many different actions on objects makes it powerful. The command window is efficient but there are even faster ways to perform commands. **_Triggers_** can be configured to start or complete a frequently used command. Typically keyboard triggers are used to run a command when a global shortcut key is pressed, but there are other triggers that run on mouse events such as clicks, drags or moving into a corner of the screen. Triggers can be invoked at anytime, without having to first activate Quicksilver (with <kbd>⌃</kbd><kbd>space</kbd>). There are built-in triggers to control iTunes (pause, play, skip to the next song or rate the current song) but it’s easy to configure them to open a particular application or prompt for a query to send to Google.
+Quicksilver’s matching algorithm makes finding something specific very efficient and Quicksilver’s ability to perform many different actions on objects makes it powerful. The command window is efficient but there are even faster ways to perform commands. **_Triggers_** can be configured to start or complete a frequently used command. Typically keyboard triggers are used to run a command when a global shortcut key is pressed, but there are other triggers that run on mouse events such as clicks, drags or moving into a corner of the screen. Triggers can be invoked at anytime, without having to first activate Quicksilver (with <kbd>⌃</kbd><kbd>Space</kbd>). There are built-in triggers to control iTunes (pause, play, skip to the next song or rate the current song) but it’s easy to configure them to open a particular application or prompt for a query to send to Google.
 
 **_Proxy objects_** work especially well with triggers. These are special objects which represent something on the system such as the currently selected text (which may be sent to a search engine) or the last downloaded file (which may be opened or moved) or the URL of the current page in Safari (which may be pasted into a document). 
 
@@ -131,7 +131,7 @@ Quicksilver’s matching algorithm makes finding something specific very efficie
 
 ## Activating Quicksilver
 
-macOS uses the term activate to mean switching to an application (starting it if necessary). In fact there’s a Quicksilver action called Activate that does just that. The menu bar show the menus of the active application. But Quicksilver runs in the background and unless it’s Preferences are open, it’s not the active application (it’s menu isn’t in the menu bar). Activating Quicksilver, that is making it ready to use, is typically done by using the keyboard shortcut (by default <kbd>⌃</kbd><kbd>space</kbd>) to bring up the command window. The first pane is selected and ready to find something in the Catalog via typing.
+macOS uses the term activate to mean switching to an application (starting it if necessary). In fact there’s a Quicksilver action called Activate that does just that. The menu bar show the menus of the active application. But Quicksilver runs in the background and unless it’s Preferences are open, it’s not the active application (it’s menu isn’t in the menu bar). Activating Quicksilver, that is making it ready to use, is typically done by using the keyboard shortcut (by default <kbd>⌃</kbd><kbd>Space</kbd>) to bring up the command window. The first pane is selected and ready to find something in the Catalog via typing.
 
 ## Selecting Items
 
@@ -219,7 +219,7 @@ Sometimes these behaviors are known as **_narrowing_** (filtering) and **_select
 TODO: (is this right?)
 
 - **_Filter Results_** - Filters the current results list.
-- **_Filter Catalog_** - Filters, but also includes the entire contents of the top-level catalog. Lasts until you type esc or activate Quicksilver again (<kbd>⌃</kbd><kbd>space</kbd>).
+- **_Filter Catalog_** - Filters, but also includes the entire contents of the top-level catalog. Lasts until you type esc or activate Quicksilver again (<kbd>⌃</kbd><kbd>Space</kbd>).
 - **_Snap to Best_** - scrolls the results list to the best match but doesn’t remove non-matching items.
 
 ## TODO: Helping the Matching Algorithm
