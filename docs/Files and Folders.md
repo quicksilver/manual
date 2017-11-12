@@ -62,7 +62,7 @@ There are several actions that can be used on tags themselves. There are two way
 
 With a tag in the first pane there are several available actions such as **Copy to Clipboard** and **Paste** but the default is **Show Files Matching Tag**. Since the tags are searched with Spotlight, this action opens a Spotlight Finder search window (like when editing a Finder smart folder) with all the files containing the tag. As an alternative, to get these results in a results list in Quicksilver, just type <kbd>→</kbd> on a tag in the first pane; after a little bit of time for a search a results list of all files with that tag will appear (though in B51 this doesn’t work in a Quicksilver session until the catalog is displayed).
 
-The Spotlight Module plugin installs several actions for searching.  Most of these are described in the [Text](Text.md) section since they work on text entered in the first pane. There are 3 actions that work on folder objects. **Spotlight Contents in Finder…** runs the search in a Finder window. **Spotlight Contents...** and **Spotlight Filenames of Contents...** return their results into a new results list in Quicksilver.  All three prompt for the the string to search in the third pane. **Spotlight Filenames of Contents...** only searches filenames not the contents of files.
+The Spotlight Module plugin installs several actions for searching. Most of these are described in the [Text](Text.md) section since they work on text entered in the first pane. There are 3 actions that work on folder objects. **Spotlight Contents in Finder…** runs the search in a Finder window. **Spotlight Contents...** and **Spotlight Filenames of Contents...** return their results into a new results list in Quicksilver. All three prompt for the the string to search in the third pane. **Spotlight Filenames of Contents...** only searches filenames not the contents of files.
 
 ## File Compression and Disk Images
 
@@ -74,7 +74,7 @@ The other two actions work on Disk Image objects (that is `.dmg` files). The **C
 
 ## Sending Files
 
-The E-mail Support plugin (installed by default) adds the three varieties of the **E-mail To…** action. They  all send files specified in the first pane as an e-mail attachment to a contact or address specified in the third pane.  For details on the differences between the **Compose**, **Send** and **Send Directly** varieties see the the [Mail](Mail.md) section below.  
+The E-mail Support plugin (installed by default) adds the three varieties of the **E-mail To…** action. They  all send files specified in the first pane as an e-mail attachment to a contact or address specified in the third pane. For details on the differences between the **Compose**, **Send** and **Send Directly** varieties see the the [Mail](Mail.md) section below. 
 
 The Chat Support plugin (installed by default) adds the **IM to Account…** action. In addition to sending text as an instant message, it can send a file specified in the first pane. Specify a contact or an IM address in the third pane. The reverse action, **IM Item…** also works with files. For details see the [Chat](Chat.md) section below.
 
@@ -98,7 +98,7 @@ Path Finder is a popular Finder alternative from Cocoatech. The Path Finder Modu
 
 ## Deviant
 
-The desktop is a folder in `~/Desktop/`. The Finder treats that folder specially and shows its contents on the screen all the time under other windows.  It’s very convenient to put active files and folders on, however it often gets crowded, particularly when multi-tasking on several projects.
+The desktop is a folder in `~/Desktop/`. The Finder treats that folder specially and shows its contents on the screen all the time under other windows. It’s very convenient to put active files and folders on, however it often gets crowded, particularly when multi-tasking on several projects.
 
 The Deviant Module plugin installs a **Select Window** action that will swap out the desktop with different folders. Select a folder in the first pane and use the **Select Window** action; the Finder should be restarted with the folder as the new desktop. Possible uses of Deviant include keeping an empty folder around for clean screenshots or if working on a set of images for a document or presentation, keeping them all accessible on the desktop.
 

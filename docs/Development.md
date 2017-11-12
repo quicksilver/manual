@@ -14,7 +14,7 @@ For this section you’ll need the Terminal Module plugin installed. There’s a
 
 The **Run […]** action will run a command or shell script selected in the first pane with optional arguments entered in text-mode in the third pane. The result of the command (i.e., stdout) is displayed in a new command window. The **Run in Terminal […]** is similar but opens a new window in Terminal to run the command and display the results.
 
-As an aside, Applescripts can be run by choosing the script in the first pane, using the **Process Text…** action and entering text in the third pane.  This can be thought of as a reverse action for any script actions added to the `~/Library/Application Support/Quicksilver/Actions/` folder (see Extending Quicksilver).
+As an aside, Applescripts can be run by choosing the script in the first pane, using the **Process Text…** action and entering text in the third pane. This can be thought of as a reverse action for any script actions added to the `~/Library/Application Support/Quicksilver/Actions/` folder (see Extending Quicksilver).
 
 If you want to type a command directly into Quicksilver and run it you can use the **Run Command in Shell** action or the **Run a Text command in Terminal** action. The first runs the command in a shell from Quicksilver and displays the result in a new Quicksilver command window, the second does so in a new Terminal window. You can also use these actions with a command from the Bash Command History catalog source. If you look through your history often you might want a trigger for Bash Command History (Catalog) (**Show Contents**). These commands can be handy when the Dock gets confused. E.g., you can do `killall Dock` with the **Run Command in Shell** action to kill the Dock and have it automatically restarted.
 
@@ -62,7 +62,7 @@ If you are an Emacs user, here’s an Emacs command to pass the current file (of
          (error "Not visiting a file or file doesn’t exist"))))
 ```
 
-Here’s another function.  It will send the contents of the Emacs region to Quicksilver as text. With the text in the first pane you can do whatever Quicksilver can do with it, e.g., the **Find With…** action or the **E-mail to…** actions. I bind it to “C-c w” using: `(global-set-key "\C-cw" 'region-to-quicksilver)`
+Here’s another function. It will send the contents of the Emacs region to Quicksilver as text. With the text in the first pane you can do whatever Quicksilver can do with it, e.g., the **Find With…** action or the **E-mail to…** actions. I bind it to “C-c w” using: `(global-set-key "\C-cw" 'region-to-quicksilver)`
 
 ```emacs-lisp
 (defun region-to-quicksilver (start end)

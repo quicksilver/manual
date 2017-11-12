@@ -36,7 +36,7 @@ Without a Dock icon, Quicksilver runs as a background process. This means it won
 
 The “Show icon in menu bar” preference puts an indicator in the top right part of the screen, some people like this, particularly if they don’t configure a Dock icon or have their Dock hidden. It provides a simplified menu to access the various configuration panes of Quicksilver. For access to the full menu options (via more sub-menus) set the option “Include access to all menu items from menu bar”. 
 
-The next section controls if and how Quicksilver checks its website automatically for updates both for updates to Quicksilver and for all installed plugins.  It can be configured to check on launch, daily, weekly or monthly. The Check Now button will, not surprisingly, check immediately for an update. 
+The next section controls if and how Quicksilver checks its website automatically for updates both for updates to Quicksilver and for all installed plugins. It can be configured to check on launch, daily, weekly or monthly. The Check Now button will, not surprisingly, check immediately for an update. 
 
 The three buttons at the bottom will rerun the installation setup described in the [Installation](introduction#Installation) section, Reset Quicksilver’s preferences, and completely Uninstall Quicksilver.
 
@@ -136,7 +136,7 @@ Checking a plugin will enable it, downloading and installing it if necessary. Se
 
 To disable a plugin, uncheck it. Its features will no longer be available but its code will still be loaded into memory. To clean up this memory (possibly fixing stability issues), restart Quicksilver. The plugin is still installed on disk (so it will appear unchecked in the Installed Plugins view) until it is deleted. So, to uninstall a plugin, select it from the list and choose the Delete Selected Plugins option from the menu.
 
-If you expect to see a plugin in the list and don’t, try refreshing the list of plugins.  
+If you expect to see a plugin in the list and don’t, try refreshing the list of plugins. 
 
 If you’re having problems installing plugins check the ownership and permissions on `~/Library/Application Support/Quicksilver/PlugIns/` and its parent directory. Use the Finder’s Get Info command (from the File menu) to see the Ownership & Permissions of a folder. It should be owned by you and you should have permission to read and write it. Usually quitting Quicksilver and removing (or moving) the PlugIns folder or its parent Quicksilver folder and restarting Quicksilver (allowing it to recreate the folder) will solve any problems. Of course removing the Quicksilver folder will remove any customizations you’ve made.
 
@@ -184,7 +184,7 @@ TODO
 
 ## Handlers
 
-Quicksilver not only makes it easier to work with a variety of applications, it sometimes uses other applications to perform commands. These are configurable in the Handlers Preferences pane.  The list of handlers varies based on which plugins are installed. Shown here are all the handlers available as of B51.
+Quicksilver not only makes it easier to work with a variety of applications, it sometimes uses other applications to perform commands. These are configurable in the Handlers Preferences pane. The list of handlers varies based on which plugins are installed. Shown here are all the handlers available as of B51.
 
 - **E-mail** - Mail program to use for E-mail actions (Mail, Gmail, Entourage, or Mailsmith).
 - **Instant Messaging** - IM program to use for IM and chat actions (iChat or Adium).
@@ -228,7 +228,7 @@ Regardless of which type you choose, a special command window appears (populated
 
 By default, triggers are available whenever Quicksilver is running, regardless of what application is active. They can also be limited to function only when a certain application is active or when a certain application is not active. You do this by opening the drawer for a trigger and choosing the Scope tab. The default is “Enabled in all applications” but you can also choose from the popup “Enabled in selected applications” or “Disabled in selected applications”. For the latter two you can type the name of the application into the large box and type tab after the name to have it turn into a blue button. You can then enter another application if you choose. Unfortunately as of B51, you cannot drag and drop an application into the pane.
 
-One place I use this is for a BlogThis bookmarklet in Safari. Like any bookmarklet it is javascript, which in this case opens a small browser window with a blog entry form and the current URL filled in. Since Safari treats it as a bookmark I can’t easily assign a shortcut to it. So I have a Quicksilver keyboard trigger which opens that bookmark (it’s in the Catalog with the other Safari bookmarks) and I have the scope set to work only when Safari is active because it’s not useful in any other application. This way if I accidentally type the shortcut, nothing will happen.  You should be able to configure different commands on the same shortcut scoped to different applications but in B51 it doesn’t seem to work.
+One place I use this is for a BlogThis bookmarklet in Safari. Like any bookmarklet it is javascript, which in this case opens a small browser window with a blog entry form and the current URL filled in. Since Safari treats it as a bookmark I can’t easily assign a shortcut to it. So I have a Quicksilver keyboard trigger which opens that bookmark (it’s in the Catalog with the other Safari bookmarks) and I have the scope set to work only when Safari is active because it’s not useful in any other application. This way if I accidentally type the shortcut, nothing will happen. You should be able to configure different commands on the same shortcut scoped to different applications but in B51 it doesn’t seem to work.
 
 Note if you have triggers that use certain features, be cautious about deleting the plugins that supply those features. In particular if you have triggers using mouse gestures from Abracadabra (see below) and if you remove the Abracadabra plugin, the trigger panel may display oddly with some blank lines and missing icons. To correct this, reinstall the plugin (Abracadabra in this case), remove the triggers, and uninstall the plugin.
 
@@ -344,7 +344,7 @@ A delay can be useful for some dangerous commands that you don’t want to execu
 
 TODO: You can define combinations of triggers to do one operation on immediate press and a second on a press an hold. E.g., you can define <kbd>⌃</kbd><kbd>⌘</kbd><kbd>I</kbd> to open your Inbox and a second <kbd>⌃</kbd><kbd>⌘</kbd><kbd>I</kbd> trigger to Get New Mail if you hold it down for 2 seconds. (one key for mail, holding it checks for new mail and then opens it) You can also configure triggers that use two scripts, one on start, one on finish.
 
-If you create a lot of keyboard triggers it’s probably best to use some system to remember them.  Some people put applications on their function keys, others use mnemonic keys like <kbd>⌃</kbd><kbd>⌘</kbd><kbd>S</kbd> for Safari. In examples above <kbd>⌃</kbd><kbd>⌘</kbd><kbd>W</kbd> did a Wikipedia search and adding a <kbd>⇧</kbd> to the shortcut did the same thing with the current selection. Someone posted on the forums a scheme using <kbd>⌥</kbd><kbd>⌘</kbd><kbd>*letter*</kbd> and <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>*letter*</kbd> for Applications, <kbd>⇧</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>*letter*</kbd> for Folders , <kbd>⇧</kbd><kbd>⌃</kbd><kbd>⌘</kbd><kbd>*letter*</kbd> for iChat buddies. The important thing is to find something that works for you. It can be difficult to work around keys used by applications you use (particularly if you use TextMate or Emacs), but it can be done. The next sections describe using triggers with the mouse instead of shortcuts.
+If you create a lot of keyboard triggers it’s probably best to use some system to remember them. Some people put applications on their function keys, others use mnemonic keys like <kbd>⌃</kbd><kbd>⌘</kbd><kbd>S</kbd> for Safari. In examples above <kbd>⌃</kbd><kbd>⌘</kbd><kbd>W</kbd> did a Wikipedia search and adding a <kbd>⇧</kbd> to the shortcut did the same thing with the current selection. Someone posted on the forums a scheme using <kbd>⌥</kbd><kbd>⌘</kbd><kbd>*letter*</kbd> and <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>*letter*</kbd> for Applications, <kbd>⇧</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>*letter*</kbd> for Folders , <kbd>⇧</kbd><kbd>⌃</kbd><kbd>⌘</kbd><kbd>*letter*</kbd> for iChat buddies. The important thing is to find something that works for you. It can be difficult to work around keys used by applications you use (particularly if you use TextMate or Emacs), but it can be done. The next sections describe using triggers with the mouse instead of shortcuts.
 
 # Using the Mouse
 

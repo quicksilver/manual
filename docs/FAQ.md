@@ -2,7 +2,7 @@
 
 ## Quicksilver uses lots of memory, cpu or hangs:
 
-Quicksilver keeps the entire index in memory and scans the catalog sources regularly.  Usually when it uses too many resources it’s because the catalog is configured too large. The default ~/Documents/ source is configured to a depth of 2, if you create a custom source of infinite depth it will make the catalog large.  Also if you configure a source for your home directory (~) it will probably scan many unnecessary files (~/Library, etc.). This is also why your music and pictures aren’t in the global catalog and should be accessed via the iTunes and iPhoto plugins which require you to type → to get into your music files and photos.  
+Quicksilver keeps the entire index in memory and scans the catalog sources regularly. Usually when it uses too many resources it’s because the catalog is configured too large. The default ~/Documents/ source is configured to a depth of 2, if you create a custom source of infinite depth it will make the catalog large. Also if you configure a source for your home directory (~) it will probably scan many unnecessary files (~/Library, etc.). This is also why your music and pictures aren’t in the global catalog and should be accessed via the iTunes and iPhoto plugins which require you to type → to get into your music files and photos. 
 
 Also if you have network drives configured to be scanned that can make the catalog large or take a while. Note the Find All Applications catalog source (in the Applications set) will scan your entire machine, including network drives for applications. A comfortable size for your catalog will vary based on the capabilities of your computer, I try to keep my catalog below 5000 items.
 
@@ -12,7 +12,7 @@ Also, if you have the Clipboard Module plugin installed and configured in the Cl
 
 you can check it’s size. I have my clipboard history set to 100 and the file is 512KB. To clear it you can use the clear button in the Clipboard History panel or while Quicksilver is not running, delete the above file.
 
-If you open the drawer for catalog sources, in the Contents tab you’ll find all the items found for that source. Clicking on the headings in this tab will sort the list. Large catalog sources (500 or more) will take a long time to sort and use lots of memory. If I accidentally sort my Documents with 2000 items I ultimately force quit Quicksilver since it uses 60-80% CPU and several hundred MB of real memory. Be careful as the sort order applies globally.  If you sort a small source it works fine, if you then (even accidentally) click on a large source it will eat up resources. A Quicksilver restart resets the contents tab to be unsorted.
+If you open the drawer for catalog sources, in the Contents tab you’ll find all the items found for that source. Clicking on the headings in this tab will sort the list. Large catalog sources (500 or more) will take a long time to sort and use lots of memory. If I accidentally sort my Documents with 2000 items I ultimately force quit Quicksilver since it uses 60-80% CPU and several hundred MB of real memory. Be careful as the sort order applies globally. If you sort a small source it works fine, if you then (even accidentally) click on a large source it will eat up resources. A Quicksilver restart resets the contents tab to be unsorted.
 
 ## Quicksilver doesn’t find my files
 
@@ -24,7 +24,7 @@ Yes, unfortunately this is a problem in B51.
 
 ## Quicksilver crashes
 
-A few plugin are destabilizing. In particular the Developer Module and Running Applications plugins.  Try disabling them and see if things improve. TODO: Otherwise, check the log in Console.app to see if there is some log message hinting at what might have gone wrong. 
+A few plugin are destabilizing. In particular the Developer Module and Running Applications plugins. Try disabling them and see if things improve. TODO: Otherwise, check the log in Console.app to see if there is some log message hinting at what might have gone wrong. 
 
 If Quicksilver crashes at startup, see if you have a `~/Library/Application Support/Quicksilver/Shelves/` folder. Quit  Quicksilver, move it out of the way and start Quicksilver again. Sometimes the shelf gets corrupted.
 
@@ -40,7 +40,7 @@ No, they do different things and are in fact complementary. Spotlight scans insi
 
 ## I don’t see feature X
 
-Make sure you have the appropriate plugin(s) installed.  If it’s an action you don’t see, check in the Action Preferences that the action is enabled (checked). If it’s something in the first pane you don’t see, make sure it’s enabled in the catalog and scanned (so that the catalog source has a number next to the checkbox). This manual tries to be very precise in describing how to enable each feature it describes.
+Make sure you have the appropriate plugin(s) installed. If it’s an action you don’t see, check in the Action Preferences that the action is enabled (checked). If it’s something in the first pane you don’t see, make sure it’s enabled in the catalog and scanned (so that the catalog source has a number next to the checkbox). This manual tries to be very precise in describing how to enable each feature it describes.
 
 ## The Quicksilver .dmg doesn’t mount
 
@@ -48,14 +48,14 @@ If you downloaded it with Safari, look to see if the downloaded file’s name en
 
 ## The third pane is empty
 
-If the TextMate Ranker is installed, uninstall it and restart Quicksilver.  It’s known to break selecting items in the third pane, e.g., when using the **Open With…** or **E-mail to…** actions.  If you’re trying to get contacts, make sure the correct plugin is installed (e.g., Contacts) and check that they are enabled in the catalog (can you get to them in the first pane?).
+If the TextMate Ranker is installed, uninstall it and restart Quicksilver. It’s known to break selecting items in the third pane, e.g., when using the **Open With…** or **E-mail to…** actions. If you’re trying to get contacts, make sure the correct plugin is installed (e.g., Contacts) and check that they are enabled in the catalog (can you get to them in the first pane?).
 
 ## Triggers don’t save
 
 TODO: There are usually 3 things that come up with triggers that don’t save.
 
-1. So-called dynamic triggers don’t save.  That is the something like Mail (**Get New Mail**) won’t save because the **Get New** action come from QS inspecting Mail.app (it’s not listed in the actions prefs).  Or a trigger using the *Menu Bar Items...* action with the third pane filled in, won’t save.
-2. Triggers are saved in `~/Library/Application Support/Quicksilver/Triggers.plist` if the permissions of that file or directory don’t allow you to write, then no trigger will be saved.  There have also been reports of this file becoming corrupted.
+1. So-called dynamic triggers don’t save. That is the something like Mail (**Get New Mail**) won’t save because the **Get New** action come from QS inspecting Mail.app (it’s not listed in the actions prefs). Or a trigger using the *Menu Bar Items...* action with the third pane filled in, won’t save.
+2. Triggers are saved in `~/Library/Application Support/Quicksilver/Triggers.plist` if the permissions of that file or directory don’t allow you to write, then no trigger will be saved. There have also been reports of this file becoming corrupted.
 3. If you have triggers using actions from some plugin and then uninstall that plugin, the triggers remain and QS can be confused. Sometimes a particular trigger doesn’t display, sometimes only one of many triggers appears in the prefs. To fix, reinstall the needed plugins, delete the related triggers, then remove the plugin.
 
 ## Leopard Specific Things
