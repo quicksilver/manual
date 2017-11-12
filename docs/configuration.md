@@ -32,7 +32,7 @@ The Application Preferences control the most fundamental aspects of Quicksilver 
 
 Quicksilver shows an icon in the Dock like most applications, but many people prefer to disable this. Uncheck the box to disable the Dock icon. The ⌽ symbol indicates Quicksilver must be restarted before the change will take affect. The easy way to restart is to activate Quicksilver (<kbd>⌃</kbd><kbd>space</kbd>) and then type <kbd>⌃</kbd><kbd>⌘</kbd><kbd>Q</kbd>
 
-Without a Dock icon, Quicksilver runs as a background process. This means it won’t appear in the Dock or when switching apps with <kbd>⌘</kbd><kbd>tab</kbd> and the main Quicksilver menu will not appear while the preference window is open. I tend to keep it in the Dock so that it’s easy to restart if Quicksilver crashes (though this is less of a problem as of 1.0). 
+Without a Dock icon, Quicksilver runs as a background process. This means it won’t appear in the Dock or when switching apps with <kbd>⌘</kbd><kbd>⇥</kbd> and the main Quicksilver menu will not appear while the preference window is open. I tend to keep it in the Dock so that it’s easy to restart if Quicksilver crashes (though this is less of a problem as of 1.0). 
 
 The “Show icon in menu bar” preference puts an indicator in the top right part of the screen, some people like this, particularly if they don’t configure a Dock icon or have their Dock hidden. It provides a simplified menu to access the various configuration panes of Quicksilver. For access to the full menu options (via more sub-menus) set the option “Include access to all menu items from menu bar”. 
 
@@ -97,7 +97,7 @@ The Extras Preferences have some advanced options.
 
 Since the matching algorithm is case-insensitive the shift key is available for some use in Quicksilver. If you check “Capitalize Key modifies action in command window“ then shifted letters are used to select the action, eliminating the need to tab to the second pane. Once moved to the action pane, unshifted letters don’t change the first pane, all typing counts for the second pane. If you also hold down the <kbd>⌘</kbd> key the action will be performed immediately, no need to type return. E.g., <kbd>⇧</kbd><kbd>I</kbd> selects the action for i (perhaps **IM**) while <kbd>⇧</kbd><kbd>⌘</kbd><kbd>I</kbd> performs the action for i. Use caution as it’s not always clear which action is invoked.
 
-If you prefer concentrating on one thing at a time, check “Hide other applications when switching” so that Quicksilver will do a “Hide Others” after switching applications. You can prevent the hiding behavior by holding down the shift key when completing the command. There have been problems reported with this feature that applications no longer appear when doing <kbd>⌘</kbd><kbd>tab</kbd>.
+If you prefer concentrating on one thing at a time, check “Hide other applications when switching” so that Quicksilver will do a “Hide Others” after switching applications. You can prevent the hiding behavior by holding down the shift key when completing the command. There have been problems reported with this feature that applications no longer appear when doing <kbd>⌘</kbd><kbd>⇥</kbd>.
 
 Normally <kbd>⌘</kbd><kbd>G</kbd> will take the Finder’s selection and put it into Quicksilver. By checking the “Pull selection from front application instead of Finder” option, it will use the same mechanism as <kbd>⌘</kbd><kbd>esc</kbd> and will pull the selection from whatever the active application is. See more details at [Invoking Quicksilver](introduction#invoking-quicksilver).
 
@@ -423,7 +423,7 @@ Those are the basics. You can of course use radial menus for lots of things and 
 
 Here are some examples of objects to use the **Show Radial Menu** action on. Many of these are proxy objects which you must enable in the catalog under Quicksilver, Proxy Objects.
 
-- Visible Applications - this is a cool mouse-based alternative to the <kbd>⌘</kbd><kbd>tab</kbd> method of switching applications. (shown at right).
+- Visible Applications - this is a cool mouse-based alternative to the <kbd>⌘</kbd><kbd>⇥</kbd> method of switching applications. (shown at right).
 - Track Now Playing - Shows a four part menu of the album, artist, genre, and composer of the current track, ready for easy browsing.
 - Artist Now Playing - this shows all the albums by this artist you have in iTunes (with album art)
 - Clipboard History 
@@ -438,7 +438,7 @@ Instead of using the comma trick you can collect useful things in a folder. Here
 
 ## Command Objects and Droplets
 
-Commands in Quicksilver can be represented as objects in Quicksilver. To create a command object, activate Quicksilver and enter a command as you normally do, but instead of typing return to execute it, instead type <kbd>⌃</kbd><kbd>return</kbd>. You’ll see a new command window appear in which the object is a new command object of the command you entered and a default action which is probably **Run**.
+Commands in Quicksilver can be represented as objects in Quicksilver. To create a command object, activate Quicksilver and enter a command as you normally do, but instead of typing return to execute it, instead type <kbd>⌃</kbd><kbd>↩</kbd>. You’ll see a new command window appear in which the object is a new command object of the command you entered and a default action which is probably **Run**.
 
 Other actions that work on commands include **Run**, **Run after Delay...**, and **Run at Time...**. The first, **Run**, is obvious and not particularly useful since just executing the command without creating a command object is easier. The other two are useful as alarms when used with actions like **Large Text** or **Display Dialog**. A delay period is entered as a decimal number followed by an h, m or s to indicate hours, minutes or seconds. E.g., 2h, 10m, 90s, or 1.5h. A number without a suffix is interpreted as minutes. You can combine these separated by spaces such as 2m 30s. You can also enter a time format such as minutes:seconds or hours:minutes:seconds. For example 9:35 or 2:11:30. I believe you can also enter decimal numbers with colons like 1.5:10:00 for 100 minutes but that is probably not useful.
 
