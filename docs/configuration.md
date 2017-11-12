@@ -109,7 +109,7 @@ If you enable “Disable Keyboard Triggers when Quicksilver is focused” then k
 
 ## Interfaces
 
-Interface plugins change the look of Quicksilver’s command window. Install them just like other plugins from the Plugins Preferences. Then select one of the installed interfaces in the Appearance Preference pane using the Command Interface popup. If you use a program like VNC to connect to different machines, you might want to configure them with different interfaces or change the colors on the interface to distinguish them.
+Interface plugins change the look of Quicksilver’s command window. Install them just like other plugins from the Plugins Preferences. Then select one of the installed interfaces in the Appearance Preference pane using the Command Interface popup. If you use a program like VNC to connect to different machines, you might want to configure them with different interfaces or change the colors on the interface to distinguish them.
 
 The following screenshots show each of the six interfaces at full size so for comparison purposes. These are all the official interfaces available from the Plugins Preferences. 
 

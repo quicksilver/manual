@@ -24,7 +24,7 @@ If you want it even faster. Setup a trigger. This way you can bring up your choi
 
 Show Children Split View
 
-My `~/Applications/` has enough in it I've started putting some sub-folders.  But they don’t show up in the catalog If i create a custom entry I get folders inside the `.apps` (e.g., Contents) I can’t figure out how to select a folder in the Source Options.  Any hints? so I'd like my `.apps` and the folders in the catalog but not what is inside the packages
+My `~/Applications/` has enough in it I've started putting some sub-folders.  But they don’t show up in the catalog If i create a custom entry I get folders inside the `.apps` (e.g., Contents) I can’t figure out how to select a folder in the Source Options.  Any hints? so I'd like my `.apps` and the folders in the catalog but not what is inside the packages
 
 hmelman: can’t you specify types of things that get added to the catalog?
 
