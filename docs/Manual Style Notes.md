@@ -16,7 +16,9 @@ The Features section covers all the plugins, in detail. Each section includes ge
 
 ## Formatting
 
-  * When giving examples of something to type, wrap each physical key in a `<kbd>` tag. For example, <kbd>⌘</kbd><kbd>A</kbd>, not <kbd>⌘A</kbd>. Don’t hesitate to use multiple characters to represent a single physical key if it makes sense, like <kbd>Space</kbd>.
+  * When giving examples of something to type, wrap each physical key in a `<kbd>` tag. For example, <kbd>⌘</kbd><kbd>A</kbd>, not <kbd>⌘A</kbd>.
+    * Don’t hesitate to use multiple characters to represent a single physical key if it makes sense, like <kbd>Space</kbd>.
+    * Show letter keys using upper-case, since that’s how they appear on most keyboards. If the user is expected to hold <kbd>⇧</kbd>, be explicit and show it.
   * Indent ordered and unordered lists by two characters before the asterisk or number. It makes them stand out better in the plain-text version, and if you ever need to include a second paragraph, the indentation of the text will look more natural. (Markdown requires follow-on paragraphs to be indented by 4 spaces. If the bullet is indented by 2, the text for the first line will naturally start at 4, lining it up with subsequent lines.)
   * Wrap the following in ticks to have them formatted using a fixed-width font:
     * File names
