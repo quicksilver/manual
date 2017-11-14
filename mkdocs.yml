@@ -24,3 +24,5 @@ pages:
     - Extending Quicksilver.md
     - Random Notes.md
     - Style Guide.md
+extra_css:
+    - css/qs.css

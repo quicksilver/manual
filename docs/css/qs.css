@@ -1,0 +1,22 @@
+.col-md-9 {
+  font-size: 12pt;
+}
+
+kbd {
+  font-family: "Monaco", monospace;
+  font-size: 10pt;
+  background-color: #303030;
+  margin-right: 1pt;
+}
+
+.navbar {
+  background: #623876;
+}
+
+a {
+  color: #623876;
+}
+
+a:hover {
+  color: #606060;
+}
