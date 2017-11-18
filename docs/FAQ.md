@@ -48,7 +48,7 @@ If you downloaded it with Safari, look to see if the downloaded file’s name en
 
 ## The third pane is empty
 
-If the TextMate Ranker is installed, uninstall it and restart Quicksilver. It’s known to break selecting items in the third pane, e.g., when using the **Open With…** or **E-mail To…** actions. If you’re trying to get contacts, make sure the correct plugin is installed (e.g., Contacts) and check that they are enabled in the catalog (can you get to them in the first pane?).
+If the TextStart Ranker is installed, uninstall it and restart Quicksilver. It’s known to break selecting items in the third pane, e.g., when using the **Open With…** or **E-mail To…** actions. If you’re trying to get contacts, make sure the correct plugin is installed (e.g., Contacts) and check that they are enabled in the catalog (can you get to them in the first pane?).
 
 ## Triggers don’t save
 
