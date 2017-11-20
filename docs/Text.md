@@ -34,6 +34,10 @@ The [Chat](Chat.md) section describes the instant messager actions. **IM to Acco
 
 The [Calendar](Calendar.md) section describes creating calendar events and to-dos in iCal and Google Calendar. These use specially formatted text to not only name the event or to-do but to set dates, times and priorities. **Create iCal Event** and **Create iCal To-Do** take a calendar as an argument in the third pane.
 
+## String Sniffing
+
+TODO
+
 ## Dictionary
 
 The Dictionary Module plugin provides access to the macOS built-in dictionary. Enter a word in the object pane and use either the **Dictionary** or **Thesaurus** actions to access macOS’s dictionary. Regardless of how the Dictionary preferences are configured, the **Dictionary** action shows the definition in a smaller panel (shown here).
