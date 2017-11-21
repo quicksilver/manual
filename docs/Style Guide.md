@@ -26,6 +26,7 @@ The Features section covers all the plugins, in detail. Each section includes ge
     * Inline commands
     * Inline code snippets
   * Action names should be in **bold**.
+  * Display full commands using “⇥” as a separator, as in Direct Object ⇥ **Action** ⇥ Indirect Object. It’s a decent enough visual separator and it’s literally what you would hit to move from one part of the command to another. Skip the `<kbd>` tag here, as it’s too visually heavy.
   * Images of example commands should use the Bezel interface with the default colors. It’s popular, built-in, and smaller than Primer. Obviously use other interfaces if it’s important for some feature/concept.
   * Use bidirectional (a.k.a. smart or curly) quotes when speaking to the reader. Use unidirectional (a.k.a. straight) quotes in contexts where it makes sense, such as code snippets where bidirectional quotes would actually prevent the code from working.
 
@@ -33,7 +34,7 @@ The Features section covers all the plugins, in detail. Each section includes ge
 
   * Use the unicode symbols for various keys (as they appear in menu shortcuts)
     * Enter the applicable modifiers in the correct order: <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd>
-  	* Use these where appropriate: <kbd>→</kbd>, <kbd>←</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>⌫</kbd>, and <kbd>⎋</kbd>. If you don’t know how to type the character that represents a particular key, you can almost certainly find it somewhere else in this manual and copy it.
+  	* Use these symbols to represent keystrokes where appropriate: <kbd>→</kbd>, <kbd>←</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>⇥</kbd>, <kbd>⌫</kbd>, and <kbd>⎋</kbd>. If you don’t know how to type the character that represents a particular key, you can almost certainly find it somewhere else in this manual and copy it.
   	* The Quicksilver preference pane has buttons on the bottom bar. Use these when referring to them: ↻ ⓘ
   * Put images in the `images` directory.
   * Describe the location of something in the preferences using arrows. For example, Preferences → General → Actions
