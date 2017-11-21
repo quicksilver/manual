@@ -23,7 +23,7 @@ If entering information directly into iCal seems easier than remembering a text 
 
 They will make iCal be the active application, opening the window and bringing it to the front if hidden or minimized. The new event or to-do is created and selected, ready to have the name changed and other information entered. Making triggers for the above would be very convenient but as of B51 triggers using the **Menu Bar Items…** action and the third pane filled in don’t save. Hopefully this will be fixed in a future version.
 
-For a little more flexibility with creating events, some people like the free OSX service Calendar Creator. This installs two Services, Add Calendar Event and Add To Do. See Calendar Creator’s documentation for what it can parse. With the Quicksilver Services Menu Module plugin installed any text can be sent to these services via Quicksilver.
+For a little more flexibility with creating events, some people like the free macOS service Calendar Creator. This installs two Services, Add Calendar Event and Add To Do. See Calendar Creator’s documentation for what it can parse. With the Quicksilver Services Menu Module plugin installed any text can be sent to these services via Quicksilver.
 
 ## Google Calendar Module
 

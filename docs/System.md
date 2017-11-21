@@ -74,7 +74,7 @@ The Extra Scripts plugin is really just a catch-all of various scripts, but most
 	- Quit Visible Apps
 	- LockScreen - runs the screen saver and makes you type a password to get back
 	- Logout - same as <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Q</kbd> (or is it <kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Q</kbd>?)
-	- Fast Logout - leaves you logged in, but goes to a login window (OSX’s Fast User Switching)
+	- Fast Logout - leaves you logged in, but goes to a login window (macOS’s Fast User Switching)
 	- Switch To Root
 	- Classic Shutdown
 	- top 10 - use Run in Terminal… as it outputs 10 lines of text for the 10 busiest applications
