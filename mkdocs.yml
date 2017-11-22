@@ -1,8 +1,8 @@
 site_name: Quicksilver Manual
 pages:
   - Home: index.md
-  - Introduction: introduction.md
-  - Configuration: configuration.md
+  - Introduction: Introduction.md
+  - Preferences: Preferences.md
   - Features:
     - Files and Folders.md
     - Applications and Processes.md
