@@ -1,10 +1,6 @@
 # Quicksilver Manual
 
-_Quicksilver is a powerful interface for your Mac, letting you perform countless actions entirely with the keyboard._
-
-[Download Quicksilver](https://qsapp.com/download.php)
-
-![Quicksilver Interface](images/quicksilver_interface.png)
+Quicksilver is a powerful interface for your Mac, letting you perform countless actions entirely with the keyboard.
 
 # How To Read this Manual
 
@@ -21,6 +17,6 @@ Each section includes general usage and configuration instructions, as well as t
 | Section | Topics | New Users | Experienced Users |
 | ---- | ------ | --------- | ----------------- |
 | Introduction | Introduction, installation, basic usage | Read thoroughly | Skim |
-| Configuration | Preferences and configuration | Skim, refer back to when needed | Read thoroughly |
+| Preferences | Preferences and configuration | Skim, refer back to when needed | Read thoroughly |
 | Features | Plugins grouped by categories | Read sections of interest. Look up unfamiliar things in the introduction and configuration sections. | Read sections of interest |
 | Appendix | Troubleshooting and extending | Read as needed | Read as needed |
