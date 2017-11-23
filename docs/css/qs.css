@@ -1,3 +1,7 @@
+body {
+  background: none;
+}
+
 .col-md-9 {
   font-size: 12pt;
 }
@@ -9,14 +13,35 @@ kbd {
   margin-right: 1pt;
 }
 
-.navbar {
-  background: #623876;
-}
-
 a {
   color: #623876;
 }
 
 a:hover {
   color: #606060;
+}
+
+.navbar {
+  background: #623876;
+  border-bottom: none;
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > li > a:hover
+{
+  background-color: #989898;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.dropdown-menu > .active > a,
+.dropdown .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > li > a:focus,
+.dropdown-menu > li > a:focus
+{
+  background-color: #917d9b;
 }
