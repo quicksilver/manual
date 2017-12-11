@@ -26,3 +26,5 @@ pages:
     - Style Guide.md
 extra_css:
     - css/qs.css
+markdown_extensions:
+  - admonition
