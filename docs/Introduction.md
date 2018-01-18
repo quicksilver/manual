@@ -123,7 +123,10 @@ The **_Catalog_** is the collection of objects that can be selected in Quicksilv
 
 For example, there is a source for Safari which indexes bookmarks and history into the catalog. Each bookmark is an object in Quicksilver. So are files and folders in the home directory, contacts in Contacts, all the apps in the Applications directory, the playlists in iTunes, and many other things (provided the appropriate plugins are installed). Note that some plugins (such as Remember the Milk) allow Quicksilver to index things stored on web servers and not merely things on the hard drive.
 
-Scanning to keep the Catalog up-to-date is done in the background at regular intervals (every 10 minutes by default). Many new users worry about a performance hit from frequent scanning. *Don’t.* The first part of the scanning process for any catalog entry is to ask “Has anything changed?” and the answer is almost always “No”. In general, only things that have been touched since that last scan will get scanned again.
+Scanning to keep the Catalog up-to-date is done in the background at regular intervals (every 10 minutes by default).
+
+!!! note "Relax"
+    Many new users worry about a performance hit from frequent scanning. *Don’t.* The first part of the scanning process for any catalog entry is to ask “Has anything changed?” and the answer is almost always “No”. In general, only things that have been touched since that last scan will get scanned again.
 
 ## Actions
 
@@ -149,15 +152,14 @@ There are also unfortunately some actions like **Make New…** which have no com
 
 ## Matching
 
-Objects, actions, and arguments are selected by typing. As each letter is typed the choices are filtered down from all possible choices to only those that match the input, and those objects are shown in the results list. You won’t see a typical “Search” input box that displays what you type. (If you’re doing it [right](#always-think-in-terms-of-abbreviations), what you type will probably be unreadable garbage anyway.) Instead, you will see the characters you typed underlined in the top match.
+Objects, actions, and arguments are selected by typing. As each letter is typed the choices are filtered down from all possible choices to only those that match the input, and those objects are shown in the results list. You won’t see a typical “Search” input box that displays what you type. (If you’re doing it right, what you type will probably be unreadable garbage anyway.) Instead, you will see the characters you typed underlined in the top match.
 
 The matching method is one of the strengths of Quicksilver. Matches can be by the beginning of the name (e.g., <kbd>D</kbd><kbd>E</kbd><kbd>S</kbd><kbd>K</kbd> for “Desktop”), or by initials (e.g., <kbd>B</kbd><kbd>A</kbd> for “Browse Artists” which is an iTunes object), or some combination of those. As long as the letters you type appear _somewhere_ in an object’s name in the order you type them, **not necessarily next to each other**, the object will match.
 
 The more items (objects and actions) are used, the higher they appear in the list of results. After typing <kbd>D</kbd><kbd>E</kbd><kbd>S</kbd> a few times, Quicksilver will start guessing “Desktop”, and if done often enough, it will start matching after just <kbd>D</kbd>. 
 
-### Always think in terms of abbreviations!
-
-Much of the value of using Quicksilver is that, unlike other systems, you don’t need to type <kbd>Q</kbd><kbd>U</kbd><kbd>I</kbd><kbd>C</kbd><kbd>K</kbd><kbd>T</kbd><kbd>I</kbd><kbd>M</kbd><kbd>E</kbd><kbd>Space</kbd><kbd>P</kbd><kbd>L</kbd><kbd>A</kbd>, etc. to find QuickTime Player. Just type <kbd>Q</kbd><kbd>T</kbd><kbd>P</kbd><kbd>L</kbd> or even just <kbd>Q</kbd><kbd>T</kbd>. Quicksilver will quickly learn which abbreviations refer to which things in your head.
+!!! note "Always think in terms of abbreviations!"
+    Much of the value of using Quicksilver is that, unlike other systems, you don’t need to type <kbd>Q</kbd><kbd>U</kbd><kbd>I</kbd><kbd>C</kbd><kbd>K</kbd><kbd>T</kbd><kbd>I</kbd><kbd>M</kbd><kbd>E</kbd><kbd>Space</kbd><kbd>P</kbd><kbd>L</kbd><kbd>A</kbd>, etc. to find QuickTime Player. Just type <kbd>Q</kbd><kbd>T</kbd><kbd>P</kbd><kbd>L</kbd> or even just <kbd>Q</kbd><kbd>T</kbd>. Quicksilver will quickly learn which abbreviations refer to which things in your head.
 
 ## Children
 
@@ -306,7 +308,8 @@ You can manually adjust the score of an item by <kbd>⌃</kbd>-clicking on it to
 
 Setting a default works for what you’ve typed, but say you want to set as a default something that is mid-way in a very long list that you don’t want to scroll through. As an example say you want “Z” to bring up your Amazon bookmark and that if you type <kbd>Z</kbd>, Amazon is further down the list than you want to look. In that case, use the **Assign Abbreviation** action. Bring up the object you want in the first pane (www.amazon.com), choose **Assign Abbreviation** as the action, and in the third pane enter the abbreviation you want via text mode (<kbd>Z</kbd>). Now if you type that abbreviation in either the first or third pane, your choice will be ranked first. This happens because exactly matching an abbreviation causes the item to have a very high score.
 
-Note: Abbreviations will only work if they match the input string in some way. You can’t set <kbd>I</kbd><kbd>R</kbd><kbd>C</kbd> to be an abbreviation for `Colloquy.app` because if you typed <kbd>I</kbd><kbd>R</kbd><kbd>C</kbd>, Colloquy would not appear in the results list. Say you don’t use Activity Monitor often and when you want it you can never remember its name but you think of the word “processes”. Searching for “proc” won’t work since those letters don’t appear in “Activity Monitor”. [Synonyms](#synonyms) were created for situations like this.
+!!! note
+    Abbreviations will only work if they match the input string in some way. You can’t set <kbd>I</kbd><kbd>R</kbd><kbd>C</kbd> to be an abbreviation for `Colloquy.app` because if you typed <kbd>I</kbd><kbd>R</kbd><kbd>C</kbd>, Colloquy would not appear in the results list. Say you don’t use Activity Monitor often and when you want it you can never remember its name but you think of the word “processes”. Searching for “proc” won’t work since those letters don’t appear in “Activity Monitor”. [Synonyms](#synonyms) were created for situations like this.
 
 Actions in the second pane work a little differently. When they initially appear, their rank is statically determined by their order in the Actions Preferences. You can manually change the order in Preferences by dragging and dropping them. You can save time by making sure the action you use most often is automatically selected. Once you start typing in the second pane though, the order of actions is determined by the matching algorithm.
 
