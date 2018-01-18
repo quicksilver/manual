@@ -46,3 +46,12 @@ a:hover {
 {
   background-color: #917d9b;
 }
+.admonition {
+  background-color: #e4e3e5;
+}
+.admonition.important {
+  background-color: #f5d2cf;
+}
+.admonition.important > .admonition-title {
+  color: #720002;
+}
