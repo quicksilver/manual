@@ -226,6 +226,15 @@ Some other examples:
 
 Synonyms act just like the object they refer to, so they will have the same icon, the same children, and the same actions will be available in the second pane.
 
+To create a synonym:
+
+  1. Go to Preferences → Catalog
+  2. Click the + button at the bottom of the window
+  3. Choose “Synonym”
+  4. In the panel that appears, type a name for your synonym and hit <kbd>↩</kbd>
+  5. Click the search widget to search the catalog just like you would in Quicksilver’s main interface.
+  6. Once the desired object is selected, you can close the Preferences window
+
 ## Preset Details
 
 The **File & Folder Scanner** lets you add folders to scan into the catalog. You can also just drag folders into the main catalog pane to add a source.
