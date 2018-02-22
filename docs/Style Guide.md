@@ -10,7 +10,7 @@ Given that Quicksilver has so many functions and each user tends to have specifi
 
 The Introduction is intended for everyone to read through from beginning to end. New users find out what to use Quicksilver for and experienced users have terminology defined and perhaps learn some advanced invocation methods. 
 
-The Configuration section walks through all of Quicksilver’s preferences in depth, particularly how to install plugins and setup triggers so later sections could just refer to it.
+The Preferences section walks through all of Quicksilver’s preferences in depth, particularly how to install plugins and setup triggers so later sections could just refer to it.
 
 The Features section covers all the plugins, in detail. Each section includes general usage and configuration instructions, as well as troubleshooting hints and tips for using features more efficiently using advanced Quicksilver features. It includes every cool Quicksilver example I ever found. New users should be able to start using the features quickly and experienced users will probably find something new about many features. 
 

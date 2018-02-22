@@ -317,7 +317,7 @@ Actions in the second pane work a little differently. When they initially appear
 
 Continuing with the example above, where you naturally think of “processes” when looking for Activity Monitor, you can use **_synonyms_** to create an identical copy of something with a different name. In this case, you could create a synonym called “Processes” that refers to Activity Monitor. From then on, you can find it by searching for “proc”.
 
-Details on setting up synonyms can be found in the Configuration section.
+Details on setting up synonyms can be found in the Preferences section.
 
 ## TextStart Ranker
 
