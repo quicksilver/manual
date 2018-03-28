@@ -9,6 +9,7 @@ import json
 import logging
 from os import makedirs
 from pathlib import Path
+import plistlib
 import re
 from shutil import copyfile
 from subprocess import run
@@ -70,56 +71,72 @@ class Project(object):
         """
         self.config_path = config_path
         self.docs_dir = docs_dir
-
-    def load(self):
-        """Load project config."""
-        log.debug('Loading config from %s', self.config_path)
-        with open(self.config_path) as cfgfp:
-            self.config = yaml.load(cfgfp)
+        self.pluginstoc = {}
+        assert self.config_path.is_file()
+        assert self.docs_dir.is_dir()
 
     def save(self):
         """Save project config."""
         log.debug('Saving config to %s', self.config_path)
-        with open(self.config_path, 'w') as cfgfp:
-            yaml.dump(self.config, cfgfp, default_flow_style=False)
+        with open(self.config_path) as cfgfp:
+            config = yaml.load(cfgfp)
 
-    def import_plugin_doc(self, name, source_dir):
-        """Import doc file from plugin source_dir into project docs."""
-        pagestoc = self.config.setdefault('pages', [])
+        self._update_config(config)
+        with open(self.config_path, 'w') as cfgfp:
+            yaml.dump(config, cfgfp, default_flow_style=False)
+
+    def _update_config(self, config):
+        pagestoc = config.setdefault('pages', [])
+        pluginstoc = [{k: v} for k, v in sorted(self.pluginstoc.items())]
         for section in pagestoc:
             if 'Plugins' in section:
-                pluginstoc = section['Plugins']
+                # Warning: Overwrites the whole section
+                section['Plugins'] = pluginstoc
                 break
 
         else:
-            pluginstoc = []
             pagestoc.append({'Plugins': pluginstoc})
 
-        dstfile = self.docs_dir / 'plugins' / f'{name}.md'
-        entry = f'plugins/{name}.md'
-        log.debug('Importing %s documentation', name)
+    def import_plugin_doc(self, source_dir):
+        """Import doc file from plugin source_dir into project docs."""
+        log.debug('Importing plugin %s', source_dir)
+        name = source_dir.name[:-len('-qsplugin')]
+        fname = name.lower()
+        name = self._parse_info_plist(source_dir) or name
+        dstfile = self.docs_dir / 'plugins' / f'{fname}.md'
+        entry = f'plugins/{fname}.md'
         makedirs(dstfile.parent, exist_ok=True)
         for srcfile in Path(source_dir).iterdir():
-            if re.match('Documentation.m((ar)?k)?d((ow)?n)?', srcfile.name):
+            if re.match(r'Documentation.m((ar)?k)?d((ow)?n)?', srcfile.name):
                 log.debug('Copying %s -> %s', srcfile, dstfile)
                 copyfile(srcfile, dstfile)
-                log.debug('Adding %s to page index', entry)
-                for i, cmp in enumerate(pluginstoc):
-                    if cmp > entry:
-                        pluginstoc.insert(i, entry)
-                        break
-                else:
-                    pluginstoc.append(entry)
+                log.debug('Adding %s to page index', name)
+                self.pluginstoc[name] = entry
+
+    def _parse_info_plist(self, source_dir):
+        try:
+            with open(source_dir / 'Info.plist', 'rb') as infofp:
+                info = plistlib.load(infofp)
+
+        except OSError:
+            return None
+        else:
+            name = info.get('CFBundleDisplayName')
+            if not name or name.startswith('$'):
+                name = info.get('CFBundleName')
+                if not name or name.startswith('$'):
+                    return None
+
+            return name
 
 
 def main():
     """Run script."""
     project = Project()
-    project.load()
     for repo in get_plugin_repositories():
         source_dir = cache_code(repo['full_name'], repo['clone_url'])
-        plugin_name = repo['name'][:-len('-qsplugin')]
-        project.import_plugin_doc(plugin_name, source_dir)
+    # for source_dir in Path('_plugins/quicksilver').iterdir():
+        project.import_plugin_doc(source_dir)
 
     project.save()
 
