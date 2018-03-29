@@ -60,7 +60,7 @@ def get_plugin_repositories(repos_url=REPOS_URL):
     """Get list of plugin repositories from github."""
     url = repos_url
     while True:
-        log.debug('Querying %s for plugin repositories', url)
+        log.info('Querying %s for plugin repositories', url)
         with urlopen(url) as response:
             for repo in json.load(response):
                 name = repo['name']
@@ -79,10 +79,10 @@ def cache_code(repo_name, repo_url, cache_dir=CACHE_DIR):
     """Clone/update repo in cache_dir."""
     dest = cache_dir / repo_name
     if dest.is_dir():
-        log.debug('Updating %s cache', repo_name)
+        log.info('Updating %s cache', repo_name)
         run(['git', 'pull', '--ff-only'], cwd=dest, check=True)
     else:
-        log.debug('Caching %s from %s', repo_name, repo_url)
+        log.info('Caching %s from %s', repo_name, repo_url)
         run(['git', 'clone', repo_url, dest], check=True)
 
     return dest
@@ -106,7 +106,7 @@ class Project(object):
 
     def save(self):
         """Save project config."""
-        log.debug('Saving config to %s', self.config_path)
+        log.info('Saving config to %s', self.config_path)
         with open(self.config_path) as cfgfp:
             config = yaml.load(cfgfp)
 
@@ -128,7 +128,7 @@ class Project(object):
 
     def import_plugin_doc(self, source_dir):
         """Import doc file from plugin source_dir into project docs."""
-        log.debug('Importing plugin %s', source_dir)
+        log.info('Importing plugin %s', source_dir)
         name = source_dir.name[:-len('-qsplugin')]
         fname = name.lower()
         name = self._get_plugin_name(source_dir, name)
@@ -141,6 +141,11 @@ class Project(object):
                 copyfile(srcfile, dstfile)
                 log.debug('Adding %s to page index', name)
                 self.pluginstoc[name] = entry
+                return name
+
+        else:
+            log.warning('No documentation found for %s', name)
+            return None
 
     def _get_plugin_name(self, source_dir, default=None):
         info = self.parse_info_plist(source_dir)
@@ -189,5 +194,11 @@ def main():
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.DEBUG)
-    main()
+    logging.basicConfig(
+        format='%(message)s',
+        level=logging.INFO,
+    )
+    try:
+        main()
+    except KeyboardInterrupt:
+        log.critical('Aborting')
