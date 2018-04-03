@@ -45,6 +45,22 @@ def get_latest_qsversion(osversion=None, check_url=CHECK_URL):
 
 def get_plugins_info(qsversion=None, osversion=None, info_url=INFO_URL, cache_dir=CACHE_DIR):
     """Fetch plugin information list from qsapp."""
+    if qsversion and osversion:
+        cache_path = cache_dir / f'info_QS{qsversion}_OS{osversion}.plist'
+    elif qsversion:
+        cache_path = cache_dir / f'info_QS{qsversion}.plist'
+    elif osversion:
+        cache_path = cache_dir / f'info_OS{osversion}.plist'
+    else:
+        cache_path = cache_dir / 'info.plist'
+
+    if cache_path.is_file():
+        log.debug('Returning cached info from %s', cache_path)
+        with open(cache_path, 'rb') as cachefp:
+            info = plistlib.load(cachefp)
+
+        return info['plugins']
+
     url = info_url
     if qsversion:
         url += f'?qsversion={qsversion}'
@@ -56,7 +72,14 @@ def get_plugins_info(qsversion=None, osversion=None, info_url=INFO_URL, cache_di
     req = Request(url, headers={'User-Agent': ua})
     log.info('Querying %s for plugins info', url)
     with urlopen(req) as response:
-        info = plistlib.loads(response.read())
+        if qsversion:
+            log.debug('Caching response to %s', cache_path)
+            with open(cache_path, 'wb+') as cachefp:
+                cachefp.write(response.read())
+                cachefp.seek(0)
+                info = plistlib.load(cachefp)
+        else:
+            info = plistlib.loads(response.read())
 
     return info['plugins']
 
