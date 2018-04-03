@@ -72,14 +72,11 @@ def get_plugins_info(qsversion=None, osversion=None, info_url=INFO_URL, cache_di
     req = Request(url, headers={'User-Agent': ua})
     log.info('Querying %s for plugins info', url)
     with urlopen(req) as response:
-        if qsversion:
-            log.debug('Caching response to %s', cache_path)
-            with open(cache_path, 'wb+') as cachefp:
-                cachefp.write(response.read())
-                cachefp.seek(0)
-                info = plistlib.load(cachefp)
-        else:
-            info = plistlib.loads(response.read())
+        log.debug('Caching response to %s', cache_path)
+        with open(cache_path, 'wb+') as cachefp:
+            cachefp.write(response.read())
+            cachefp.seek(0)
+            info = plistlib.load(cachefp)
 
     return info['plugins']
 
