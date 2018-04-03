@@ -29,10 +29,13 @@ REPOS_URL = 'https://api.github.com/orgs/quicksilver/repos'
 log = logging.getLogger(__name__)
 
 
-def get_latest_qsversion(check_url=CHECK_URL):
+def get_latest_qsversion(osversion=None, check_url=CHECK_URL):
     """Query for the latest version of Quicksilver."""
-    # User-Agent is used to filter on OS version, so ensure it is not.
-    req = Request(check_url, headers={'User-Agent': 'manual/plugindocs'})
+    ua = 'manual/plugindocs'
+    if osversion:
+        ua += f' Mac OS X {osversion}'
+
+    req = Request(check_url, headers={'User-Agent': ua})
     log.info('Querying %s for latest qs version', check_url)
     with urlopen(req) as response:
         build = response.read().decode()
@@ -40,15 +43,17 @@ def get_latest_qsversion(check_url=CHECK_URL):
     return build
 
 
-def get_plugins_info(qsversion=None, info_url=INFO_URL):
+def get_plugins_info(qsversion=None, osversion=None, info_url=INFO_URL, cache_dir=CACHE_DIR):
     """Fetch plugin information list from qsapp."""
+    url = info_url
     if qsversion:
-        url = f'{info_url}?qsversion={qsversion}'
-    else:
-        url = info_url
+        url += f'?qsversion={qsversion}'
 
-    # User-Agent is used to filter on OS version, so ensure it is not.
-    req = Request(url, headers={'User-Agent': 'manual/plugindocs'})
+    ua = 'manual/plugindocs'
+    if osversion:
+        ua += f' Mac OS X {osversion}'
+
+    req = Request(url, headers={'User-Agent': ua})
     log.info('Querying %s for plugins info', url)
     with urlopen(req) as response:
         info = plistlib.loads(response.read())
