@@ -5,16 +5,13 @@ Import Documentation for Quicksilver plugins.
 This script fetches plugin documentation from their respective repositories and
 inserts them into the *plugins/* directory in *docs/*.
 """
-import json
 import logging
 from os import makedirs
 from pathlib import Path
 import plistlib
-import re
-from shutil import copyfile
-from subprocess import run
 from urllib.request import Request, urlopen
 
+from html2text import html2text
 import yaml
 
 
@@ -23,7 +20,6 @@ CONFIG_PATH = Path(__file__).parent / 'mkdocs.yml'
 DOCS_DIR = Path(__file__).parent / 'docs'
 CHECK_URL = 'https://qs0.qsapp.com/plugins/check.php'
 INFO_URL = 'https://qs0.qsapp.com/plugins/info.php'
-REPOS_URL = 'https://api.github.com/orgs/quicksilver/repos'
 
 
 log = logging.getLogger(__name__)
@@ -73,44 +69,13 @@ def get_plugins_info(qsversion=None, osversion=None, info_url=INFO_URL, cache_di
     log.info('Querying %s for plugins info', url)
     with urlopen(req) as response:
         log.debug('Caching response to %s', cache_path)
+        makedirs(cache_dir, exist_ok=True)
         with open(cache_path, 'wb+') as cachefp:
             cachefp.write(response.read())
             cachefp.seek(0)
             info = plistlib.load(cachefp)
 
     return info['plugins']
-
-
-def get_plugin_repositories(repos_url=REPOS_URL):
-    """Get list of plugin repositories from github."""
-    url = repos_url
-    while True:
-        log.info('Querying %s for plugin repositories', url)
-        with urlopen(url) as response:
-            for repo in json.load(response):
-                name = repo['name']
-                if name.endswith('-qsplugin') and '-unused' not in name:
-                    yield repo
-
-            links = response.headers.get('Link')
-            nextlink = re.search(r'<([^>]+)>; rel="next"', links)
-            if nextlink:
-                url = nextlink.group(1)
-            else:
-                break
-
-
-def cache_code(repo_name, repo_url, cache_dir=CACHE_DIR):
-    """Clone/update repo in cache_dir."""
-    dest = cache_dir / repo_name
-    if dest.is_dir():
-        log.info('Updating %s cache', repo_name)
-        run(['git', 'pull', '--ff-only'], cwd=dest, check=True)
-    else:
-        log.info('Caching %s from %s', repo_name, repo_url)
-        run(['git', 'clone', repo_url, dest], check=True)
-
-    return dest
 
 
 class Project(object):
@@ -151,68 +116,57 @@ class Project(object):
         else:
             pagestoc.append({'Plugins': pluginstoc})
 
-    def import_plugin_doc(self, source_dir):
-        """Import doc file from plugin source_dir into project docs."""
-        log.info('Importing plugin %s', source_dir)
-        name = source_dir.name[:-len('-qsplugin')]
-        fname = name.lower()
-        name = self._get_plugin_name(source_dir, name)
-        dstfile = self.docs_dir / 'plugins' / f'{fname}.md'
-        entry = f'plugins/{fname}.md'
-        makedirs(dstfile.parent, exist_ok=True)
-        for srcfile in Path(source_dir).iterdir():
-            if re.match(r'Documentation.m((ar)?k)?d((ow)?n)?', srcfile.name):
-                log.debug('Copying %s -> %s', srcfile, dstfile)
-                copyfile(srcfile, dstfile)
-                log.debug('Adding %s to page index', name)
-                self.pluginstoc[name] = entry
-                return name
+    def import_plugin_doc(self, plugin):
+        """Import from plugin info into project docs."""
+        name, fname = self._get_plugin_names(plugin)
+        log.info('Importing plugin %s', name)
+        source = plugin.get('QSPlugIn', {}).get('extendedDescription', '')
+        output = html2text(source).strip()
+        if output:
+            entry = f'plugins/{fname}.md'
+            dstfile = self.docs_dir / 'plugins' / f'{fname}.md'
+            log.debug('Writing docs to %s', dstfile)
+            makedirs(dstfile.parent, exist_ok=True)
+            with open(dstfile, mode='w') as mdfile:
+                mdfile.write(output)
+
+            log.debug('Adding %s to page index', name)
+            self.pluginstoc[name] = entry
+            return name
 
         else:
             log.warning('No documentation found for %s', name)
             return None
 
-    def _get_plugin_name(self, source_dir, default=None):
-        info = self.parse_info_plist(source_dir)
-        name = info.get('CFBundleDisplayName')
-        if not name or name.startswith('$'):
-            name = info.get('CFBundleName')
-            if not name or name.startswith('$'):
-                return default
+    def _get_plugin_names(self, plugin):
+        fname = plugin.get('CFBundleIdentifier').rsplit('.')[-1]
+        if fname.startswith('QS'):
+            fname = fname[2:]
 
-        return name
+        name = plugin.get('CFBundleDisplayName') or plugin.get('CFBundleName')
+        if not name:
+            name = fname
 
-    @staticmethod
-    def parse_info_plist(source_dir):
-        """Parse plugin Info.plist."""
-        with open(source_dir / 'Info.plist', 'rb') as infofp:
-            info = plistlib.load(infofp)
+        if name.lower().endswith('plugin'):
+            name = name[:-6].rstrip()
 
-        return info
+        fname = fname.lower()
+        if fname.endswith('plugin'):
+            fname = fname[:-6].rstrip()
+
+        return name, fname
 
 
 def main():
     """Run script."""
     qsversion = get_latest_qsversion()
     plugins = get_plugins_info(qsversion)
-    supported_plugin_ids = set()
-    for plugin in plugins:
-        plugin_id = plugin.get('CFBundleIdentifier')
-        if plugin_id:
-            supported_plugin_ids.add(plugin_id)
-
     project = Project()
-    for repo in get_plugin_repositories():
+    for plugin in plugins:
         try:
-            source_dir = cache_code(repo['full_name'], repo['clone_url'])
-            pid = project.parse_info_plist(source_dir).get('CFBundleIdentifier')
-            if pid not in supported_plugin_ids:
-                log.warning('Ignoring obsolete plugin: %s', pid)
-                continue
-
-            project.import_plugin_doc(source_dir)
+            project.import_plugin_doc(plugin)
         except Exception as exc:
-            log.warning('Error importing %s: %s', repo.get('full_name'), exc)
+            log.warning('Error importing %s: %s', plugin.get('CFBundleName'), exc)
             log.debug('Exception', exc_info=True)
 
     project.save()
