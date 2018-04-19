@@ -20,6 +20,11 @@ CONFIG_PATH = Path(__file__).parent / 'mkdocs.yml'
 DOCS_DIR = Path(__file__).parent / 'docs'
 CHECK_URL = 'https://qs0.qsapp.com/plugins/check.php'
 INFO_URL = 'https://qs0.qsapp.com/plugins/info.php'
+SUPPORTED_OS_VERSIONS = [
+    (10, 11, 6),
+    (10, 12, 6),
+    (10, 13, 4),
+]
 
 
 log = logging.getLogger(__name__)
@@ -120,23 +125,28 @@ class Project(object):
         """Import from plugin info into project docs."""
         name, fname = self._get_plugin_names(plugin)
         log.info('Importing plugin %s', name)
-        source = plugin.get('QSPlugIn', {}).get('extendedDescription', '')
-        output = html2text(source).strip()
-        if output:
-            entry = f'plugins/{fname}.md'
-            dstfile = self.docs_dir / 'plugins' / f'{fname}.md'
-            log.debug('Writing docs to %s', dstfile)
-            makedirs(dstfile.parent, exist_ok=True)
-            with open(dstfile, mode='w') as mdfile:
+        dstfile = self.docs_dir / 'plugins' / f'{fname}.md'
+        log.debug('Writing docs to %s', dstfile)
+        makedirs(dstfile.parent, exist_ok=True)
+        with open(dstfile, mode='w') as mdfile:
+            summary = [
+                f'#{name}\n\n',
+                self._get_plugin_summary(plugin),
+                '\n\n',
+            ]
+            mdfile.writelines(summary)
+            source = plugin.get('QSPlugIn', {}).get('extendedDescription', '')
+            output = html2text(source).strip()
+            if output:
                 mdfile.write(output)
+            else:
+                log.debug('No documentation found for %s', name)
+                mdfile.write('No plugin documentation.')
 
-            log.debug('Adding %s to page index', name)
-            self.pluginstoc[name] = entry
-            return name
-
-        else:
-            log.warning('No documentation found for %s', name)
-            return None
+        log.debug('Adding %s to page index', name)
+        entry = f'plugins/{fname}.md'
+        self.pluginstoc[name] = entry
+        return name
 
     def _get_plugin_names(self, plugin):
         fname = plugin.get('CFBundleIdentifier').rsplit('.')[-1]
@@ -156,13 +166,45 @@ class Project(object):
 
         return name, fname
 
+    def _get_plugin_summary(self, plugin):
+        tpl = '\n'.join((
+            '{desc}',
+            '',
+            ' Summary                  | {sp} ',
+            '-------------------------:|:{hl:-^{width}}-',
+            ' Latest plugin version    | {plv}',
+            ' Supported MacOS versions | {osv}',
+            ' Quicksilver builds       | {qsv}',
+            ''
+        ))
+        desc = plugin.get('QSPlugIn', {}).get('description', '')
+        kw = {
+            'desc': desc + '.' if desc and not desc.endswith('.') else desc,
+            'sp': '&nbsp;',
+            'hl': '-',
+            'plv': plugin.get('CFBundleShortVersionString', ''),
+            'osv': ', '.join('{}.{}'.format(*v) for v in sorted(plugin['_osversions'])),
+            'qsv': ', '.join(str(v) for v in sorted(plugin['_qsversions'])),
+        }
+        kw['width'] = max(len(kw[s]) for s in ('plv', 'osv', 'qsv'))
+        return tpl.format(**kw)
+
 
 def main():
     """Run script."""
-    qsversion = get_latest_qsversion()
-    plugins = get_plugins_info(qsversion)
+    pluginmap = {}
+    for major, minor, patch in sorted(SUPPORTED_OS_VERSIONS):
+        # sorted takes care of later osversions go with later qsversions
+        osversion = f'{major}_{minor}_{patch}'
+        log.info('With osversion=%s:', osversion)
+        qsversion = get_latest_qsversion(osversion=osversion)
+        for plugin in get_plugins_info(qsversion=qsversion, osversion=osversion):
+            info = pluginmap.setdefault(plugin['CFBundleIdentifier'], plugin)
+            info.setdefault('_osversions', set()).add((major, minor))
+            info.setdefault('_qsversions', set()).add(qsversion)
+
     project = Project()
-    for plugin in plugins:
+    for plugin in pluginmap.values():
         try:
             project.import_plugin_doc(plugin)
         except Exception as exc:
