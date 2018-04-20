@@ -132,7 +132,7 @@ class Project(object):
         makedirs(dstfile.parent, exist_ok=True)
         with open(dstfile, mode='w') as mdfile:
             summary = [
-                f'#{name}\n\n',
+                f'# {name}\n\n',
                 self._get_plugin_summary(plugin),
                 '\n\n',
             ]

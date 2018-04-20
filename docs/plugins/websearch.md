@@ -1,4 +1,4 @@
-#Web Search
+# Web Search
 
 Allows searching the web.
 

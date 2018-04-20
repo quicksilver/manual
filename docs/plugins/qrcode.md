@@ -1,4 +1,4 @@
-#QSQRCode
+# QSQRCode
 
 Displays objects as QR Code.
 

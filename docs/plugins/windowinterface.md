@@ -1,4 +1,4 @@
-#Window Interface
+# Window Interface
 
 Provides a simple window interface.
 

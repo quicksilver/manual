@@ -1,4 +1,4 @@
-#Calendar
+# Calendar
 
 Adds support for creating Events and To-Dos with Calendars on your Mac.
 

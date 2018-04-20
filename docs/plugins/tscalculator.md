@@ -1,4 +1,4 @@
-#Calculator
+# Calculator
 
 Allows calculation of mathematical expressions with the Calculate action.
 

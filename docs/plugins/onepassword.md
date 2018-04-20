@@ -1,4 +1,4 @@
-#1Password
+# 1Password
 
 Adds support for 1Password Data to Reveal in 1Password and to Go & Fill web forms.
 

@@ -1,4 +1,4 @@
-#iTunes
+# iTunes
 
 Allows you to control iTunes and browse the iTunes library.
 

@@ -1,4 +1,4 @@
-#Command Line Tool
+# Command Line Tool
 
 Allows data to be piped into Quicksilver from the command line.
 

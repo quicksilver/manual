@@ -1,4 +1,4 @@
-#Apple Mail
+# Apple Mail
 
 Enables browsing and email actions for Apple Mail.
 

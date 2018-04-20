@@ -1,4 +1,4 @@
-#E-mail Support
+# E-mail Support
 
 Works with your mail client to enable e-mail based actions.
 

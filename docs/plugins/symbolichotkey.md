@@ -1,4 +1,4 @@
-#System HotKey Commands
+# System HotKey Commands
 
 Allows triggering of Exposé and other System Hotkeys.
 

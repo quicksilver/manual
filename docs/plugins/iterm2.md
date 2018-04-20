@@ -1,4 +1,4 @@
-#iTerm2
+# iTerm2
 
 Provider for using iTerm2 with the Terminal plugin.
 

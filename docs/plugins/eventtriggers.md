@@ -1,4 +1,4 @@
-#Event Triggers
+# Event Triggers
 
 Run triggers automatically based on system events.
 

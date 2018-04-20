@@ -1,4 +1,4 @@
-#Flashlight Interface
+# Flashlight Interface
 
 Provides a Spotlight style interface.
 

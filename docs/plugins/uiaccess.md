@@ -1,4 +1,4 @@
-#User Interface
+# User Interface
 
 Access the menus and windows of running applications.
 

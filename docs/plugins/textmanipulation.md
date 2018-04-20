@@ -1,4 +1,4 @@
-#Text Manipulation
+# Text Manipulation
 
 Actions for manipulating text lines in files.
 

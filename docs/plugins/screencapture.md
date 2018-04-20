@@ -1,4 +1,4 @@
-#Screen Capture
+# Screen Capture
 
 A set of actions that allow capturing the screen.
 

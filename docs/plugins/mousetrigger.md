@@ -1,4 +1,4 @@
-#Mouse Triggers
+# Mouse Triggers
 
 Allows triggering with hot corners and edges of the main screen.
 

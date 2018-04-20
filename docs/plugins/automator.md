@@ -1,4 +1,4 @@
-#Automator
+# Automator
 
 Support For Workflows and Automator Actions.
 

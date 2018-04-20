@@ -1,4 +1,4 @@
-#Spotlight
+# Spotlight
 
 Spotlight actions and integration.
 

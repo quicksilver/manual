@@ -1,4 +1,4 @@
-#Clipboard
+# Clipboard
 
 Allows clipboard recording and adds a clipboard history window.
 

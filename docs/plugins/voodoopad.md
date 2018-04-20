@@ -1,4 +1,4 @@
-#VoodooPad Module
+# VoodooPad Module
 
 A QuickSilver module for working with VoodooPad.
 

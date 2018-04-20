@@ -1,4 +1,4 @@
-#OpenMeta File Tagging
+# OpenMeta File Tagging
 
 Support for file tagging with OpenMeta.
 

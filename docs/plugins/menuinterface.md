@@ -1,4 +1,4 @@
-#Menu Interface
+# Menu Interface
 
 Provides a menu bar interface.
 

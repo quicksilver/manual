@@ -1,4 +1,4 @@
-#Terminal
+# Terminal
 
 Allows running of shell scripts in Quicksilver or the Terminal.
 

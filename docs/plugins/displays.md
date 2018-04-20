@@ -1,4 +1,4 @@
-#Displays
+# Displays
 
 Allows modification of desktop picture, resolution and depth of displays.
 

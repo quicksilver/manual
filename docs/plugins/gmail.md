@@ -1,4 +1,4 @@
-#Gmail
+# Gmail
 
 Allows Quicksilver to send emails via Gmail.
 

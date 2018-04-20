@@ -1,4 +1,4 @@
-#Path Finder
+# Path Finder
 
 Handles open, reveal, info, and selection actions in Path Finder.
 

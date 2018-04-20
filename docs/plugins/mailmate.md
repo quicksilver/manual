@@ -1,4 +1,4 @@
-#MailMate
+# MailMate
 
 Send messages using MailMate.
 

@@ -1,4 +1,4 @@
-#Dash
+# Dash
 
 Allows quick access to Dash DocSets.
 

@@ -2,7 +2,7 @@
 
 Quicksilver is a powerful interface for your Mac, letting you perform countless actions entirely with the keyboard.
 
-# How To Read this Manual
+## How To Read this Manual
 
 Quicksilver’s strength is that it integrates with so many different aspects of macOS, but that also makes it difficult to explain in an order that works for every user while avoiding duplication. The table below describes how this manual is organized and how new and experienced users should use it to learn about Quicksilver.
 

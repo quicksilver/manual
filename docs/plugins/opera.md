@@ -1,4 +1,4 @@
-#Opera
+# Opera
 
 Plugin for connecting Quicksilver and the Opera browser.
 

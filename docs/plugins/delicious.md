@@ -1,4 +1,4 @@
-#Social Bookmarks
+# Social Bookmarks
 
 Provides access to del.icio.us and pinboard.in bookmarks.
 

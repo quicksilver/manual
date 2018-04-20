@@ -1,4 +1,4 @@
-#DeMinimizer
+# DeMinimizer
 
 Restore and minimize windows.
 

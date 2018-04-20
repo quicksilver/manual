@@ -1,4 +1,4 @@
-#TextStart Ranker
+# TextStart Ranker
 
 Ranking which prefers word boundaries.<br><br>So when you enter "ab" as a search string then "Address Book.app" gets a higher score then "Abrasive.jpg".<br><br>You can change the default ranker in the Handlers preferences.
 

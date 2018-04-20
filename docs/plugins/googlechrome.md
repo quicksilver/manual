@@ -1,4 +1,4 @@
-#Google Chrome
+# Google Chrome
 
 Access to information and functionality in the Google Chrome web browser.
 

@@ -1,4 +1,4 @@
-#Image Manipulation
+# Image Manipulation
 
 Actions to scale and change format of images.
 

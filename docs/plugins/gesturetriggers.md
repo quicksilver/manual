@@ -1,4 +1,4 @@
-#Abracadabra Triggers
+# Abracadabra Triggers
 
 Trigger commands with mouse/trackpad gestures.
 
