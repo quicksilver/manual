@@ -1,0 +1,118 @@
+#Yojimbo
+
+Add and Access Yojimbo Items.
+
+ Summary                  | &nbsp; 
+-------------------------:|:--------------------
+ Latest plugin version    | 3.0.0
+ Supported MacOS versions | 10.11, 10.12, 10.13
+ Quicksilver builds       | 4024
+
+
+# Yojimbo Plugin
+
+## Overview
+
+This plug-in allows you to quickly find, add, and modify items in your Yojimbo
+library using Quicksilver. It also makes great use of your tags.
+
+This plug-in works with Yojimbo 4 or higher. All actions that add or modify
+items in Yojimbo's library use BareBones supported scripting.
+
+## Actions
+
+  * Add to Yojimbo with Name…
+
+If you type, paste, or "grab" some text into Quicksilver, you can add it as a
+new Yojimbo note with this action. You can also add files. Currently, it will
+allow PDF, TXT, RTF, JPEG, PNG and GIF. I couldn't find a complete list of
+supported types, but if you need to add something else, a workaround is to use
+"Some File ⇥ Open with… ⇥ Yojimbo".
+
+You'll be asked for a name for the new item in the third pane. There should be
+a reasonable default.
+
+  * Add to Yojimbo with Contents…
+
+This is the reverse of the previous action. If the name you want to use for
+the new item is in the first pane, you can go to the third pane to enter the
+item's contents.
+
+  * Archive to Yojimbo
+
+With a URL selected in Quicksilver, you can add the page it references as a
+web archive.
+
+  * Show in Yojimbo
+
+With a Yojimbo item in Quicksilver's first pane, this should be the default
+action. It will open (or switch to) Yojimbo with the item selected.
+
+  * Add Tags to Item(s)…
+
+With one or more Yojimbo items in Quicksilver's first pane, you can add tags
+using this action. The third pane will present a list of existing Yojimbo
+tags. You can select multiple tags using the comma trick, enter tags manually
+in text-entry mode, or a combination of those.
+
+Note: You cannot add multiple tags in text-entry mode by typing them all at
+once, but you can enter one at a time as text by typing one, hitting ⎋ then ,
+then . and entering another.
+
+  * Prepend text…
+
+With a Yojimbo note item in Quicksilver's first pane, you can prepend text to
+the beginning of the note. Enter the text to prepend in the third pane.
+
+  * Append text…
+
+With a Yojimbo note item in Quicksilver's first pane, you can append text to
+the end of the note. Enter the text to append in the third pane.
+
+## Workflow
+
+Here are a couple of examples of how you might use Quicksilver to interact
+with Yojimbo.
+
+### Adding an Item
+
+  1. Select text or a file in Quicksilver.
+  2. Choose "Add to Yojimbo…" in the second pane.
+  3. Tab to the third pane to enter a name (or accept the default).
+  4. Hit ↩
+  5. The item will be added to Yojimbo and Quicksilver will pop back up with the item in the first pane.
+  6. Choose "Add Tags to Item…" in the second pane. (You can also open the item, or just hit ⎋ if you don't want to do anything further.)
+  7. Select or type the tags you want to assign.
+  8. Hit ↩
+
+### Locating Items
+
+All of the items in your Yojimbo library are added directly to the catalog, so
+simply typing a few characters of the item's name might be enough to find it,
+but…
+
+All of your tags in Yojimbo are also added to the catalog. If you locate and
+select a tag, then hit → or /, you will get a list of items in your library
+that have that tag. You will also get a list of all other tags that those
+items contain. If you right arrow into one of those tags, you will see items
+that match both tags and any tags contained by those items that you haven't
+already arrowed through. Right arrowing into another tag will show items
+matching all three, etc. This emulates the indispensable behavior of Yojimbo's
+Tag Explorer.
+
+If you locate and select the Yojimbo application itself and hit → or /, you'll
+go directly to a list of items and tags. From there, you can hit → or / to go
+"into" a tag or tags as described above. Items with no tags assigned are also
+available (grouped under "Untagged Items").
+
+NOTE
+
+    If you see duplicate items after upgrading Yojimbo from version 3 to version 4, you'll need to manually delete `~/Library/Caches/Metadata/com.barebones.yojimbo`. The duplicates will appear in both Quicksilver and Spotlight until you remove the old copies.
+
+### Note Features
+
+There are a couple of useful tricks specific to notes in Yojimbo. In addition
+to being able to prepend/append to them, they also support all of the standard
+actions you can perform on text in Quicksilver like "Paste", "Large Type",
+"E-mail…", etc. Each of these actions will use a plain-text version of the
+note's contents.

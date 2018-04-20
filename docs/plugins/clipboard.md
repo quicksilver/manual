@@ -1,0 +1,102 @@
+#Clipboard
+
+Allows clipboard recording and adds a clipboard history window.
+
+ Summary                  | &nbsp; 
+-------------------------:|:--------------------
+ Latest plugin version    | 1.6.0
+ Supported MacOS versions | 10.11, 10.12, 10.13
+ Quicksilver builds       | 4024
+
+
+### Clipboard Plugin
+
+The clipboard plugin gives Quicksilver the ability to keep a record of the
+Clipboard history (disabled by default), storing it in the 'Clipboard History'
+item in Quicksilver (type 'Clipboard History' into Quicksilver).  
+In addition to viewing the clipboard history in Quicksilver, the plugin adds a
+floating panel which displays all your history. To open the panel, open
+Quicksilver and press ⌘L.
+
+### Preferences
+
+The Clipboard preferences allow you to alter the behaviour of how Quicksilver
+stores your clipboard contents. The following options are available:
+
+Capture History
+
+    Turn on the history capture option, so Quicksilver will keep a record of your history items. Enter the number of items you would like Quicksilver to store in the box alongside. 20 items is a good starting point.
+Keep history when restarting
+
+    Enable this to preserve clipboard history when Quicksilver or your computer are restarted. This will save your clipboard data to the disk, so you should consider any security issues before enabling the option.
+Hide after pasting
+
+    Enabling this option causes the Clipboard window to hide when you paste an item.
+Ignore Applications
+
+    Sometimes you may copy sensitive information for certain applications, if you want Quicksilver to ignore all clipboard entries from a given application, then enter its name in the box.
+
+### Clipboard Window
+
+#### Positioning the window
+
+The Clipboard Window is a floating panel specific to Quicksilver, giving it
+several useful features for positioning. Positioning the window on the side of
+the screen will cause it to become 'docked' on the screen edge. It will then
+slide into the screen edge. Hover over the edge of the screen to make the
+window reappear.
+
+The position of windows is remembered across restarts of Quicksilver, and you
+can have the window disappear after pasting by enabling the 'Hide after
+pasting' option in the preferences (see above).  
+**Tip:** You can quickly open and close the Clipboard Window by creating a
+trigger with the following options:  
+'Clipboard History ⇥ Show' If you would like to display the contents of your
+Clipboard history in Quicksilver (so that they are searchable) then set up the
+following trigger:  
+'Clipboard History ⇥ Show Contents'
+
+#### Pasting Items
+
+The Clipboard Window (activated by pressing ⌘L when Quicksilver is activated)
+displays a list of your Clipboard history. You can browse the history using
+the ↑↓ arrows, and paste text by pressing the Enter key (↩). A quicker way to
+paste an item is by pressing its corresponding number (from 1 to 9), displayed
+next to the item in the preference window.
+
+Finally, it is possible to drag an item from the Clipboard window to wherever
+you would like to place it (e.g. on your Desktop) or double click an item to
+paste it.
+
+**Tip** To paste items form the Clipboard Window as plain text, hold the ⌥
+(option) key whilst either double clicking an item or pressing a keyboard key
+(numbers 1 to 9 or ↩)
+
+### Proxy Objects
+
+#### Clipboard Contents
+
+The 'Clipboard Contents' proxy object returns whatever you have currently
+copied to your clipboard. It is useful for setting up with triggers. An
+example could be:  
+'Clipboard Contents ⇥ Find With… ⇥ Google'
+
+#### Current Find Clipboard
+
+This returns the text you last searched for in a standard Cocoa application or
+"copied" with ⌘E. For example, if you just searched for some words in
+TextEdit, then decide you want to repeat that search on the web, you can run
+'Current Find Clipboard ⇥ Find With… ⇥ DuckDuckGo'.
+
+### Action Objects
+
+By default, the Clipboard plugin adds a serious of 'action objects' which can
+be run from Quicksilver's 1st pane, or more usefully, as triggers. These are:
+
+  * **Clip store paste`<number>`**
+  * **Clip store copy`<number>`**
+
+`Clip store paste` can be used to paste the clipboard's contents corresponding
+to `<number>`. For example, `Clip store paste 9` will paste the 9th item from
+the pasteboard. `Clip store copy` works in a similar way, except instead of
+pasting the item directly, it copies it to the clipboard.

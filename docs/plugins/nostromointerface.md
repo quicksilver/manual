@@ -1,0 +1,39 @@
+#Nostromo Interface
+
+Provides a wide interface.
+
+ Summary                  | &nbsp; 
+-------------------------:|:--------------------
+ Latest plugin version    | 1.3.0
+ Supported MacOS versions | 10.11, 10.12, 10.13
+ Quicksilver builds       | 4024
+
+
+## Nostromo
+
+This provides a wide interface, suited to displaying longer names and/or
+details for items in your catalog.
+
+### Colors
+
+The "Customize" panel in the Appearance preferences allows you to set colors
+from several "themes". This interface uses and respects Quicksilver's bezel
+colors (also configurable in the Appearance prefs). As such, the themes are
+not persistent, but the individual colors are. This allows you to use one of
+the built-in options as a starting point, but tweak individual colors to your
+liking if needed.
+
+To put it another way, the "Customize" panel is only used to **set** colors.
+Do not expect to see the last theme you used selected the next time you open
+the panel.
+
+### Position
+
+The interface can be moved if it's obscuring something, but the new position
+will not be remembered. It will be centered the next time you invoke it.
+
+### About
+
+"Nostromo" is the name of the ship in _Alien_ (1979).
+
+[Report bugs](https://github.com/skurfer/Nostromo/issues) on GitHub.
