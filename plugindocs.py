@@ -39,9 +39,9 @@ def get_latest_qsversion(osversion=None, check_url=CHECK_URL):
     req = Request(check_url, headers={'User-Agent': ua})
     log.info('Querying %s for latest qs version', check_url)
     with urlopen(req) as response:
-        build = response.read().decode()
+        hexbuild = response.read().decode()
 
-    return build
+    return int(hexbuild, 16)
 
 
 def get_plugins_info(qsversion=None, osversion=None, info_url=INFO_URL, cache_dir=CACHE_DIR):
@@ -182,9 +182,9 @@ class Project(object):
             'desc': desc + '.' if desc and not desc.endswith('.') else desc,
             'sp': '&nbsp;',
             'hl': '-',
-            'plv': plugin.get('CFBundleShortVersionString', ''),
+            'plv': plugin.get('CFBundleShortVersionString') or plugin.get('CFBundleVersion', ''),
             'osv': ', '.join('{}.{}'.format(*v) for v in sorted(plugin['_osversions'])),
-            'qsv': ', '.join(str(v) for v in sorted(plugin['_qsversions'])),
+            'qsv': ', '.join(format(v, 'x') for v in sorted(plugin['_qsversions'])),
         }
         kw['width'] = max(len(kw[s]) for s in ('plv', 'osv', 'qsv'))
         return tpl.format(**kw)
