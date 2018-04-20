@@ -21,6 +21,14 @@ This will run a web server at <http://localhost:8000/>. The site should reload a
 
 Be sure to review the Style Guide (included in the manual) before starting.
 
+
+## Updating plugin docs ##
+
+Plugin docs are automatically pulled in from the plugin packages. To update them, run the _plugindocs.py_ script:
+
+    $ venv/bin/python plugindocs.py
+
+
 ## Updating the Live Manual ##
 
 The manual repository has been cloned into `/data/manual`.
