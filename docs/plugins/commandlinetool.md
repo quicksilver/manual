@@ -2,11 +2,10 @@
 
 Allows data to be piped into Quicksilver from the command line.
 
- Summary                  | &nbsp; 
--------------------------:|:--------------------
- Latest plugin version    | 1.2.1
- Supported MacOS versions | 10.11, 10.12, 10.13
- Quicksilver builds       | 4024
+ Summary                    | &nbsp; 
+---------------------------:|:--------------------
+ Available on macOS version | 10.11, 10.12, 10.13
+      for Quicksilver build | 4024
 
 
 The `qs` command allows you to select files or text in Quicksilver (or send

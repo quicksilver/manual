@@ -2,11 +2,10 @@
 
 Access to information from the Safari browser.
 
- Summary                  | &nbsp; 
--------------------------:|:--------------------
- Latest plugin version    | 2.4.2
- Supported MacOS versions | 10.11, 10.12, 10.13
- Quicksilver builds       | 4024
+ Summary                    | &nbsp; 
+---------------------------:|:--------------------
+ Available on macOS version | 10.11, 10.12, 10.13
+      for Quicksilver build | 4024
 
 
 ## Catalog

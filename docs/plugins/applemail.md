@@ -2,11 +2,10 @@
 
 Enables browsing and email actions for Apple Mail.
 
- Summary                  | &nbsp; 
--------------------------:|:--------------------
- Latest plugin version    | 3.1.0
- Supported MacOS versions | 10.11, 10.12, 10.13
- Quicksilver builds       | 4024
+ Summary                    | &nbsp; 
+---------------------------:|:--------------------
+ Available on macOS version | 10.11, 10.12, 10.13
+      for Quicksilver build | 4024
 
 
 ## Apple Mail Plugin

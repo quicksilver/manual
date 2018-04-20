@@ -172,11 +172,11 @@ class Project(object):
         tpl = '\n'.join((
             '{desc}',
             '',
-            ' Summary                  | {sp} ',
-            '-------------------------:|:{hl:-^{width}}-',
-            ' Latest plugin version    | {plv}',
-            ' Supported MacOS versions | {osv}',
-            ' Quicksilver builds       | {qsv}',
+            ' Summary                    | {sp} ',
+            '---------------------------:|:{hl:-^{width}}-',
+            # '      Latest plugin version | {plv}',
+            ' Available on macOS version | {osv}',
+            '      for Quicksilver build | {qsv}',
             ''
         ))
         desc = plugin.get('QSPlugIn', {}).get('description', '')
@@ -184,11 +184,11 @@ class Project(object):
             'desc': desc + '.' if desc and not desc.endswith('.') else desc,
             'sp': '&nbsp;',
             'hl': '-',
-            'plv': plugin.get('CFBundleShortVersionString') or plugin.get('CFBundleVersion', ''),
+            # 'plv': plugin.get('CFBundleShortVersionString') or plugin.get('CFBundleVersion', ''),
             'osv': ', '.join('{}.{}'.format(*v) for v in sorted(plugin['_osversions'])),
             'qsv': ', '.join(format(v, 'x') for v in sorted(plugin['_qsversions'])),
         }
-        kw['width'] = max(len(kw[s]) for s in ('plv', 'osv', 'qsv'))
+        kw['width'] = max(len(kw[s]) for s in kw.keys() if s != 'desc')
         return tpl.format(**kw)
 
 

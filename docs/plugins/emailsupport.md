@@ -2,11 +2,10 @@
 
 Works with your mail client to enable e-mail based actions.
 
- Summary                  | &nbsp; 
--------------------------:|:--------------------
- Latest plugin version    | 2.0.2
- Supported MacOS versions | 10.11, 10.12, 10.13
- Quicksilver builds       | 4024
+ Summary                    | &nbsp; 
+---------------------------:|:--------------------
+ Available on macOS version | 10.11, 10.12, 10.13
+      for Quicksilver build | 4024
 
 
 ## E-mail Support

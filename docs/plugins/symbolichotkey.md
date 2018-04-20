@@ -2,11 +2,10 @@
 
 Allows triggering of Exposé and other System Hotkeys.
 
- Summary                  | &nbsp; 
--------------------------:|:--------------------
- Latest plugin version    | 5A
- Supported MacOS versions | 10.11, 10.12, 10.13
- Quicksilver builds       | 4024
+ Summary                    | &nbsp; 
+---------------------------:|:--------------------
+ Available on macOS version | 10.11, 10.12, 10.13
+      for Quicksilver build | 4024
 
 
 Adds a catalog entry for Exposé and Dashboard commands. For these to work,
