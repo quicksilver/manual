@@ -101,6 +101,14 @@ class Project(object):
         assert self.config_path.is_file()
         assert self.docs_dir.is_dir()
 
+    def clear(self):
+        """Clear docs dir."""
+        plugins_dir = self.docs_dir / 'plugins'
+        log.warning('Clearing %s', plugins_dir)
+        for file in plugins_dir.iterdir():
+            if file.is_file():
+                file.unlink()
+
     def save(self):
         """Save project config."""
         log.info('Saving config to %s', self.config_path)
@@ -200,6 +208,7 @@ def main():
     """Run script."""
     argp = ArgumentParser()
     argp.add_argument('--fresh', action='store_true', help='Ignore local info cache')
+    argp.add_argument('--clear', action='store_true', help='Clear existing plugin docs')
     opts = argp.parse_args()
     pluginmap = {}
     for major, minor, patch in sorted(SUPPORTED_OS_VERSIONS):
@@ -214,6 +223,9 @@ def main():
             info.setdefault('_qsversions', set()).add(qsversion)
 
     project = Project()
+    if opts.clear:
+        project.clear()
+
     for plugin in pluginmap.values():
         try:
             project.import_plugin_doc(plugin)
