@@ -6,9 +6,10 @@ This script fetches plugin documentation from their respective repositories and
 inserts them into the *plugins/* directory in *docs/*.
 """
 import logging
+import plistlib
+from argparse import ArgumentParser
 from os import makedirs
 from pathlib import Path
-import plistlib
 from urllib.request import Request, urlopen
 
 from html2text import html2text
@@ -44,7 +45,8 @@ def get_latest_qsversion(osversion=None, check_url=CHECK_URL):
     return int(hexbuild, 16)
 
 
-def get_plugins_info(qsversion=None, osversion=None, info_url=INFO_URL, cache_dir=CACHE_DIR):
+def get_plugins_info(qsversion=None, osversion=None, fresh=False,
+                     info_url=INFO_URL, cache_dir=CACHE_DIR):
     """Fetch plugin information list from qsapp."""
     if qsversion and osversion:
         cache_path = cache_dir / f'info_QS{qsversion}_OS{osversion}.plist'
@@ -55,7 +57,7 @@ def get_plugins_info(qsversion=None, osversion=None, info_url=INFO_URL, cache_di
     else:
         cache_path = cache_dir / 'info.plist'
 
-    if cache_path.is_file():
+    if cache_path.is_file() and not fresh:
         log.debug('Returning cached info from %s', cache_path)
         with open(cache_path, 'rb') as cachefp:
             info = plistlib.load(cachefp)
@@ -192,13 +194,17 @@ class Project(object):
 
 def main():
     """Run script."""
+    argp = ArgumentParser()
+    argp.add_argument('--fresh', action='store_true', help='Ignore local info cache')
+    opts = argp.parse_args()
     pluginmap = {}
     for major, minor, patch in sorted(SUPPORTED_OS_VERSIONS):
         # sorted takes care of later osversions go with later qsversions
         osversion = f'{major}_{minor}_{patch}'
         log.info('With osversion=%s:', osversion)
         qsversion = get_latest_qsversion(osversion=osversion)
-        for plugin in get_plugins_info(qsversion=qsversion, osversion=osversion):
+        plugins = get_plugins_info(qsversion=qsversion, osversion=osversion, fresh=opts.fresh)
+        for plugin in plugins:
             info = pluginmap.setdefault(plugin['CFBundleIdentifier'], plugin)
             info.setdefault('_osversions', set()).add((major, minor))
             info.setdefault('_qsversions', set()).add(qsversion)
