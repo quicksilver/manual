@@ -209,6 +209,8 @@ def main():
     argp = ArgumentParser()
     argp.add_argument('--fresh', action='store_true', help='Ignore local info cache')
     argp.add_argument('--clear', action='store_true', help='Clear existing plugin docs')
+    argp.add_argument('--keep-empty', action='store_false', dest='skip_empty',
+                      help='Keep stub document for plugins without documentation')
     opts = argp.parse_args()
     pluginmap = {}
     for major, minor, patch in sorted(SUPPORTED_OS_VERSIONS):
@@ -228,7 +230,7 @@ def main():
 
     for plugin in pluginmap.values():
         try:
-            project.import_plugin_doc(plugin)
+            project.import_plugin_doc(plugin, skip_empty=opts.skip_empty)
         except Exception as exc:
             log.warning('Error importing %s: %s', plugin.get('CFBundleName'), exc)
             log.debug('Exception', exc_info=True)
