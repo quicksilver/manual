@@ -123,10 +123,16 @@ class Project(object):
         else:
             pagestoc.append({'Plugins': pluginstoc})
 
-    def import_plugin_doc(self, plugin):
+    def import_plugin_doc(self, plugin, skip_empty=True):
         """Import from plugin info into project docs."""
         name, fname = self._get_plugin_names(plugin)
         log.info('Importing plugin %s', name)
+        source = plugin.get('QSPlugIn', {}).get('extendedDescription', '')
+        output = html2text(source).strip()
+        if not output and skip_empty:
+            log.info('Skipping %s (no documentation)', name)
+            return None
+
         dstfile = self.docs_dir / 'plugins' / f'{fname}.md'
         log.debug('Writing docs to %s', dstfile)
         makedirs(dstfile.parent, exist_ok=True)
@@ -137,12 +143,10 @@ class Project(object):
                 '\n\n',
             ]
             mdfile.writelines(summary)
-            source = plugin.get('QSPlugIn', {}).get('extendedDescription', '')
-            output = html2text(source).strip()
             if output:
                 mdfile.write(output)
             else:
-                log.debug('No documentation found for %s', name)
+                log.debug('No documentation for %s', name)
                 mdfile.write('No plugin documentation.')
 
         log.debug('Adding %s to page index', name)
