@@ -2,6 +2,7 @@ extra_css:
 - css/qs.css
 markdown_extensions:
 - admonition
+- extra
 pages:
 - Home: index.md
 - Introduction: Introduction.md
