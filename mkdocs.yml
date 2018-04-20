@@ -21,12 +21,6 @@ pages:
   - Images.md
   - System.md
   - Development.md
-- Appendix:
-  - FAQ.md
-  - Troubleshooting.md
-  - Extending Quicksilver.md
-  - Random Notes.md
-  - Style Guide.md
 - Plugins:
   - 1Password: plugins/onepassword.md
   - Abracadabra Triggers: plugins/gesturetriggers.md
@@ -101,4 +95,10 @@ pages:
   - iPhoto: plugins/iphoto.md
   - iTerm2: plugins/iterm2.md
   - iTunes: plugins/itunes.md
+- Appendix:
+  - FAQ.md
+  - Troubleshooting.md
+  - Extending Quicksilver.md
+  - Random Notes.md
+  - Style Guide.md
 site_name: Quicksilver Manual
