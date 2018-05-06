@@ -48,6 +48,9 @@ pages:
   - Google Chrome: plugins/googlechrome.md
   - Growl Notifier: plugins/growl.md
   - Image Manipulation: plugins/imagemanipulation.md
+  - iPhoto: plugins/iphoto.md
+  - iTerm2: plugins/iterm2.md
+  - iTunes: plugins/itunes.md
   - Keychain: plugins/keychain.md
   - MailMate: plugins/mailmate.md
   - Microsoft Office: plugins/microsoftoffice.md
@@ -77,9 +80,6 @@ pages:
   - Viscosity: plugins/viscosity.md
   - Web Search: plugins/websearch.md
   - Yojimbo: plugins/yojimbo.md
-  - iPhoto: plugins/iphoto.md
-  - iTerm2: plugins/iterm2.md
-  - iTunes: plugins/itunes.md
 - Appendix:
   - FAQ.md
   - Troubleshooting.md

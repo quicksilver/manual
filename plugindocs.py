@@ -121,7 +121,11 @@ class Project(object):
 
     def _update_config(self, config):
         pagestoc = config.setdefault('pages', [])
-        pluginstoc = [{k: v} for k, v in sorted(self.pluginstoc.items())]
+        sortedpages = sorted(
+            self.pluginstoc.items(),
+            key=lambda i: tuple(map(str.lower, i)),
+        )
+        pluginstoc = [{k: v} for k, v in sortedpages]
         for section in pagestoc:
             if 'Plugins' in section:
                 # Warning: Overwrites the whole section
