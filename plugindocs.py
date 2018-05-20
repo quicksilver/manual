@@ -211,11 +211,21 @@ class Project(object):
 def main():
     """Run script."""
     argp = ArgumentParser()
+    logargs = argp.add_mutually_exclusive_group()
+    logargs.add_argument('--debug', action='store_true', help='Turn on debug mesages')
+    logargs.add_argument('--quiet', action='store_true',
+                         help='Suppress output except for warnings and errors')
     argp.add_argument('--fresh', action='store_true', help='Ignore local info cache')
     argp.add_argument('--clear', action='store_true', help='Clear existing plugin docs')
     argp.add_argument('--keep-empty', action='store_false', dest='skip_empty',
                       help='Keep stub document for plugins without documentation')
     opts = argp.parse_args()
+
+    if opts.debug:
+        logging.getLogger().setLevel(logging.DEBUG)
+    elif opts.quiet:
+        logging.getLogger().setLevel(logging.WARNING)
+
     pluginmap = {}
     for major, minor, patch in sorted(SUPPORTED_OS_VERSIONS):
         # sorted takes care of later osversions go with later qsversions
