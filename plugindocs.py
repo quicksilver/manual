@@ -1,19 +1,36 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """
 Import Documentation for Quicksilver plugins.
 
 This script fetches plugin documentation from their respective repositories and
 inserts them into the *plugins/* directory in *docs/*.
 """
+from __future__ import unicode_literals
+
 import logging
 import plistlib
+import sys
 from argparse import ArgumentParser
-from os import makedirs
-from pathlib import Path
-from urllib.request import Request, urlopen
 
 from html2text import html2text
 import yaml
+
+if sys.version_info.major >= 3:
+    from pathlib import Path
+    from urllib.request import Request, urlopen
+else:
+    import urllib2
+    from contextlib import closing
+    from urllib2 import Request
+
+    # Python 2 backport
+    from pathlib2 import Path
+
+    def urlopen(*a, **kw):
+        """Patch urllib2.urlopen to add ``with`` support."""
+        return closing(urllib2.urlopen(*a, **kw))
+
+    plistlib.load = plistlib.readPlist
 
 
 CACHE_DIR = Path('_plugins')
@@ -35,7 +52,7 @@ def get_latest_qsversion(osversion=None, check_url=CHECK_URL):
     """Query for the latest version of Quicksilver."""
     ua = 'manual/plugindocs'
     if osversion:
-        ua += f' Mac OS X {osversion}'
+        ua += ' Mac OS X {osversion}'.format(**locals())
 
     req = Request(check_url, headers={'User-Agent': ua})
     log.info('Querying %s for latest qs version', check_url)
@@ -49,35 +66,35 @@ def get_plugins_info(qsversion=None, osversion=None, fresh=False,
                      info_url=INFO_URL, cache_dir=CACHE_DIR):
     """Fetch plugin information list from qsapp."""
     if qsversion and osversion:
-        cache_path = cache_dir / f'info_QS{qsversion}_OS{osversion}.plist'
+        cache_path = cache_dir / 'info_QS{qsversion}_OS{osversion}.plist'.format(**locals())
     elif qsversion:
-        cache_path = cache_dir / f'info_QS{qsversion}.plist'
+        cache_path = cache_dir / 'info_QS{qsversion}.plist'.format(**locals())
     elif osversion:
-        cache_path = cache_dir / f'info_OS{osversion}.plist'
+        cache_path = cache_dir / 'info_OS{osversion}.plist'.format(**locals())
     else:
         cache_path = cache_dir / 'info.plist'
 
     if cache_path.is_file() and not fresh:
         log.debug('Returning cached info from %s', cache_path)
-        with open(cache_path, 'rb') as cachefp:
+        with cache_path.open('rb') as cachefp:
             info = plistlib.load(cachefp)
 
         return info['plugins']
 
     url = info_url
     if qsversion:
-        url += f'?qsversion={qsversion}'
+        url += '?qsversion={qsversion}'.format(**locals())
 
     ua = 'manual/plugindocs'
     if osversion:
-        ua += f' Mac OS X {osversion}'
+        ua += ' Mac OS X {osversion}'.format(**locals())
 
     req = Request(url, headers={'User-Agent': ua})
     log.info('Querying %s for plugins info', url)
     with urlopen(req) as response:
         log.debug('Caching response to %s', cache_path)
-        makedirs(cache_dir, exist_ok=True)
-        with open(cache_path, 'wb+') as cachefp:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        with cache_path.open('wb+') as cachefp:
             cachefp.write(response.read())
             cachefp.seek(0)
             info = plistlib.load(cachefp)
@@ -112,18 +129,18 @@ class Project(object):
     def save(self):
         """Save project config."""
         log.info('Saving config to %s', self.config_path)
-        with open(self.config_path) as cfgfp:
+        with self.config_path.open() as cfgfp:
             config = yaml.load(cfgfp)
 
         self._update_config(config)
-        with open(self.config_path, 'w') as cfgfp:
+        with self.config_path.open('w') as cfgfp:
             yaml.dump(config, cfgfp, default_flow_style=False)
 
     def _update_config(self, config):
         pagestoc = config.setdefault('pages', [])
         sortedpages = sorted(
             self.pluginstoc.items(),
-            key=lambda i: tuple(map(str.lower, i)),
+            key=lambda i: tuple(s.lower() for s in i),
         )
         pluginstoc = [{k: v} for k, v in sortedpages]
         for section in pagestoc:
@@ -145,12 +162,12 @@ class Project(object):
             log.info('Skipping %s (no documentation)', name)
             return None
 
-        dstfile = self.docs_dir / 'plugins' / f'{fname}.md'
+        dstfile = self.docs_dir / 'plugins' / '{fname}.md'.format(**locals())
         log.debug('Writing docs to %s', dstfile)
-        makedirs(dstfile.parent, exist_ok=True)
-        with open(dstfile, mode='w') as mdfile:
+        dstfile.parent.mkdir(parents=True, exist_ok=True)
+        with dstfile.open('w') as mdfile:
             summary = [
-                f'# {name}\n\n',
+                '# {name}\n\n'.format(**locals()),
                 self._get_plugin_summary(plugin),
                 '\n\n',
             ]
@@ -162,8 +179,9 @@ class Project(object):
                 mdfile.write('No plugin documentation.')
 
         log.debug('Adding %s to page index', name)
-        entry = f'plugins/{fname}.md'
-        self.pluginstoc[name] = entry
+        entry = 'plugins/{fname}.md'.format(**locals())
+        # little py2 str hack to stop !!unicode appearing in yaml
+        self.pluginstoc[str(name)] = str(entry)
         return name
 
     def _get_plugin_names(self, plugin):
@@ -229,7 +247,7 @@ def main():
     pluginmap = {}
     for major, minor, patch in sorted(SUPPORTED_OS_VERSIONS):
         # sorted takes care of later osversions go with later qsversions
-        osversion = f'{major}_{minor}_{patch}'
+        osversion = '{major}_{minor}_{patch}'.format(**locals())
         log.info('With osversion=%s:', osversion)
         qsversion = get_latest_qsversion(osversion=osversion)
         plugins = get_plugins_info(qsversion=qsversion, osversion=osversion, fresh=opts.fresh)
