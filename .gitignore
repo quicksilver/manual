@@ -5,3 +5,4 @@ site
 venv
 
 _plugins/
+docs/plugins/
