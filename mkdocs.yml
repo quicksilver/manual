@@ -1,5 +1,5 @@
 site_name: Quicksilver Manual
-pages:
+nav:
   - Home: index.md
   - Introduction: Introduction.md
   - Preferences: Preferences.md
