@@ -58,6 +58,12 @@ TODO: There are usually 3 things that come up with triggers that don’t save.
 2. Triggers are saved in `~/Library/Application Support/Quicksilver/Triggers.plist` if the permissions of that file or directory don’t allow you to write, then no trigger will be saved. There have also been reports of this file becoming corrupted.
 3. If you have triggers using actions from some plugin and then uninstall that plugin, the triggers remain and QS can be confused. Sometimes a particular trigger doesn’t display, sometimes only one of many triggers appears in the prefs. To fix, reinstall the needed plugins, delete the related triggers, then remove the plugin.
 
+## Catalog entries are missing on Mojave or later
+
+This is known to affect Safari Bookmarks and Safari History.
+
+Go to your [Privacy Preferences][privacy] and add Quicksilver to the “Full Disk Access” list.
+
 ## Actions fail on Mojave or later
 
 In macOS Mojave, Apple began requiring user confirmation before allowing applications to interact with each other via AppleEvents (one of the technologies behind AppleScript). Quicksilver makes heavy use of AppleEvents to interact with your system.
