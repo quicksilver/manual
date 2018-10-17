@@ -18,6 +18,12 @@ If you open the drawer for catalog sources, in the Contents tab you’ll find al
 
 By default Quicksilver finds files on your Desktop and in your Documents folder but it doesn’t scan very far into those locations. It scans things on the Desktop but not inside folders on the Desktop, that is it scans the Desktop to a depth of 1. Quicksilver scans the ~/Documents folder to a depth of 2. To scan deeper, clone the source so it’s in the Custom set in the catalog and editable. To do this, select the Users set and the Documents source, open the drawer and select the Attributes tab. Click on Create Copy to create a new source in Custom named Documents. Select the new source and click on the  button to show a drawer with three tabs. Select the Source Options tab and select the depth. Do not just set it to infinite, the catalog will be too large and Quicksilver will slow to a crawl. See the Catalog section for some tips.
 
+## Quicksilver always searches the entire catalog ##
+
+After right-arrowing into something, if searching appears to start over from the entire catalog rather than searching the current context, you may have inadvertently changed the search mode using <kbd>⌘</kbd><kbd>→</kbd> or <kbd>⌘</kbd><kbd>←</kbd>.
+
+After you right-arrow, click the gear at the top of the results list. You can change the search mode there. You can also use the keyboard shortcuts above to cycle though the search modes. “Filter Results” is probably what you want in most situations.
+
 ## Quicksilver plays or shows notifications for the wrong iTunes track
 
 Yes, unfortunately this is a problem in B51.
