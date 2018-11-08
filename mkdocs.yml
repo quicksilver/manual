@@ -3,7 +3,7 @@ extra_css:
 markdown_extensions:
 - admonition
 - extra
-pages:
+nav:
 - Home: index.md
 - Introduction: Introduction.md
 - Preferences: Preferences.md
@@ -26,6 +26,7 @@ pages:
   - 1Password: plugins/onepassword.md
   - Abracadabra Triggers: plugins/gesturetriggers.md
   - Apple Mail: plugins/applemail.md
+  - Audio: plugins/audio.md
   - Automator: plugins/automator.md
   - Calculator: plugins/tscalculator.md
   - Calendar: plugins/icalmodule.md

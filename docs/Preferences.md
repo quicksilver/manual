@@ -470,6 +470,31 @@ The **Save Command to File…** action takes a command object and saves it in a 
 
 With a saved command on your Desktop you might want to be able to drag a file onto the command and have it run on that file. This type of saved command is known as a Droplet. To create a droplet, use the Droplet Item proxy object in the command and save it using the **Save Command to File…** action. The command file will have a special icon and a `.app` extension. Whatever you drop on the droplet application will take the place of the Droplet Item proxy when the command is executed.
 
+# Touch Bar Support #
+
+For Macs with a Touch Bar, the following will be available when Quicksilver is active:
+
+  * Back/forward in history
+  * Grab current selection
+  * Clear the interface
+  * Quick Look
+  * Reveal Proxy
+  * Show Task Viewer
+  * Back/forward in collection
+  * Explode collection
+  * Remove last item from collection
+
+The available buttons and their positions can be customized to your liking.
+
+  1. Invoke Quicksilver (the interface must be visible)
+  2. Go to the Quicksilver menu in the menu bar
+  3. Choose “Customize Touch Bar…”
+
+!!! note
+    If you don’t normally run Quicksilver with the Dock icon visible, you’ll need to enable it temporarily to access the menu. (Preferences → General → Application → Show icon in dock)
+    
+    You can hide the Dock icon again once you’re happy with your customizations.
+
 # Plugins
 
 Quicksilver is designed with a central core that implements some basic functionality, but most of the features are implemented in plugins. You can pick and choose which plugin functionality you want, but must install the plugins before that functionality is available. Managing the plugins including finding, installing, enabling, and removing is done entirely from within Quicksilver in the Plugins Preferences (though additional configuration in Preferences or the Catalog may be useful or necessary). You can bring it up from the menu, or by activating Quicksilver and typing <kbd>⌘</kbd><kbd>"</kbd>.

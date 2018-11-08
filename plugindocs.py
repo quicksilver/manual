@@ -137,7 +137,7 @@ class Project(object):
             yaml.dump(config, cfgfp, default_flow_style=False)
 
     def _update_config(self, config):
-        pagestoc = config.setdefault('pages', [])
+        pagestoc = config.setdefault('nav', [])
         sortedpages = sorted(
             self.pluginstoc.items(),
             key=lambda i: tuple(s.lower() for s in i),
