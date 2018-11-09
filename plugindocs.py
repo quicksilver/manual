@@ -10,6 +10,7 @@ from __future__ import unicode_literals
 import logging
 import plistlib
 import sys
+from lxml import etree
 from argparse import ArgumentParser
 
 from html2text import html2text
@@ -156,7 +157,36 @@ class Project(object):
         """Import from plugin info into project docs."""
         name, fname = self._get_plugin_names(plugin)
         log.info('Importing plugin %s', name)
-        source = plugin.get('QSPlugIn', {}).get('extendedDescription', '')
+        source = plugin.get('QSPlugIn', {}).get('extendedDescription', '').strip()
+
+        if not source and skip_empty:
+            log.info('Skipping %s (no documentation)', name)
+            return None
+
+        transform = etree.XSLT(etree.XML('''\
+        <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:output method="html" indent="yes"/>
+        <xsl:template match="node()|@*" name="identity">
+            <xsl:copy>
+                <xsl:apply-templates select="node()|@*"/>
+            </xsl:copy>
+        </xsl:template>
+
+        <xsl:template match="//dl">
+            <xsl:apply-templates />
+        </xsl:template>
+
+        <xsl:template match="//dl/dt">
+            <h3><xsl:value-of select="text()" /></h3>
+        </xsl:template>
+
+        <xsl:template match="//dl/dd">
+            <p><xsl:value-of select="text()" /></p>
+        </xsl:template>
+        </xsl:stylesheet>'''))
+        xml = etree.HTML(source)
+        source = str(transform(xml))
+
         output = html2text(source).strip()
         if not output and skip_empty:
             log.info('Skipping %s (no documentation)', name)
