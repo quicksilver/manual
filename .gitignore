@@ -1,2 +1,8 @@
+__pycache__
+*.py[cdo]
+
 site
 venv
+
+_plugins/
+docs/plugins/
