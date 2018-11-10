@@ -15,6 +15,7 @@ You can optionally install MkDocs to see a live preview of the site as you work.
     $ cd manual
     $ virtualenv -p python3 venv
     $ venv/bin/pip install -r requirements.txt
+    $ venv/bin/python plugindocs.py
     $ venv/bin/mkdocs serve
 
 This will run a web server at <http://localhost:8000/>. The site should reload automatically whenever you update content or configuration.
@@ -24,10 +25,9 @@ Be sure to review the Style Guide (included in the manual) before starting.
 
 ## Updating plugin docs ##
 
-Plugin docs are automatically pulled in from the plugin packages. To update them, run the _plugindocs.py_ script:
+Plugin docs are automatically pulled in from the plugin packages. To update them, run the `plugindocs.py` script:
 
     $ venv/bin/python plugindocs.py
-
 
 ## Updating the Live Manual ##
 
@@ -39,6 +39,7 @@ Publishing the latest version should be as simple as
 
     $ cd /data/manaul
     $ git pull
+    $ venv/bin/python plugindocs.py
     $ venv/bin/mkdocs build
 
 [MkDocs]: http://www.mkdocs.org/
