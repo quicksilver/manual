@@ -42,7 +42,8 @@ INFO_URL = 'https://qs0.qsapp.com/plugins/info.php'
 SUPPORTED_OS_VERSIONS = [
     (10, 11, 6),
     (10, 12, 6),
-    (10, 13, 4),
+    (10, 13, 6),
+    (10, 14, 2),
 ]
 
 
@@ -263,7 +264,7 @@ def main():
     logargs.add_argument('--debug', action='store_true', help='Turn on debug mesages')
     logargs.add_argument('--quiet', action='store_true',
                          help='Suppress output except for warnings and errors')
-    argp.add_argument('--fresh', action='store_true', help='Ignore local info cache')
+    argp.add_argument('--fresh', action='store_true', help='Ignore (& refresh) local info cache')
     argp.add_argument('--clear', action='store_true', help='Clear existing plugin docs')
     argp.add_argument('--keep-empty', action='store_false', dest='skip_empty',
                       help='Keep stub document for plugins without documentation')

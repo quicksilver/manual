@@ -25,9 +25,19 @@ Be sure to review the Style Guide (included in the manual) before starting.
 
 ## Updating plugin docs ##
 
-Plugin docs are automatically pulled in from the plugin packages. To update them, run the `plugindocs.py` script:
+Plugin docs are automatically pulled in from the plugin packages. To generate them for the latest QS build, run the `plugindocs.py` script:
 
     $ venv/bin/python plugindocs.py
+
+Because of the lengthy download, the plugindocs script will keep a local cache of the plugin info from the qsapp.com site. If a plugin's documentation has been updated, but QS has not, you should run the script with the `--fresh` option to overwrite the cache.
+
+If a plugin has been removed, you may also want to add the `--clear` option to remove the old generated documentation.
+
+### Developer notes ###
+
+  * When changes to the supported OS versions are made, these should be reflected in the `SUPPORTED_OS_VERSIONS` constant in  _pluginsdocs.py_.
+  * Check `--help` for the full list of options.
+
 
 ## Updating the Live Manual ##
 
@@ -41,6 +51,7 @@ Publishing the latest version should be as simple as
     $ git pull
     $ venv/bin/python plugindocs.py
     $ venv/bin/mkdocs build
+
 
 [MkDocs]: http://www.mkdocs.org/
 [Homebrew]: https://brew.sh/
