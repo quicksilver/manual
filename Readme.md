@@ -8,7 +8,7 @@ Editing this manual locally is relatively easy. You can just edit the files like
 
 You can optionally install MkDocs to see a live preview of the site as you work. To use the latest release of Python and avoid installing packages system-wide, I recommend installing Python from [Homebrew][] and creating a virtual environment.
 
-    $ brew install python3
+    $ brew install python
     $ pip3 install virtualenv
     $ cd <your directory for projects>
     $ git clone <your fork of this repo>
