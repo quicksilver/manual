@@ -1,6 +1,6 @@
 # Quicksilver Manual Source #
 
-These are the source files for the Quicksilver user manual. Use [MkDocs][] to build a site from these files.
+These are the source files for the [online Quicksilver user manual](https://qsapp.com/manual/). Use [MkDocs][] to build a site from these files.
 
 ## Working Locally ##
 
