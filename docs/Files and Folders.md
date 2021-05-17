@@ -56,6 +56,10 @@ There are many file and folder actions, but realize they work with Quicksilver�
 
 See the [Text Files](Text.md#text-files) section for actions that modify the contents of a text files.
 
+## Previewing A File With QuickLook
+
+To preview a file using QuickLook, type <kbd>⌘</kbd><kbd>Y</kbd>. To preview full-screen, use <kbd>⌥</kbd><kbd>⌘</kbd><kbd>Y</kbd> (these are the same shortcuts as in the Finder). QuickLook is also the default behavior of <kbd>Space</kbd> for some file types if "Spacebar behavior" is set to "Smart" or "QuickLook" in the Command section of the General preferences pane.
+
 ## File Tagging
 
 The File Attributes plugin allows Quicksilver to tag files and search for files based on one or more tags.
