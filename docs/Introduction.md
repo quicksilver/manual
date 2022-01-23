@@ -42,7 +42,7 @@ Open Terminal, type `brew install --cask quicksilver`. You can `uninstall` just 
 
 ## First Launch
 
-Due to the way Quicksilver is built, macOS raises a [code signing warning (open issue)](https://github.com/quicksilver/Quicksilver/issues/2576))—the quickest way to get around this is to <kbd>ctrl-</kbd> or <kbd>right-click</kbd> the Quicksilver app in Applications, choose "open" from the contextual menu, *then* choose the *extra "open" button* that now appears in the warning dialog box. This only needs doing once, Quicksilver will then launch in future without further issue.
+Due to the way Quicksilver is built, macOS raises a [code signing warning](https://github.com/quicksilver/Quicksilver/issues/2576). The quickest way to get around this is to Control-Click or Right-Click the Quicksilver app in Applications, choose “Open” from the contextual menu, *then* choose the *extra “Open” button* that now appears in the warning dialog box. This only needs doing once, Quicksilver will then launch in future without further issue.
 
 On first launch, Quicksilver presents some setup options (it can be rerun later with the Run Setup button in the Application Preferences). Choose a shortcut that activates the Quicksilver command window, or just accept the default, <kbd>⌃</kbd><kbd>Space</kbd>. Quicksilver will recommend plugins based on applications you have installed and other criteria.
 
