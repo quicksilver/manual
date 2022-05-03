@@ -8,7 +8,6 @@ inserts them into the *plugins/* directory in *docs/*.
 
 import logging
 import plistlib
-import sys
 from lxml import etree
 from argparse import ArgumentParser
 
