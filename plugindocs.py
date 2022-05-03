@@ -116,7 +116,7 @@ class Project(object):
         """Save project config."""
         log.info('Saving config to %s', self.config_path)
         with self.config_path.open() as cfgfp:
-            config = yaml.load(cfgfp)
+            config = yaml.safe_load(cfgfp)
 
         self._update_config(config)
         with self.config_path.open('w') as cfgfp:
