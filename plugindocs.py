@@ -1,37 +1,21 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Import Documentation for Quicksilver plugins.
 
 This script fetches plugin documentation from their respective repositories and
 inserts them into the *plugins/* directory in *docs/*.
 """
-from __future__ import unicode_literals
 
 import logging
 import plistlib
-import sys
 from lxml import etree
 from argparse import ArgumentParser
 
 from html2text import html2text
 import yaml
 
-if sys.version_info.major >= 3:
-    from pathlib import Path
-    from urllib.request import Request, urlopen
-else:
-    import urllib2
-    from contextlib import closing
-    from urllib2 import Request
-
-    # Python 2 backport
-    from pathlib2 import Path
-
-    def urlopen(*a, **kw):
-        """Patch urllib2.urlopen to add ``with`` support."""
-        return closing(urllib2.urlopen(*a, **kw))
-
-    plistlib.load = plistlib.readPlist
+from pathlib import Path
+from urllib.request import Request, urlopen
 
 
 CACHE_DIR = Path('_plugins')
@@ -132,7 +116,7 @@ class Project(object):
         """Save project config."""
         log.info('Saving config to %s', self.config_path)
         with self.config_path.open() as cfgfp:
-            config = yaml.load(cfgfp)
+            config = yaml.safe_load(cfgfp)
 
         self._update_config(config)
         with self.config_path.open('w') as cfgfp:
