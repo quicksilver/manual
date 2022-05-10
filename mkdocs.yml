@@ -29,7 +29,7 @@ nav:
   - Audio: plugins/audio.md
   - Automator: plugins/automator.md
   - Calculator: plugins/tscalculator.md
-  - Calendar: plugins/icalmodule.md
+  - Calendar & Reminders: plugins/icalmodule.md
   - Clipboard: plugins/clipboard.md
   - Command Line Tool: plugins/commandlinetool.md
   - Contacts: plugins/addressbook.md
@@ -63,7 +63,6 @@ nav:
   - OpenMeta File Tagging: plugins/openmetafiletagging.md
   - Opera: plugins/opera.md
   - Process Manipulation: plugins/processmanipulation.md
-  - PushDialer: plugins/quicksilver.md
   - QSQRCode: plugins/qrcode.md
   - Remember The Milk: plugins/rememberthemilk.md
   - Remote Hosts: plugins/remotehosts.md
@@ -81,6 +80,7 @@ nav:
   - Viscosity: plugins/viscosity.md
   - Web Search: plugins/websearch.md
   - Yojimbo: plugins/yojimbo.md
+  - zoom.us: plugins/zoom.md
 - Appendix:
   - FAQ.md
   - Troubleshooting.md
