@@ -1,3 +1,4 @@
+---
 name: Check
 
 on:
@@ -7,12 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: recursive
-    - name: Build docs
-      run: |
-        python3 -m pip install --upgrade pip
-        python3 -m pip install -r requirements.txt
-        python3 plugindocs.py
-        python3 -m mkdocs build
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Build docs
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt
+          python3 plugindocs.py
+          python3 -m mkdocs build

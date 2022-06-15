@@ -1,3 +1,4 @@
+---
 name: Deploy
 
 on:
@@ -8,21 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: recursive
-    - name: Pull changes
-      env:
-        SERVER: ${{ secrets.SERVER }}
-        PORT: ${{ secrets.PORT }}
-        SSH_KEY: ${{secrets.SSH_KEY}}
-      run: |
-        echo "${SSH_KEY}" > /tmp/key
-        chmod 0600 /tmp/key
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Pull changes
+        env:
+          SERVER: ${{ secrets.SERVER }}
+          PORT: ${{ secrets.PORT }}
+          SSH_KEY: ${{secrets.SSH_KEY}}
+        run: |
+          echo "${SSH_KEY}" > /tmp/key
+          chmod 0600 /tmp/key
 
-        ssh -T "${SERVER}" -p "${PORT}" -i /tmp/key -o StrictHostKeyChecking=no <<'EOF'
-          cd /data/manaul
-          git pull --dry-run
-          venv/bin/python plugindocs.py
-          venv/bin/python -m mkdocs build
-        EOF
+          ssh -T "${SERVER}" -p "${PORT}" -i /tmp/key -o StrictHostKeyChecking=no <<'EOF'
+            cd /data/manual
+            git pull --dry-run
+            venv/bin/python plugindocs.py
+            venv/bin/python -m mkdocs build
+          EOF
