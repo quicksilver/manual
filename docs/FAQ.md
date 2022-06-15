@@ -102,8 +102,8 @@ directory whose target usually resides in `/nix/store` somewhere
 (you can inspect with `/usr/bin/readlink -f ~/.nix-profile/`).
 
 If one attempts to add this path to the Quicksilver catalog through the
-graphical user interface in
-`Settings` ⇥ `Catalog` ⇥ `+` ⇥ `File & Folder Scanner`, a MacOS file picker
+graphical user interface (`Settings` ⇥ `Catalog` ⇥ `+` ⇥
+`File & Folder Scanner`), a MacOS file picker
 presents itself, and one can enter in the path either by pressing
 <kbd>⌘</kbd><kbd>⇧</kbd><kbd>G</kbd> to type it in, or using
 <kbd>⌘</kbd><kbd>⇧</kbd><kbd>.</kbd> to toggle showing hidden files and
@@ -112,7 +112,7 @@ symlink at the time of adding the path; if that symlink changes to point to a
 different directory, the Quicksilver catalog entry will still point to the old
 path that was resolved at the time of adding.
 
-If this is not the desired beheavior, one can add the symlink to the
+If this is not the desired behavior, one can add the symlink to the
 Quicksilver catalog *without* resolving to its target by selecting the symlink
 in Quicksilver's first pane (either by navigating or by entering text mode,
 typing it in, then hitting <kbd>⎋</kbd>), then using the `Add To Catalog`
