@@ -22,7 +22,7 @@ To scan deeper, clone the source so it’s in the Custom set in the catalog and 
 
 Do not just set it to infinite, the catalog will be too large and Quicksilver will slow to a crawl. See the Catalog section for some tips.
 
-## Quicksilver always searches the entire catalog ##
+## Quicksilver always searches the entire catalog
 
 After right-arrowing into something, if searching appears to start over from the entire catalog rather than searching the current context, you may have inadvertently changed the search mode using <kbd>⌘</kbd><kbd>→</kbd> or <kbd>⌘</kbd><kbd>←</kbd>.
 
@@ -39,7 +39,7 @@ When you see crashes, here are a few things to try.
 
 ## Quicksilver won’t install any plugins or hangs when trying
 
-This is usually a permissions problem. Check that your user account (and not root) owns `~/Library/Application Support/Quicksilver/` and the PlugIns folder beneath it. You can check and change this if needed by doing Get Info in the Finder and looking in the Ownership & Permission section. After making sure the folder exists and you own it and have permissions to write to it, restart Quicksilver. 
+This is usually a permissions problem. Check that your user account (and not root) owns `~/Library/Application Support/Quicksilver/` and the PlugIns folder beneath it. You can check and change this if needed by doing Get Info in the Finder and looking in the Ownership & Permission section. After making sure the folder exists and you own it and have permissions to write to it, restart Quicksilver.
 
 The other cause is if you’re running Little Snitch which is a reverse firewall and prevents Quicksilver from contacting the server where the plugins are.
 
@@ -91,3 +91,44 @@ Alternatively, you can reset the access in Terminal:
 Unfortunately, that resets everything, so any application on your system using AppleEvents will have to be reauthorized.
 
 [privacy]: x-apple.systempreferences:com.apple.preference.security?Privacy_Automation
+
+## Adding symlinks to the Quicksilver catalog
+
+Some users would like to add symlinks to files or directories to their
+Quicksilver catalog *without* resolving the symlink. For example,
+[`nix`](https://nixos.org/) users may want to add the contents of
+`~/.nix-profile` to their catalog. `~/.nix-profile` is a symlink to a
+directory whose target usually resides in `/nix/store` somewhere
+(you can inspect with `/usr/bin/readlink -f ~/.nix-profile/`).
+
+If one attempts to add this path to the Quicksilver catalog through the
+graphical user interface (`Settings` ⇥ `Catalog` ⇥ `+` ⇥
+`File & Folder Scanner`), a MacOS file picker
+presents itself, and one can enter in the path either by pressing
+<kbd>⌘</kbd><kbd>⇧</kbd><kbd>G</kbd> to type it in, or using
+<kbd>⌘</kbd><kbd>⇧</kbd><kbd>.</kbd> to toggle showing hidden files and
+folders. However, taking this approach, MacOS will resolve the path to the
+symlink at the time of adding the path; if that symlink changes to point to a
+different directory, the Quicksilver catalog entry will still point to the old
+path that was resolved at the time of adding.
+
+If this is not the desired behavior, one can add the symlink to the
+Quicksilver catalog *without* resolving to its target by selecting the symlink
+in Quicksilver's first pane (either by navigating or by entering text mode,
+typing it in, then hitting <kbd>⎋</kbd>), then using the `Add To Catalog`
+action:
+
+![Adding a Symlink to the Catalog](images/add_symlink_to_catalog.png)
+
+Please note that currently Quicksilver will not index the contents of a
+symlinked directory, though it will index the content of a directory that is
+within a symlinked directory. For example, adding `~/.nix-profile` to the
+catalog will not index `~/.nix-profile/bin`. However, because
+`~/.nix-profile/bin` is a directory (not a symlink), adding
+`~/.nix-profile/bin` to your catalog can scan and add its contents such as
+`~/.nix-profile/bin/nix`. Further, if you use the approach above to add it
+without resolving its path, it should continue to update its contents over
+time, even as the target of `~/.nix-profile` evolves.
+
+For context and additional discussion, see
+[Quicksilver/issues/2758](https://github.com/quicksilver/Quicksilver/issues/2758).
