@@ -88,3 +88,6 @@ nav:
   - Random Notes.md
   - Style Guide.md
 site_name: Quicksilver Manual
+markdown_extensions:
+    - toc:
+        permalink: True
