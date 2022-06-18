@@ -23,4 +23,4 @@ jobs:
           echo "${SSH_KEY}" > /tmp/key
           chmod 0600 /tmp/key
 
-          ssh -T "${SERVER}" -p "${PORT}" -i /tmp/key -o StrictHostKeyChecking=no
+          ssh -T "${SERVER}" -p "${PORT}" -i /tmp/key -o StrictHostKeyChecking=no "${GITHUB_REPOSITORY}"
