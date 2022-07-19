@@ -21,6 +21,10 @@ a:hover {
   color: #606060;
 }
 
+.bg-primary {
+  background-color: #623876 !important;
+}
+
 .navbar {
   background: #623876;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
