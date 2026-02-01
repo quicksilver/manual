@@ -24,7 +24,7 @@ If you’ve been using Quicksilver for a while, you understand that he was compl
 
 ## Requirements
 
-The latest version runs on macOS 10.10 or later. [Previous versions](https://qsapp.com/archives/) are available for older versions of macOS.
+The latest version runs on macOS 10.14 or later. [Previous versions](https://github.com/quicksilver/Quicksilver/releases) are available for older versions of macOS.
 
 ## Installing Quicksilver
 

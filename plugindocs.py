@@ -24,13 +24,14 @@ DOCS_DIR = Path(__file__).parent / 'docs'
 CHECK_URL = 'https://qs0.qsapp.com/plugins/check.php'
 INFO_URL = 'https://qs0.qsapp.com/plugins/info.php'
 SUPPORTED_OS_VERSIONS = [
-    (10, 11, 6),
-    (10, 12, 6),
-    (10, 13, 6),
     (10, 14, 6),
     (10, 15, 7),
     (11, 6, 7),
-    (12, 4, 0)
+    (12, 4, 0),
+    (13, 0, 0),
+    (14, 0, 0),
+    (15, 0, 0),
+    (16, 0, 0),
 ]
 
 
