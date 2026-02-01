@@ -6,3 +6,5 @@ venv
 
 _plugins/
 docs/plugins/
+
+.DS_Store

@@ -1,8 +1,13 @@
 extra_css:
 - css/qs.css
 markdown_extensions:
-- admonition
-- extra
+- toc:
+    permalink: true
+plugins:
+  search:
+    lang: en
+theme:
+  name: mkdocs
 nav:
 - Home: index.md
 - Introduction: Introduction.md
@@ -39,6 +44,7 @@ nav:
   - Developer: plugins/developer.md
   - Displays: plugins/displays.md
   - E-mail Support: plugins/emailsupport.md
+  - Emojis: plugins/emojisplugin.md
   - Event Triggers: plugins/eventtriggers.md
   - Extra Scripts: plugins/extrascripts.md
   - FaceTime: plugins/facetime.md
@@ -70,6 +76,7 @@ nav:
   - Screen Capture: plugins/screencapture.md
   - Services Menu: plugins/servicesmenu.md
   - Shelf: plugins/shelf.md
+  - Shortcuts: plugins/shortcutsplugin.md
   - Spotlight: plugins/spotlight.md
   - System HotKey Commands: plugins/symbolichotkey.md
   - Terminal: plugins/terminal.md
@@ -80,6 +87,7 @@ nav:
   - Viscosity: plugins/viscosity.md
   - Web Search: plugins/websearch.md
   - Yojimbo: plugins/yojimbo.md
+  - Yosemite Interface: plugins/yosemite.md
   - zoom.us: plugins/zoom.md
 - Appendix:
   - FAQ.md
@@ -87,7 +95,5 @@ nav:
   - Extending Quicksilver.md
   - Random Notes.md
   - Style Guide.md
+  - Search: search.md
 site_name: Quicksilver Manual
-markdown_extensions:
-    - toc:
-        permalink: True
