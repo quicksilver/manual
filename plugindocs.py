@@ -319,7 +319,7 @@ Redirecting...
     const lookupDiv = document.getElementById('plugin-lookup');
     
     if (!pluginId) {
-        window.location.href = '../';
+        window.location.href = '../../';
     }
     
     // Read the manifest embedded in the page
@@ -328,7 +328,7 @@ Redirecting...
         const manifestEl = document.getElementById('plugin-manifest');
         manifest = JSON.parse(manifestEl.textContent || '{}');
     } catch (error) {
-        window.location.href = '../';
+        window.location.href = '../../';
         return;
     }
 
