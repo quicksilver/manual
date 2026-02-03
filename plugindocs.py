@@ -10,6 +10,7 @@ import logging
 import plistlib
 from lxml import etree
 from argparse import ArgumentParser
+import json
 
 from html2text import html2text
 import yaml
@@ -105,6 +106,7 @@ class Project(object):
         self.config_path = config_path
         self.docs_dir = docs_dir
         self.pluginstoc = {}
+        self.plugin_id_map = {}  # Maps bundle IDs to page slugs
         assert self.config_path.is_file()
         assert self.docs_dir.is_dir()
 
@@ -125,6 +127,9 @@ class Project(object):
         self._update_config(config)
         with self.config_path.open('w') as cfgfp:
             yaml.dump(config, cfgfp, default_flow_style=False)
+        
+        # Save plugin ID mapping
+        self._save_plugin_id_map()
 
     def _update_config(self, config):
         pagestoc = config.setdefault('nav', [])
@@ -133,6 +138,7 @@ class Project(object):
             key=lambda i: tuple(s.lower() for s in i),
         )
         pluginstoc = [{k: v} for k, v in sortedpages]
+        
         for section in pagestoc:
             if 'Plugins' in section:
                 # Warning: Overwrites the whole section
@@ -146,6 +152,7 @@ class Project(object):
         """Import from plugin info into project docs."""
         name, fname = self._get_plugin_names(plugin)
         log.info('Importing plugin %s', name)
+        plugin_id = plugin.get('CFBundleIdentifier')
         source = plugin.get('QSPlugIn', {}).get('extendedDescription', '').strip()
 
         if not source and skip_empty:
@@ -189,6 +196,7 @@ class Project(object):
                 '# {name}\n\n'.format(**locals()),
                 self._get_plugin_summary(plugin),
                 '\n\n',
+                '<div id="plugin-docs" markdown="1">\n',
             ]
             mdfile.writelines(summary)
             if output:
@@ -196,11 +204,18 @@ class Project(object):
             else:
                 log.debug('No documentation for %s', name)
                 mdfile.write('No plugin documentation.')
+            mdfile.write('\n</div>')
+            
+            # Add JavaScript for dynamic content loading
+            mdfile.write('\n\n')
+            mdfile.write(self._get_plugin_dynamic_loader(plugin_id))
 
         log.debug('Adding %s to page index', name)
         entry = 'plugins/{fname}.md'.format(**locals())
         # little py2 str hack to stop !!unicode appearing in yaml
         self.pluginstoc[str(name)] = str(entry)
+        # Store mapping of plugin ID to page slug for lookup
+        self.plugin_id_map[plugin_id] = fname
         return name
 
     def _get_plugin_names(self, plugin):
@@ -243,6 +258,103 @@ class Project(object):
         }
         kw['width'] = max(len(kw[s]) for s in kw.keys() if s != 'desc')
         return tpl.format(**kw)
+
+    def _get_plugin_dynamic_loader(self, plugin_id):
+        """Generate JavaScript to dynamically load plugin info from API."""
+        return '''
+<script>
+(function() {{
+    const pluginId = '{}';
+    const apiUrl = 'https://qs0.qsapp.com/api/plugin-info.php?id=' + encodeURIComponent(pluginId);
+    const contentDiv = document.getElementById('plugin-docs');
+    
+    // Fetch and update plugin info from the API
+    fetch(apiUrl)
+        .then(response => {{
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        }})
+        .then(data => {{
+            if (data && data.pluginInfo && data.pluginInfo.extendedDescription) {{
+                contentDiv.innerHTML = data.pluginInfo.extendedDescription;
+            }}
+        }})
+        .catch(error => {{
+            console.log('Could not fetch latest plugin info from API:', error);
+            // Content above is static version, which is fine for offline access
+        }});
+    
+    if (!contentDiv) return;
+}})();
+</script>
+'''.format(plugin_id)
+
+    def _save_plugin_id_map(self):
+        """Save a lookup page embedding plugin IDs to page slugs."""
+        redirect_file = self.docs_dir / 'plugins' / 's.md'
+        log.debug('Creating plugin lookup redirect page at %s', redirect_file)
+        with redirect_file.open('w') as f:
+            f.write(self._get_plugin_lookup_page())
+
+    def _get_plugin_lookup_page(self):
+        """Generate a lookup page that redirects to the correct plugin page by ID."""
+        manifest_json = json.dumps(self.plugin_id_map, indent=2, sort_keys=True)
+        manifest_md = '''# Plugin Lookup
+
+Use this page to find plugins by their bundle identifier.
+
+<div id="plugin-lookup"></div>
+
+<script id="plugin-manifest" type="application/json">
+{manifest_json}
+</script>
+'''.format(manifest_json=manifest_json)
+        return manifest_md + '''
+<script>
+(function() {
+    // Get the plugin ID from query parameter
+    const params = new URLSearchParams(window.location.search);
+    const pluginId = params.get('id');
+    
+    const lookupDiv = document.getElementById('plugin-lookup');
+    
+    if (!pluginId) {
+        lookupDiv.innerHTML = '<p>No plugin ID specified. Use ?id=com.example.plugin</p>';
+        return;
+    }
+    
+    // Read the manifest embedded in the page
+    let manifest = {};
+    try {
+        const manifestEl = document.getElementById('plugin-manifest');
+        manifest = JSON.parse(manifestEl.textContent || '{}');
+    } catch (error) {
+        lookupDiv.innerHTML = '<p>Error loading plugin manifest: ' + escapeHtml(error.message) + '</p>';
+        return;
+    }
+
+    const slug = manifest[pluginId];
+    if (slug) {
+        // Redirect to the plugin page
+        window.location.href = '../' + slug + '/';
+    } else {
+        lookupDiv.innerHTML = '<p>Plugin not found: ' + escapeHtml(pluginId) + '</p>';
+    }
+    
+    function escapeHtml(text) {
+        if (!text) return '';
+        const map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        };
+        return text.replace(/[&<>"']/g, m => map[m]);
+    }
+})();
+</script>
+'''
 
 
 def main():

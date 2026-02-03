@@ -3,11 +3,7 @@ extra_css:
 markdown_extensions:
 - toc:
     permalink: true
-plugins:
-  search:
-    lang: en
-theme:
-  name: mkdocs
+- md_in_html
 nav:
 - Home: index.md
 - Introduction: Introduction.md
@@ -53,7 +49,6 @@ nav:
   - Firefox: plugins/firefox.md
   - Gmail: plugins/gmail.md
   - Google Chrome: plugins/googlechrome.md
-  - Growl Notifier: plugins/growl.md
   - Image Manipulation: plugins/imagemanipulation.md
   - iPhoto: plugins/iphoto.md
   - iTerm2: plugins/iterm2.md
@@ -96,4 +91,9 @@ nav:
   - Random Notes.md
   - Style Guide.md
   - Search: search.md
+plugins:
+  search:
+    lang: en
 site_name: Quicksilver Manual
+theme:
+  name: mkdocs
