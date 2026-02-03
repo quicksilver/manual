@@ -301,7 +301,7 @@ class Project(object):
         manifest_json = json.dumps(self.plugin_id_map, indent=2, sort_keys=True)
         manifest_md = '''# Plugin Lookup
 
-Use this page to find plugins by their bundle identifier.
+Redirecting...
 
 <div id="plugin-lookup"></div>
 
@@ -319,8 +319,7 @@ Use this page to find plugins by their bundle identifier.
     const lookupDiv = document.getElementById('plugin-lookup');
     
     if (!pluginId) {
-        lookupDiv.innerHTML = '<p>No plugin ID specified. Use ?id=com.example.plugin</p>';
-        return;
+        window.location.href = '../';
     }
     
     // Read the manifest embedded in the page
@@ -329,7 +328,7 @@ Use this page to find plugins by their bundle identifier.
         const manifestEl = document.getElementById('plugin-manifest');
         manifest = JSON.parse(manifestEl.textContent || '{}');
     } catch (error) {
-        lookupDiv.innerHTML = '<p>Error loading plugin manifest: ' + escapeHtml(error.message) + '</p>';
+        window.location.href = '../';
         return;
     }
 
