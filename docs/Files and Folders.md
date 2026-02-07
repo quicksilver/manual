@@ -52,7 +52,7 @@ The **Get Info** action shows the Finder’s info panel for the object, just lik
 
 The **Set Label…** action opens a third pane to choose a color label. The **Lock File** and **Unlock File** actions do the obvious. The **Make Invisible (hide)** and **Make Visible (Show)** actions change the visibility attribute of files. To find invisible files use the Finder’s Find command (<kbd>⌘</kbd><kbd>F</kbd>) and from the search attributes pop-up menu choose Other and then Visibility, then pick the desired value (Visible, Invisible, or either). The **Always Open Type With…** action will tell macOS to always open files of that type with the specified application, same as the “Change All…” button in the info panel.
 
-There are many file and folder actions, but realize they work with Quicksilver’s other capabilities. By using [the comma trick](Introduction.md#the-comma-trick) an action can be used on multiple files at once. E.g., move several files to the Trash or a folder, upload them to a server, add a label or tag to several files, send multiple attachments to multiple recipients in a single e-mail message, etc. 
+There are many file and folder actions, but realize they work with Quicksilver’s other capabilities. By using [the comma trick](getting-started/invoking-quicksilver.md#the-comma-trick) an action can be used on multiple files at once. E.g., move several files to the Trash or a folder, upload them to a server, add a label or tag to several files, send multiple attachments to multiple recipients in a single e-mail message, etc. 
 
 See the [Text Files](Text.md#text-files) section for actions that modify the contents of a text files.
 

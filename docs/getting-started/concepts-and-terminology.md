@@ -15,7 +15,7 @@ The Quicksilver application runs in the background. By default there is a Dock i
 
 ## The Interface
 
-![Command Window Terms](images/command_window_terms.png)
+![Command Window Terms](../images/command_window_terms.png)
 
 Quicksilver commands are entered via two or three panes containing respectively an **_object_**, an **_action_**, and if a third pane is needed, an **_argument_**. These are the terms used in this manual, but unfortunately other terms are used in some places in Quicksilver and in discussions online. The Primer Interface labels the panes Subject, Action, and Object. Some forum posts use Subject, Verb, and Object; and others use Direct Object, Verb, and Indirect Object. Much of the built-in plugin documentation refers to objects in the first and third panes as "items". This manual uses the terms in the diagram above.
 

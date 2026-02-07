@@ -8,7 +8,7 @@ This is how I do it using Quicksilver. I type <kbd>⌃</kbd><kbd>Space</kbd><kbd
 
 Let's walk through that. <kbd>⌃</kbd><kbd>Space</kbd>, at any time, in any application, activates Quicksilver bringing up the two pane window shown here:
 
-![Quicksilver Interface](images/quicksilver_interface.png)
+![Quicksilver Interface](../images/quicksilver_interface.png)
 
 When I type <kbd>A</kbd>, Ashish appears in the first pane because I often send her e-mail. Her picture appears because I have her picture in her Contacts entry (mostly because Quicksilver makes such good use of it). Also, another window appears below the main interface with other choices. If I kept typing, those would change to be some other choice, but since Ashish is what I want, I'm done. The second pane shows the **Compose E-mail** action which is what I want to do. This appears because it's the most common thing I do with contacts. Typing <kbd>↩</kbd> performs the selected action so I see a new Compose Message window appear from Mail with Ashish's address filled in.
 
