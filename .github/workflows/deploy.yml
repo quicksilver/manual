@@ -14,6 +14,7 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
+        cache: 'pip'
     - name: Install WeasyPrint (apt)
       run: |
         sudo apt-get update
@@ -33,7 +34,9 @@ jobs:
         SSH_KEY: ${{ secrets.SSH_KEY }}
       run: |
         mkdir -p ~/.ssh
-        eval $(ssh-agent -s)
-        ssh-add <(printf '%s\n' "$SSH_KEY")
-
-        scp -P "${PORT}" -o StrictHostKeyChecking=accept-new -r site/ qs@${SERVER}:/home/qs/manual/
+        ssh-keyscan -p "${PORT}" "${SERVER}" >> ~/.ssh/known_hosts 2>/dev/null
+        
+        echo "${SSH_KEY}" > /tmp/key
+        chmod 0600 /tmp/key
+        
+        scp -P "${PORT}" -i /tmp/key -o StrictHostKeyChecking=yes -r site/ qs@${SERVER}:/home/qs/manual/

@@ -3,6 +3,7 @@ extra_css:
 markdown_extensions:
 - toc:
     permalink: true
+    toc_depth: 2-6
 - md_in_html
 nav:
 - Home: index.md
@@ -97,8 +98,28 @@ plugins:
   to-pdf:
     author: Howard Melman & Quicksilver Team
     cover_logo: https://qsapp.com/assets/quicksilver-icon-CpykCx5c.png
+    cover_subtitle: by Howard Melman & Quicksilver Team
     output_path: pdf/quicksilver-manual.pdf
     download_link: footer
-site_name: Quicksilver Manual
+    enabled_if_env: CI
+site_name: Quicksilver User Manual
+site_url: https://qsapp.com/manual
 theme:
-  name: mkdocs
+  name: material
+  locale: en
+  palette:
+    - scheme: light
+      primary: custom
+      accent: purple
+    - scheme: dark
+      primary: custom
+      accent: purple
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - search.suggest
+    - search.highlight

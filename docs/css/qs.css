@@ -1,30 +1,37 @@
-/* Quicksilver Manual Custom Styles - Updated for MkDocs current version */
+/* Quicksilver Manual Custom Styles for Material Theme */
 
-/* Override Bootstrap CSS variables for Quicksilver theme */
 :root {
-  --bs-primary: #623876;
-  --bs-primary-rgb: 98, 56, 118;
+  --md-primary-fg-color: #5C3A72;
+  --md-accent-fg-color: #8b5fbf;
 }
 
-html[data-bs-theme="light"] {
-  --bs-primary: #623876;
-  --bs-primary-rgb: 98, 56, 118;
+/* Content links blue */
+.md-typeset a {
+  color: #0066cc;
 }
 
-html[data-bs-theme="dark"] {
-  --bs-primary: #917d9b;
-  --bs-primary-rgb: 145, 125, 155;
+.md-typeset a:hover {
+  color: #003d99;
 }
 
-/* Main body and background */
-body {
-  background: none;
+/* Headings */
+h1 {
+  color: #5C3A72;
+  border-bottom: 2px solid #5C3A72;
+  padding-bottom: 0.5rem;
 }
 
-/* Main content area typography */
-.col-md-9 {
-  font-size: 12pt;
-  line-height: 1.6;
+h2 {
+  color: #5C3A72;
+}
+
+h3, h4, h5, h6 {
+  color: #333333;
+}
+
+[data-md-color-scheme="dark"] h1,
+[data-md-color-scheme="dark"] h2 {
+  color: #917d9b;
 }
 
 /* Keyboard styling */
@@ -40,217 +47,50 @@ kbd {
   box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
 }
 
-/* Links - Quicksilver purple theme (but not in navbar) */
-a:not(.navbar-brand):not(.nav-link) {
-  color: #623876;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:not(.navbar-brand):not(.nav-link):hover {
-  color: #606060;
-  text-decoration: underline;
-}
-
-/* Navigation bar - use primary color variable */
-.navbar {
-  background-color: #623876 !important;
-  background-image: none !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border-bottom: none;
-  --bs-navbar-padding-y: 0;
-}
-
-.bg-primary {
-  background-color: #623876 !important;
-  background-image: none !important;
-}
-
-.navbar-dark {
-  --bs-navbar-color: rgba(255, 255, 255, 0.8);
-  --bs-navbar-hover-color: rgba(255, 255, 255, 1);
-  --bs-navbar-active-color: rgba(255, 255, 255, 1);
-}
-
-.navbar-nav {
-  --bs-nav-link-padding-y: 0.8rem;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: white !important;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #ffffff !important;
-  background-color: #917d9b;
-}
-
-.navbar-dark .navbar-brand {
-  color: #ffffff;
-}
-
-/* Dropdown menu styling */
-.dropdown-menu {
-  max-height: 80vh;
-  overflow-y: auto;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.dropdown-menu .dropdown-item {
-  color: #333333;
-  padding: 0.5rem 1rem;
-}
-
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item.active {
-  background-color: #917d9b;
-  color: #ffffff;
-}
-
-.dropdown-menu .dropdown-item.active {
-  background-color: #917d9b;
-}
-
-/* Sidebar styling */
-.bs-sidebar {
-  padding: 1rem 0;
-}
-
-.bs-sidebar .nav-link {
-  color: #333333;
-  padding: 0.25rem 0;
-  font-size: 0.95rem;
-}
-
-.bs-sidebar .nav-link:hover {
-  color: #623876;
-}
-
-.bs-sidebar .nav-link.active {
-  color: #623876;
-  font-weight: 600;
-  border-left: 3px solid #623876;
-  padding-left: 10px;
-}
-
-/* Admonitions and callout boxes */
-.admonition {
-  background-color: #e4e3e5;
-  border-left: 4px solid #b0b0b0;
-  padding: 10px 15px;
-  margin: 1rem 0;
-  border-radius: 3px;
-}
-
-.admonition-title {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #333333;
-}
-
-.admonition.important {
-  background-color: #f5d2cf;
-  border-left-color: #e8796c;
-}
-
-.admonition.important > .admonition-title {
-  color: #720002;
-}
-
-.admonition.warning {
-  background-color: #fff3cd;
-  border-left-color: #ffc107;
-}
-
-.admonition.note,
-.admonition.info {
-  background-color: #d1ecf1;
-  border-left-color: #17a2b8;
-}
-
-.admonition.note > .admonition-title,
-.admonition.info > .admonition-title {
-  color: #0c5460;
-}
-
 /* Code blocks */
 code {
   background-color: #f5f5f5;
-  padding: 2px 6px;
   border-radius: 3px;
-  font-family: "Monaco", "Courier New", monospace;
-  font-size: 0.9em;
 }
 
-pre {
-  background-color: #303030;
-  color: #ffffff;
-  padding: 15px;
-  border-radius: 5px;
-  overflow-x: auto;
-  line-height: 1.4;
+[data-md-color-scheme="dark"] code {
+  background-color: #404040;
 }
 
-pre code {
-  background-color: transparent;
-  color: inherit;
-  padding: 0;
-  font-size: 0.9em;
+/* Admonitions */
+.md-typeset .admonition,
+.md-typeset .admonition-note {
+  border-color: #5C3A72;
+}
+
+.md-typeset .admonition.important,
+.md-typeset .admonition-warning {
+  border-color: #e8796c;
 }
 
 /* Tables */
-table {
+.md-typeset table {
   margin: 1rem 0;
-  border-collapse: collapse;
-  width: 100%;
 }
 
-table thead {
+.md-typeset thead {
   background-color: #f5f5f5;
 }
 
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 10px 15px;
-  text-align: left;
+[data-md-color-scheme="dark"] .md-typeset thead {
+  background-color: #404040;
 }
 
-table tbody tr:nth-child(even) {
+.md-typeset tbody tr:nth-child(even) {
   background-color: #fafafa;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: #333333;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+[data-md-color-scheme="dark"] .md-typeset tbody tr:nth-child(even) {
+  background-color: #303030;
 }
 
-h1 {
-  border-bottom: 2px solid #623876;
-  padding-bottom: 0.5rem;
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  color: #623876;
-}
-
-/* Search modal */
-.modal {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  border-radius: 5px;
-}
-
-/* Ensure search icon is visible */
-.navbar-dark .navbar-nav .nav-link i {
-  color: rgba(255, 255, 255, 0.8);
+/* Content area */
+.md-typeset {
+  font-size: 13pt;
+  line-height: 1.6;
 }
