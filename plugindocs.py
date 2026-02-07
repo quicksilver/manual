@@ -19,7 +19,16 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 
-# Add custom YAML constructor for !ENV tag used in mkdocs.yml
+# Custom class to represent !ENV values
+class EnvVar:
+    """Wrapper for environment variable references in YAML."""
+    def __init__(self, value):
+        self.value = value
+
+    def __repr__(self):
+        return f'EnvVar({self.value!r})'
+
+
 def env_constructor(loader, node):
     """Constructor for !ENV tag that preserves the tag."""
     if isinstance(node, yaml.ScalarNode):
@@ -28,11 +37,25 @@ def env_constructor(loader, node):
         value = loader.construct_sequence(node)
     else:
         value = loader.construct_object(node)
-    return value
+    return EnvVar(value)
 
 
-# Add the constructor to SafeLoader
+def env_representer(dumper, data):
+    """Representer for !ENV tag to preserve it when dumping."""
+    # For lists, use flow style (inline brackets)
+    if isinstance(data.value, list):
+        node = dumper.represent_list(data.value)
+        node.flow_style = True
+        node.tag = '!ENV'
+        return node
+    else:
+        # For scalars
+        return dumper.represent_scalar('!ENV', str(data.value))
+
+
+# Add the constructor and representer to SafeLoader/SafeDumper
 yaml.SafeLoader.add_constructor('!ENV', env_constructor)
+yaml.SafeDumper.add_representer(EnvVar, env_representer)
 
 
 CACHE_DIR = Path('_plugins')
@@ -142,7 +165,7 @@ class Project(object):
 
         self._update_config(config)
         with self.config_path.open('w') as cfgfp:
-            yaml.dump(config, cfgfp, default_flow_style=False)
+            yaml.dump(config, cfgfp, Dumper=yaml.SafeDumper, default_flow_style=False, sort_keys=False)
         
         # Save plugin ID mapping
         self._save_plugin_id_map()

@@ -107,14 +107,11 @@ nav:
   - Search: search.md
 plugins:
 - git-committers:
-    enabled:
-    - CI
-    - false
+    repository: quicksilver/manual
+    token: !ENV [GIT_COMMITTERS_TOKEN]
+    enabled: !ENV [CI, false]
     exclude:
     - plugins/*
-    repository: quicksilver/manual
-    token:
-    - GIT_COMMITTERS_TOKEN
 - git-revision-date-localized:
     fallback_to_build_date: true
     type: timeago
