@@ -32,14 +32,8 @@ jobs:
         PORT: ${{ secrets.PORT }}
         SSH_KEY: ${{ secrets.SSH_KEY }}
       run: |
-        set -x
         mkdir -p ~/.ssh
-        touch ~/.ssh/known_hosts
-        ssh-keyscan -H "${SERVER}" >> ~/.ssh/known_hosts 2>/dev/null || echo "ssh-keyscan failed"
-        cat ~/.ssh/known_hosts
-
         eval $(ssh-agent -s)
-        ssh-add <(printf '%s\n' "$SSH_KEY") || echo "ssh-add failed"
-        ssh-add -l
+        ssh-add <(printf '%s\n' "$SSH_KEY")
 
-        scp -v -P "${PORT}" -o StrictHostKeyChecking=yes -r site/ qs@${SERVER}:/home/qs/manual/
+        scp -P "${PORT}" -o StrictHostKeyChecking=accept-new -r site/ qs@${SERVER}:/home/qs/manual/
