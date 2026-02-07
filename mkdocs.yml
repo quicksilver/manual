@@ -106,24 +106,27 @@ nav:
   - Style Guide.md
   - Search: search.md
 plugins:
-  - git-committers:
-      repository: quicksilver/manual
-      token: !ENV [GIT_COMMITTERS_TOKEN]
-      enabled: !ENV [CI, false]
-      exclude:
-        - plugins/*
-  - git-revision-date-localized:
-      fallback_to_build_date: true
-      type: timeago
-  - search:
-      lang: en
-  - to-pdf:
-      author: Howard Melman & Quicksilver Team
-      cover_logo: https://qsapp.com/assets/quicksilver-icon-CpykCx5c.png
-      cover_subtitle: by Howard Melman & Quicksilver Team
-      download_link: footer
-      enabled_if_env: CI
-      output_path: pdf/quicksilver-manual.pdf
+- git-committers:
+    enabled:
+    - CI
+    - false
+    exclude:
+    - plugins/*
+    repository: quicksilver/manual
+    token:
+    - GIT_COMMITTERS_TOKEN
+- git-revision-date-localized:
+    fallback_to_build_date: true
+    type: timeago
+- search:
+    lang: en
+- to-pdf:
+    author: Howard Melman & Quicksilver Team
+    cover_logo: https://qsapp.com/assets/quicksilver-icon-CpykCx5c.png
+    cover_subtitle: by Howard Melman & Quicksilver Team
+    download_link: footer
+    enabled_if_env: CI
+    output_path: pdf/quicksilver-manual.pdf
 repo_url: https://github.com/quicksilver/manual
 site_name: Quicksilver User Manual
 site_url: https://qsapp.com/manual

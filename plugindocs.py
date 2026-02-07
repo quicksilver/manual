@@ -19,6 +19,22 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 
+# Add custom YAML constructor for !ENV tag used in mkdocs.yml
+def env_constructor(loader, node):
+    """Constructor for !ENV tag that preserves the tag."""
+    if isinstance(node, yaml.ScalarNode):
+        value = loader.construct_scalar(node)
+    elif isinstance(node, yaml.SequenceNode):
+        value = loader.construct_sequence(node)
+    else:
+        value = loader.construct_object(node)
+    return value
+
+
+# Add the constructor to SafeLoader
+yaml.SafeLoader.add_constructor('!ENV', env_constructor)
+
+
 CACHE_DIR = Path('_plugins')
 CONFIG_PATH = Path(__file__).parent / 'mkdocs.yml'
 DOCS_DIR = Path(__file__).parent / 'docs'
