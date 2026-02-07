@@ -15,6 +15,7 @@ jobs:
       with:
         python-version: '3.11'
         cache: 'pip'
+        cache-dependency-path: requirements.txt
     - name: Install WeasyPrint (apt)
       run: |
         sudo apt-get update
@@ -35,5 +36,8 @@ jobs:
       run: |
         echo "${SSH_KEY}" > /tmp/key
         chmod 0600 /tmp/key
-        
-        scp -P "${PORT}" -i /tmp/key -o StrictHostKeyChecking=no -r site/ qs@${SERVER}:/home/qs/manual/
+        mkdir -p ~/.ssh
+        touch ~/.ssh/known_hosts
+        ssh-keyscan -H "${SERVER}" >> ~/.ssh/known_hosts 2>/dev/null
+
+        scp -P "${PORT}" -i /tmp/key -o StrictHostKeyChecking=yes -r site/ qs@${SERVER}:/home/qs/manual/
