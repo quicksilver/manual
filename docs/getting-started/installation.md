@@ -16,7 +16,7 @@ Using Homebrew:
 
 [Homebrew is a package manager for OS X](https://brew.sh) for installs, updates and uninstalls of most OS X software:
 
-Open Terminal, type `brew install --cask quicksilver`. You can `uninstall` just as easily. 
+Open Terminal, type `brew install --cask quicksilver`. You can `uninstall` just as easily.
 
 ## First Launch
 

@@ -1,3 +1,4 @@
+edit_uri: edit/main/docs/
 extra_css:
 - css/qs.css
 markdown_extensions:
@@ -7,7 +8,12 @@ markdown_extensions:
 - md_in_html
 nav:
 - Home: index.md
-- Introduction: Introduction.md
+- Getting Started:
+  - Why Quicksilver: getting-started/why-quicksilver.md
+  - Installation: getting-started/installation.md
+  - Getting Started: getting-started/getting-started.md
+  - Concepts and Terminology: getting-started/concepts-and-terminology.md
+  - Invoking Quicksilver: getting-started/invoking-quicksilver.md
 - Preferences: Preferences.md
 - Features:
   - Files and Folders.md
@@ -93,33 +99,40 @@ nav:
   - Style Guide.md
   - Search: search.md
 plugins:
+  git-committers:
+    repository: organization/repository
+  git-revision-date-localized: null
   search:
     lang: en
   to-pdf:
     author: Howard Melman & Quicksilver Team
     cover_logo: https://qsapp.com/assets/quicksilver-icon-CpykCx5c.png
     cover_subtitle: by Howard Melman & Quicksilver Team
-    output_path: pdf/quicksilver-manual.pdf
     download_link: footer
     enabled_if_env: CI
+    output_path: pdf/quicksilver-manual.pdf
+repo_url: https://github.com/quicksilver/manual
 site_name: Quicksilver User Manual
 site_url: https://qsapp.com/manual
 theme:
-  name: material
-  locale: en
-  palette:
-    - scheme: light
-      primary: custom
-      accent: purple
-    - scheme: dark
-      primary: custom
-      accent: purple
-  font:
-    text: Roboto
-    code: Roboto Mono
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.instant
-    - search.suggest
-    - search.highlight
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.instant
+  - search.suggest
+  - search.highlight
+  - content.action.edit
+  font:
+    code: Roboto Mono
+    text: Roboto
+  icon:
+    repo: fontawesome/brands/github
+  locale: en
+  name: material
+  palette:
+  - accent: purple
+    primary: custom
+    scheme: light
+  - accent: purple
+    primary: custom
+    scheme: dark

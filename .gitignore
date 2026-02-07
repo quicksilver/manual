@@ -8,3 +8,5 @@ _plugins/
 docs/plugins/
 
 .DS_Store
+
+.cache
