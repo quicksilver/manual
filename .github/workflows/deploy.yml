@@ -15,6 +15,10 @@ jobs:
       with:
         python-version: '3.11'
         cache: 'pip'
+    - name: Install WeasyPrint (apt)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y weasyprint
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip

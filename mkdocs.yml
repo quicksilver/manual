@@ -94,6 +94,11 @@ nav:
 plugins:
   search:
     lang: en
+  to-pdf:
+    author: Howard Melman & Quicksilver Team
+    cover_logo: https://qsapp.com/assets/quicksilver-icon-CpykCx5c.png
+    output_path: pdf/quicksilver-manual.pdf
+    download_link: footer
 site_name: Quicksilver Manual
 theme:
   name: mkdocs
