@@ -28,9 +28,8 @@ jobs:
     - name: Download plugin documentation
       run: python plugindocs.py
     - name: Build mkdocs
-      with:
-        env:
-          BUILD_PDF: 1
+      env:
+        BUILD_PDF: 1
       run: mkdocs build
     - name: Deploy to server
       env:
