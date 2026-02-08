@@ -107,6 +107,7 @@ nav:
 plugins:
 - git-committers:
     repository: quicksilver/manual
+    branch: main
     token: !ENV [GIT_COMMITTERS_TOKEN]
     enabled: !ENV [CI, false]
     exclude:
