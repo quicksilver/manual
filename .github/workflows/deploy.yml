@@ -45,4 +45,4 @@ jobs:
         echo "${SSH_KEY}" > /tmp/key
         chmod 0600 /tmp/key
         
-        rsync -avz --delete -e "ssh -p ${PORT} -i /tmp/key -o StrictHostKeyChecking=yes" site/ qs@${SERVER}:/home/qs/manual/
+        rsync -avz --delete -e "ssh -p ${PORT} -i /tmp/key -o StrictHostKeyChecking=yes" site/ qs@${SERVER}:/home/qs/manual/site/
