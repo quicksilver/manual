@@ -9,7 +9,7 @@ markdown_extensions:
 nav:
 - Home: index.md
 - Getting Started:
-  - Why Quicksilver: getting-started/why-quicksilver.md
+  - getting-started/index.md
   - Installation: getting-started/installation.md
   - Getting Started: getting-started/getting-started.md
   - Concepts and Terminology: getting-started/concepts-and-terminology.md
@@ -132,9 +132,11 @@ theme:
   - navigation.tabs
   - navigation.tabs.sticky
   - navigation.instant
+  - navigation.indexes
+  - content.action.edit
   - search.suggest
   - search.highlight
-  - content.action.edit
+  - search.share
   font:
     code: Roboto Mono
     text: Roboto
