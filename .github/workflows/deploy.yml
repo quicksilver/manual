@@ -27,6 +27,8 @@ jobs:
         pip install -r requirements.txt
     - name: Download plugin documentation
       run: python plugindocs.py
+    - name: Set pdf subtitle
+      run: echo "PDF_COVER_SUBTITLE=Updated $(date '+%b %-d, %Y')" >> $GITHUB_ENV
     - name: Build mkdocs
       env:
         BUILD_PDF: 1

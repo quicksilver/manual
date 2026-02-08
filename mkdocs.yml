@@ -120,7 +120,8 @@ plugins:
 - to-pdf:
     author: Howard Melman & Quicksilver Team
     cover_logo: https://qsapp.com/assets/quicksilver-icon-CpykCx5c.png
-    cover_subtitle: by Howard Melman & Quicksilver Team
+    cover_subtitle: !ENV [PDF_COVER_SUBTITLE, Quicksilver User Manual]
+    copyright: "QSApp.com"
     download_link: footer
     enabled_if_env: BUILD_PDF
     output_path: pdf/quicksilver-manual.pdf
