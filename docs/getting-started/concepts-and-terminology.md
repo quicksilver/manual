@@ -89,4 +89,4 @@ Triggers can be configured to start or complete a frequently used command. Quick
 
 ## Collections
 
-**_Collections_** are groups of objects built up either by using [the comma trick](#the-comma-trick), selecting all results with <kbd>⌘</kbd><kbd>A</kbd>, or grabbing multiple selected items from another application. You can use a collection to act on multiple objects at once. (e.g., copy multiple files, send an e-mail to multiple contacts, add multiple tags to a file, etc.)
+**_Collections_** are groups of objects built up either by using [the comma trick](./invoking-quicksilver.md#the-comma-trick), selecting all results with <kbd>⌘</kbd><kbd>A</kbd>, or grabbing multiple selected items from another application. You can use a collection to act on multiple objects at once. (e.g., copy multiple files, send an e-mail to multiple contacts, add multiple tags to a file, etc.)

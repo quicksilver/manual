@@ -104,7 +104,6 @@ nav:
   - Extending Quicksilver.md
   - Random Notes.md
   - Style Guide.md
-  - Search: search.md
 plugins:
 - git-committers:
     repository: quicksilver/manual
