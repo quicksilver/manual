@@ -83,6 +83,8 @@ Quicksilver's matching algorithm makes finding something specific very efficient
 
 Triggers can be configured to start or complete a frequently used command. Quicksilver comes with the ability to assign triggers to shortcut keys, but plugins are available to run triggers based on mouse events, gestures (drawing shapes on screen), and system events (like "Switched to Battery Power").
 
+Learn more about triggers on the [Triggers](../features/Triggers.md) page
+
 ## Proxy Objects
 
 **_Proxy objects_** work especially well with triggers. These are special objects which represent something on the system such as the currently selected text (which may be sent to a search engine) or the last downloaded file (which may be opened or moved) or the URL of the current page in Safari (which may be pasted into an e-mail message).

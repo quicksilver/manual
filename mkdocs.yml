@@ -15,21 +15,33 @@ nav:
   - Concepts and Terminology: getting-started/concepts-and-terminology.md
   - Invoking Quicksilver: getting-started/invoking-quicksilver.md
 - Features:
-  - Files and Folders.md
-  - Applications and Processes.md
-  - iTunes.md
-  - Contacts.md
-  - Mail.md
-  - Chat.md
-  - Calendar.md
-  - Web.md
-  - Text.md
-  - Clipboard and Shelf.md
-  - Note Taking Applications.md
-  - Images.md
-  - System.md
-  - Development.md
+  - features/index.md
+  - Files and Folders: features/Files and Folders.md
+  - Applications and Processes: features/Applications and Processes.md
+  - Contacts: features/Contacts.md
+  - Mail: features/Mail.md
+  - Chat: features/Chat.md
+  - Calendar: features/Calendar.md
+  - Web: features/Web.md
+  - Text: features/Text.md
+  - Triggers:
+    - features/triggers/index.md
+    - Types of Triggers:
+      - Keyboard Triggers: features/triggers/keyboard-triggers.md
+      - Mouse Triggers: features/triggers/mouse-triggers.md
+      - Event Triggers: features/triggers/event-triggers.md
+      - Gesture Triggers: features/triggers/gestures.md
+    - Examples:
+      - Example Triggers: features/triggers/examples.md
+      - More Trigger Ideas: features/triggers/more-examples.md
+  - Using the Mouse: features/Using the Mouse.md
+  - Clipboard and Shelf: features/Clipboard and Shelf.md
+  - Note Taking Applications: features/Note Taking Applications.md
+  - Images: features/Images.md
+  - System: features/System.md
+  - Development: features/Development.md
 - Plugins:
+  - plugins/index.md
   - 1Password: plugins/onepassword.md
   - Abracadabra Triggers: plugins/gesturetriggers.md
   - Apple Mail: plugins/applemail.md
@@ -99,11 +111,12 @@ nav:
   - Touch Bar Support: preferences/touch-bar-support.md
   - Plugins: preferences/plugins.md
 - Appendix:
-  - FAQ.md
-  - Troubleshooting.md
-  - Extending Quicksilver.md
-  - Random Notes.md
-  - Style Guide.md
+  - appendix/index.md
+  - FAQ: appendix/FAQ.md
+  - Troubleshooting: appendix/Troubleshooting.md
+  - Extending Quicksilver: appendix/Extending Quicksilver.md
+  - Random Notes: appendix/Random Notes.md
+  - Style Guide: appendix/Style Guide.md
 plugins:
 - git-committers:
     repository: quicksilver/manual

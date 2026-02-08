@@ -22,7 +22,7 @@ The default action for a file object is **Open**. For scripts however this could
 
 It might be more common to use with an application, but the **Open at Login** action can also set a file to open automatically at login time. The item is added to the list in the Account System Preferences under the Login Items tab. All items listed in that pane are started at login, the checkbox only indicates if they are hidden when started. The **Do Not Open at Login** action removes something from the list. (Both of these actions are disabled by default.)
 
-The **Reveal** action opens the containing folder and selects the item. This is a very easy way to find what folder an item is in, particularly when finding the item directly via the catalog instead of navigating down to it. I do this often to find applications (which are in my catalog) and might be in `/Applications` or `~/Applications` or a couple of levels down. In fact, it’s so useful Quicksilver uses this as the [alternate](./preferences/general.md#actions) for **Open**. (With a file in the first pane and the action set to **Open**, typing <kbd>⌘</kbd><kbd>↩</kbd> performs the **Reveal** action.)
+The **Reveal** action opens the containing folder and selects the item. This is a very easy way to find what folder an item is in, particularly when finding the item directly via the catalog instead of navigating down to it. I do this often to find applications (which are in my catalog) and might be in `/Applications` or `~/Applications` or a couple of levels down. In fact, it's so useful Quicksilver uses this as the [alternate](../preferences/general.md#actions) for **Open**. (With a file in the first pane and the action set to **Open**, typing <kbd>⌘</kbd><kbd>↩</kbd> performs the **Reveal** action.)
 
 Quicksilver includes several methods that take a file and return a form of the file’s path.
 
@@ -52,7 +52,7 @@ The **Get Info** action shows the Finder’s info panel for the object, just lik
 
 The **Set Label…** action opens a third pane to choose a color label. The **Lock File** and **Unlock File** actions do the obvious. The **Make Invisible (hide)** and **Make Visible (Show)** actions change the visibility attribute of files. To find invisible files use the Finder’s Find command (<kbd>⌘</kbd><kbd>F</kbd>) and from the search attributes pop-up menu choose Other and then Visibility, then pick the desired value (Visible, Invisible, or either). The **Always Open Type With…** action will tell macOS to always open files of that type with the specified application, same as the “Change All…” button in the info panel.
 
-There are many file and folder actions, but realize they work with Quicksilver’s other capabilities. By using [the comma trick](getting-started/invoking-quicksilver.md#the-comma-trick) an action can be used on multiple files at once. E.g., move several files to the Trash or a folder, upload them to a server, add a label or tag to several files, send multiple attachments to multiple recipients in a single e-mail message, etc. 
+There are many file and folder actions, but realize they work with Quicksilver's other capabilities. By using [the comma trick](../getting-started/invoking-quicksilver.md#the-comma-trick) an action can be used on multiple files at once. E.g., move several files to the Trash or a folder, upload them to a server, add a label or tag to several files, send multiple attachments to multiple recipients in a single e-mail message, etc. 
 
 See the [Text Files](Text.md#text-files) section for actions that modify the contents of a text files.
 

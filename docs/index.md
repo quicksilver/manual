@@ -16,8 +16,8 @@ Each section includes general usage and configuration instructions, as well as t
 
 | Section | Topics | New Users | Experienced Users |
 | ------- | ------ | --------- | ----------------- |
-| Introduction | Introduction, installation, basic usage | Read thoroughly | Skim |
-| Preferences | Preferences and configuration | Skim, refer back to when needed | Read thoroughly |
-| Features | Features, grouped by category | Read sections of interest. Look up unfamiliar things in the introduction and preferences sections | Read sections of interest |
-| Plugins | Individual plugin documentation | Discover plugins, learn about their functionality | Read as needed |
-| Appendix | Troubleshooting and extending | Read as needed | Read as needed |
+| [Introduction](./getting-started/index.md) | Introduction, installation, basic usage | Read thoroughly | Skim |
+| [Preferences](./preferences/general.md) | Preferences and configuration | Skim, refer back to when needed | Read thoroughly |
+| [Features](./features/index.md) | Features, grouped by category | Read sections of interest. Look up unfamiliar things in the introduction and preferences sections | Read sections of interest |
+| [Plugins](./plugins/index.md) | Individual plugin documentation | Discover plugins, learn about their functionality | Read as needed |
+| [Appendix](./appendix/index.md) | Troubleshooting and extending | Read as needed | Read as needed |

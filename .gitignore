@@ -5,7 +5,8 @@ site
 venv
 
 _plugins/
-docs/plugins/
+docs/plugins/*
+!docs/plugins/index.md
 
 .DS_Store
 
