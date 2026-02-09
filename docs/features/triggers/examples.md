@@ -8,7 +8,7 @@ You can obviously make similar triggers to open your favorite applications. Some
 
 ### Show Shelf/Clipboard Contents
 
-The Shelf and Clipboard History are enabled with the Shelf plugin and the Clipboard plugin respectively. Each enables a window that you typically access with the mouse (see [Clipboard and Shelf](../features/Clipboard and Shelf.md) for details). To get keyboard access to these, first enable the objects in the Catalog under Quicksilver and Shelf & Clipboard (check the box and click the rescan button). If you select these objects in the first pane, you can type <kbd>→</kbd> or <kbd>/</kbd> to open a new results list with their contents. The **Show Contents** action is the equivalent of this, and since it's an action, you can use it in a trigger.
+The Shelf and Clipboard History are enabled with the Shelf plugin and the Clipboard plugin respectively. Each enables a window that you typically access with the mouse (see [Clipboard and Shelf](../Clipboard and Shelf.md) for details). To get keyboard access to these, first enable the objects in the Catalog under Quicksilver and Shelf & Clipboard (check the box and click the rescan button). If you select these objects in the first pane, you can type <kbd>→</kbd> or <kbd>/</kbd> to open a new results list with their contents. The **Show Contents** action is the equivalent of this, and since it's an action, you can use it in a trigger.
 
 So this trigger will open the shelf in a results list, with the first item selected, and let you type to select any item on the shelf (or the Clipboard History if you use that object). You can also use the **Search Contents** action which is very similar but won’t select the first time and won’t show a results list at first.
 
@@ -16,7 +16,7 @@ You can create triggers using **Show Contents** or **Search Contents** for anyth
 
 ### Search Wikipedia
 
-Some actions take an argument in the third pane and triggers can use these too. The **Search For…** action will search some web site for the text entered as an argument. See the [Web Searches](../features/Web.md#web-searches) section for the details of using this action.
+Some actions take an argument in the third pane and triggers can use these too. The **Search For…** action will search some web site for the text entered as an argument. See the [Web Searches](../Web.md#web-searches) section for the details of using this action.
 
 A trigger for a commonly used web search, such as Wikipedia, is very useful. If you specified the argument in the trigger it would search for the same text each time it’s run. However, if you leave the third pane blank, then when the trigger is run, Quicksilver will open a command window with the first two panes filled in (in this case with Wikipedia and **Search For…**), and the third pane selected, ready for you to type the query.
 

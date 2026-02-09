@@ -118,7 +118,7 @@ in Quicksilver's first pane (either by navigating or by entering text mode,
 typing it in, then hitting <kbd>⎋</kbd>), then using the `Add To Catalog`
 action:
 
-![Adding a Symlink to the Catalog](images/add_symlink_to_catalog.png)
+![Adding a Symlink to the Catalog](../images/add_symlink_to_catalog.png)
 
 Please note that currently Quicksilver will not index the contents of a
 symlinked directory, though it will index the content of a directory that is

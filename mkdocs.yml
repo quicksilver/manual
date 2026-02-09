@@ -34,7 +34,7 @@ nav:
     - Examples:
       - Example Triggers: features/triggers/examples.md
       - More Trigger Ideas: features/triggers/more-examples.md
-  - Using the Mouse: features/Using the Mouse.md
+  - Using the Mouse: features/using-the-mouse.md
   - Clipboard and Shelf: features/Clipboard and Shelf.md
   - Note Taking Applications: features/Note Taking Applications.md
   - Images: features/Images.md
@@ -107,8 +107,6 @@ nav:
   - General: preferences/general.md
   - Catalog: preferences/catalog.md
   - Triggers: preferences/triggers.md
-  - Using the Mouse: preferences/using-the-mouse.md
-  - Touch Bar Support: preferences/touch-bar-support.md
   - Plugins: preferences/plugins.md
 - Appendix:
   - appendix/index.md
@@ -116,6 +114,7 @@ nav:
   - Troubleshooting: appendix/Troubleshooting.md
   - Extending Quicksilver: appendix/Extending Quicksilver.md
   - Random Notes: appendix/Random Notes.md
+  - Touch Bar Support: appendix/touch-bar-support.md
   - Style Guide: appendix/Style Guide.md
 plugins:
 - git-committers:

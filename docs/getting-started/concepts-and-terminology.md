@@ -83,7 +83,7 @@ Quicksilver's matching algorithm makes finding something specific very efficient
 
 Triggers can be configured to start or complete a frequently used command. Quicksilver comes with the ability to assign triggers to shortcut keys, but plugins are available to run triggers based on mouse events, gestures (drawing shapes on screen), and system events (like "Switched to Battery Power").
 
-Learn more about triggers on the [Triggers](../features/Triggers.md) page
+Learn more about triggers on the [Triggers](../features/triggers/index.md) page
 
 ## Proxy Objects
 
