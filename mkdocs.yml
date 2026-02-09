@@ -147,6 +147,7 @@ theme:
   - navigation.tabs.sticky
   - navigation.instant
   - navigation.indexes
+  - navigation.footer
   - content.action.edit
   - search.suggest
   - search.highlight
@@ -165,3 +166,11 @@ theme:
   - accent: purple
     primary: custom
     scheme: dark
+extra:
+  social:
+    - icon: fontawesome/solid/home
+      link: https://qsapp.com
+    - icon: fontawesome/solid/file-pdf
+      link: https://qsapp.com/manual/pdf/quicksilver-manual.pdf
+    - icon: fontawesome/brands/github
+      link: https://github.com/quicksilver/quicksilver
