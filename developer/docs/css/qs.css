@@ -1,0 +1,100 @@
+/* Quicksilver Manual Custom Styles for Material Theme */
+
+:root {
+  --md-primary-fg-color: #814aa6;
+  --md-accent-fg-color: #8b5fbf;
+}
+
+/* Content links blue */
+.md-typeset a {
+  color: #0066cc;
+}
+
+.md-typeset a:hover {
+  color: #003d99;
+}
+
+/* Headings */
+h1 {
+  color: #5C3A72;
+  border-bottom: 2px solid #5C3A72;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  color: #5C3A72;
+}
+
+h3, h4, h5, h6 {
+  color: #333333;
+}
+
+[data-md-color-scheme="dark"] h1,
+[data-md-color-scheme="dark"] h2 {
+  color: #917d9b;
+}
+
+/* Keyboard styling */
+kbd {
+  font-family: "Monaco", monospace;
+  font-size: 10pt;
+  background-color: #303030;
+  color: #ffffff;
+  padding: 2px 6px;
+  margin-right: 1pt;
+  border-radius: 3px;
+  display: inline-block;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+/* Code blocks */
+code {
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+
+[data-md-color-scheme="dark"] code {
+  background-color: #404040;
+}
+
+.md-header__topic:first-child {
+  font-weight: normal;
+}
+
+/* Admonitions */
+.md-typeset .admonition,
+.md-typeset .admonition-note {
+  border-color: #5C3A72;
+}
+
+.md-typeset .admonition.important,
+.md-typeset .admonition-warning {
+  border-color: #e8796c;
+}
+
+/* Tables */
+.md-typeset table {
+  margin: 1rem 0;
+}
+
+.md-typeset thead {
+  background-color: #f5f5f5;
+}
+
+[data-md-color-scheme="dark"] .md-typeset thead {
+  background-color: #404040;
+}
+
+.md-typeset tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+[data-md-color-scheme="dark"] .md-typeset tbody tr:nth-child(even) {
+  background-color: #303030;
+}
+
+/* Content area */
+.md-typeset {
+  font-size: 13pt;
+  line-height: 1.6;
+}

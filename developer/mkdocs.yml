@@ -1,0 +1,49 @@
+edit_uri: edit/main/developer/docs/
+extra_css:
+- css/qs.css
+markdown_extensions:
+- toc:
+    permalink: true
+    toc_depth: 2-6
+- md_in_html
+nav:
+- Home: index.md
+plugins:
+- git-revision-date-localized:
+    fallback_to_build_date: true
+    type: timeago
+- search:
+    lang: en
+repo_url: https://github.com/quicksilver/manual
+site_name: Quicksilver Developer Documentation
+site_url: https://qsapp.com/manual
+theme:
+  features:
+  - navigation.instant
+  - navigation.indexes
+  - navigation.footer
+  - content.action.edit
+  - search.suggest
+  - search.highlight
+  - search.share
+  logo: https://qsapp.com/assets/quicksilver-icon-CpykCx5c.png
+  font:
+    code: Roboto Mono
+    text: Roboto
+  icon:
+    repo: fontawesome/brands/github
+  locale: en
+  name: material
+  palette:
+  - accent: purple
+    primary: custom
+    scheme: light
+  - accent: purple
+    primary: custom
+    scheme: dark
+extra:
+  social:
+    - icon: fontawesome/solid/home
+      link: https://qsapp.com
+    - icon: fontawesome/brands/github
+      link: https://github.com/quicksilver/quicksilver
