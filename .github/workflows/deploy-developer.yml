@@ -31,9 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        # only checkout the developer folder (sparse checkout) to speed up the workflow
-        with:
-          sparse-checkout: 'developer/*'
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
