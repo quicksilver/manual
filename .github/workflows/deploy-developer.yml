@@ -35,11 +35,13 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: build mkdocs
+      - name: setup dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          mkdocs build -d developer
+      - name: Build mkdocs
+        working-directory: developer
+        run: mkdocs build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
