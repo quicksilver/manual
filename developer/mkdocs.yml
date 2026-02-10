@@ -19,7 +19,6 @@ nav:
   - Localization: app-development/Localization.md
   - Release Process: project/Release_Process.md
   - Quicksilver Server: app-development/Quicksilver_Server.md
-  - Plugin Release Process: app-development/plugin-release-process.md
 - Plugin Development:
   - Introduction: plugin-development/intro.md
   - Documentation: plugin-development/documentation.md
@@ -46,7 +45,7 @@ nav:
     - Concepts: plugin-development/catalog/index.md
     - Custom Types: plugin-development/catalog/custom-types.md
   - Notifications: plugin-development/Notifications.md
-  - Upgrading Xibs: plugin-development/Upgrading_Xibs.md
+  - Plugin Release Process: app-development/plugin-release-process.md
   - Guides:
     - Troubleshooting: plugin-development/troubleshooting.md
     - AppleScript Examples:
