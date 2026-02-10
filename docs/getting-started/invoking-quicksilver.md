@@ -97,6 +97,16 @@ A non-obvious feature is known as the **_comma trick_**. The <kbd>,</kbd> key al
 
 Activate Quicksilver, select an item, type <kbd>,</kbd> and then select another item. A collection of smaller icons accumulate at the bottom or left of the object pane depending on the interface used (the menu interface does not support the comma trick). Any number of items can be selected, after which <kbd>⇥</kbd> to the action pane and continue as normal.
 
+There are three common scenarios for using the comma trick:
+
+  * **Items in the same folder** -- Navigate into a folder, select an item, press <kbd>,</kbd>, then navigate to another item in that same folder.
+  * **Items in different folders** -- Navigate into a folder, select an item, press <kbd>,</kbd>, then press <kbd>⎋</kbd> to return to the top level and search for another folder. Alternatively, press <kbd>,</kbd> and use <kbd>←</kbd> or <kbd>→</kbd> to navigate to a different folder.
+  * **Items anywhere in the catalog** -- Search for any cataloged item, press <kbd>,</kbd>, and search for another cataloged item.
+
+![Comma trick with multiple items selected](../images/Comma_Trick_example_red_box.png)
+
+The last selected item does not require a comma press. Pressing <kbd>⌫</kbd> will remove the last comma-selected item from the collection.
+
 Another way to select multiple items is with <kbd>⌘</kbd><kbd>A</kbd>. It will select all the items in the results list as if the comma trick had been used individually for all of them. If the results list is long this can take a long time. It's most useful to operate on all the items in a small folder (e.g., deleting, moving, or tagging them all).
 
 Collections can be browsed using <kbd>⌃</kbd><kbd>[</kbd> and <kbd>⌃</kbd><kbd>]</kbd>. The currently selected object can be removed from the collection with the <kbd>⌫</kbd> key. <kbd>⌥</kbd><kbd>,</kbd> will remove the most recent item added to the collection, no matter what you have selected.

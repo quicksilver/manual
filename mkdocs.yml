@@ -39,6 +39,18 @@ nav:
   - Note Taking Applications: features/Note Taking Applications.md
   - Images: features/Images.md
   - System: features/System.md
+  - Alternate Actions: features/alternate-actions.md
+  - Finder Selection: features/finder-selection.md
+  - Interfaces: features/interfaces.md
+  - AppleScript:
+    - features/applescript/index.md
+    - Custom Actions: features/applescript/custom-actions.md
+    - Action Templates: features/applescript/templates.md
+    - Color Picker: features/applescript/color-picker.md
+    - Convert Units: features/applescript/convert-units.md
+    - Open AirDrop: features/applescript/open-airdrop.md
+    - Paste File Path: features/applescript/paste-file-path.md
+    - Run Shell Command: features/applescript/run-shell-command.md
   - Development: features/Development.md
 - Plugins:
   - plugins/index.md
@@ -107,11 +119,17 @@ nav:
   - General: preferences/general.md
   - Catalog: preferences/catalog.md
   - Triggers: preferences/triggers.md
+  - Actions: preferences/actions.md
   - Plugins: preferences/plugins.md
 - Appendix:
   - appendix/index.md
   - FAQ: appendix/FAQ.md
   - Troubleshooting: appendix/Troubleshooting.md
+  - Keyboard Shortcuts: appendix/keyboard-shortcuts.md
+  - Hidden Defaults: appendix/hidden-defaults.md
+  - Known Bad Applications: appendix/known-bad-applications.md
+  - Tips: appendix/tips.md
+  - Tutorials: appendix/tutorials.md
   - Extending Quicksilver: appendix/Extending Quicksilver.md
   - Random Notes: appendix/Random Notes.md
   - Touch Bar Support: appendix/touch-bar-support.md

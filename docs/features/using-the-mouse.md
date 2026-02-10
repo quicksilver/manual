@@ -8,6 +8,15 @@ You can bring up an e-mail address and drag it into the To: or CC: field of a ma
 
 If the application you’re dropping into doesn’t accept the item your dragging from Quicksilver you’ll probably get the name of the item dropped in. For example, if you drag a file into a web form, you’ll find the file name with its full path entered into the form. Do the same thing with a contact to make sure you get a difficult name spelled correctly. Drag a postal address from a contact into a document or a field in an online mapping service. With proxy objects, you can drag the Current Web Page, the Currently Playing Track, or the Latest Download.
 
+## Grab 'n Drop
+
+The <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd> shortcut lets you combine a Finder selection with whatever is already in Quicksilver's first pane, automatically choosing an appropriate action.
+
+  * **Open With...** -- Select a file (or files) in Finder, activate Quicksilver, and choose the application you want to use in the first pane. Instead of tabbing to the action pane, type <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd>. The command window rearranges so the file is in the first pane, the action is **Open With...**, and the application is in the third pane.
+  * **Move to...** -- Select the file or files to move in Finder, activate Quicksilver, and bring up the destination folder in the first pane. Type <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd>. The command window rearranges so the files are in the first pane, the action is **Move to...**, and the destination folder is the argument. Press <kbd>↩</kbd> to execute.
+
+In general, if an application is in the first pane when you type <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd>, the Finder selection becomes the object and the application becomes the **Open With...** target. If a directory is in the first pane, the Finder selection becomes the object and the directory becomes the **Move to...** target.
+
 ## Command Objects and Droplets
 
 Entire commands in Quicksilver can be represented as a single object. To create a command object, activate Quicksilver and enter a command as you normally do, but instead of typing return to execute it, type <kbd>⌃</kbd><kbd>↩</kbd> to “encapsulate” the command. You’ll see a new command window appear in which the object is a new command object and the action (with default settings) is **Run**.

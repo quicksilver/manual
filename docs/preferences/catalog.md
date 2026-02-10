@@ -80,7 +80,20 @@ The Defaults Reader allows you to index some keys from Property List (`.plist`) 
 
 The Group type is just a a folder for custom catalog sources to be able to group many custom sources in the catalog preferences to make them easier to read.
 
-Additional catalog sources are described elsewhere in this manual. 
+Additional catalog sources are described elsewhere in this manual.
+
+## Plugin Catalog Sources
+
+The types of items Quicksilver can add to its catalog can be extended through plugins. The table below shows a few (but not all) of the plugins that add new catalog sources.
+
+![Adding a catalog source](../images/addcatalog.png)
+
+| Plugin | Added Catalog Source | Description |
+| --- | --- | --- |
+| Built in | Synonym | Allows you to specify a new name for an item in Quicksilver's catalog by providing a synonym. E.g., you could create a synonym for "Sparrow.app" called "Mail" so that when you search for "Mail" you can select "Sparrow.app". |
+| Web Searches Plugin | Web Search List | Allows Quicksilver to catalog Web Search URLs for searching websites. The URL you enter must contain `***` in place of the search string. E.g., for a Web Search on Google.com, the Search URL would be `http://google.com/search?q=***`. |
+| Remote Hosts Plugin | Remote Hosts | Allows you to define a file which Quicksilver scans for "Remote Host" items. See the Remote Hosts documentation for more information. |
+| Spotlight Plugin | Spotlight | Add files to the catalog based on a Spotlight search. You define the Spotlight query and limit the search to a specific folder. |
 
 In the Quicksilver set there is a source called Quicksilver Catalog Entries. If enabled, an item is added to the catalog for each source configured. These items have names that end with “(Catalog)”. You can select one of these items in the first pane and then type <kbd>→</kbd> to navigate through just that source. If you want to do this often, create a trigger. E.g., the trigger Applications (Catalog) (**Show Contents**) lets you search through just the applications in your catalog (well those that are found via this catalog source). While you can often do this just by typing <kbd>→</kbd> into an object, if you have custom sources configured (say for files of a particular project) this can be very handy.
 

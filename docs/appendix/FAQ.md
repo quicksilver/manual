@@ -64,7 +64,47 @@ If you see something unexpected or unwanted and you’re not sure how it ended u
 !!! note
     The Show Source in Catalog action needs to be enabled in Preferences → General → Actions
 
-## Triggers don’t work after a restart of Quicksilver
+## I want Quicksilver to stay in English, not my system language
+
+If you want to keep Quicksilver in English regardless of your system locale, run this command in Terminal.app:
+
+    defaults write com.blacktree.Quicksilver AppleLanguages -array English
+
+Once entered, restart Quicksilver and it should be in (American) English only.
+
+## Why won't my triggers save?
+
+  1. Triggers are saved in `~/Library/Application Support/Quicksilver/Triggers.plist`. If the permissions of that file or directory don't allow you to write, then no trigger will be saved. There have also been reports of this file becoming corrupted.
+  2. If you have triggers using actions from some plugin and then uninstall that plugin, the triggers remain and Quicksilver can be confused. Sometimes a particular trigger doesn't display, sometimes only one of many triggers appears in the preferences. To fix, reinstall the needed plugins, delete the related triggers, then remove the plugin.
+
+## How do I back up or reset Quicksilver's settings?
+
+Reinstalling Quicksilver doesn't change any saved configuration. Quicksilver stores all its state in the following locations (`~` represents your home folder):
+
+  * `~/Library/Application Support/Quicksilver/`
+  * `~/Library/Preferences/com.blacktree.Quicksilver.plist`
+  * `~/Library/Caches/Quicksilver/`
+  * `~/Library/Caches/com.blacktree.Quicksilver/`
+
+**To back up Quicksilver's settings**, copy the first two items to a safe location (e.g. your Desktop folder).
+
+**To reset Quicksilver to its initial configuration**, open the Application section of Quicksilver's preferences and click the "Reset Preferences" button.
+
+If your problem stops then you know it was caused by something wrong in your previous configuration. Try copying items back one-by-one from your backup, restarting Quicksilver after putting back each file, until you find the cause. Here is what the files in the Application Support directory do:
+
+  * `Actions.plist` — list of installed actions
+  * `Catalog.plist` — the configured catalog sources
+  * `Mnemonics.plist` — learned inputs, defaults and abbreviations
+  * `PlugIns.plist` — the list of available plug-ins and how they are configured
+  * `Triggers.plist` — the configured triggers
+  * `Caches/` — another cache folder
+  * `Indexes/` — folder of indexed items
+  * `PlugIns/` — installed plug-ins
+  * `Shelves/` — where items on the Shelf and clipboards are stored
+  * `Actions/` — not installed by default. The user can create this folder to add scripts that implement custom actions
+  * `Templates/` — not installed by default. The user can create this folder to add template files to use with the **Make New...** action
+
+## Triggers don't work after a restart of Quicksilver
 
 You may create a trigger that works as expected until the next time Quicksilver is launched. If this happens, the trigger probably involves something that isn’t in the catalog. You may be able to find something and use it in a trigger while it’s in memory, but when Quicksilver restarts and sets up your triggers, only the objects in the catalog are available.
 

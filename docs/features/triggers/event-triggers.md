@@ -14,10 +14,22 @@ Some examples will probably explain it better at this point. The plugin’s docu
 
 Here are some other ideas:
 
-  * Turn off AirPlay (by switching to the “Computer” device) when headphones are plugged in
+  * Turn off AirPlay (by switching to the "Computer" device) when headphones are plugged in
   * Switch to the appropriate equalizer preset in iTunes when an optical cable is plugged in
   * When Pages launches, quit Twitter
   * After compressing files or folders, move the archive to the desktop
   * When taking a screen shot, ask me who to e-mail it to
   * Append a message to a file when you lose Internet connectivity
+
+## Event Trigger Object
+
+The plugin provides a proxy object called **Event Trigger Object**. This proxy resolves to whatever object triggered the event, allowing the action to operate on it directly. For example, if you set an event trigger to fire whenever the track in iTunes changes and set the action to **Event Trigger Object** → **Large Type**, the name of the track will appear on screen whenever the track changes.
+
+## Setup
+
+To use event triggers, enable the following items in Preferences (<kbd>⌘</kbd><kbd>,</kbd>). Activate items from left to right.
+
+| Triggers | Catalog |
+| --- | --- |
+| Adds "Event" triggers that are similar to ordinary triggers, but activated due to system changes. | Quicksilver → Proxy Objects → **Event Trigger Object** |
 

@@ -41,8 +41,23 @@ FileVault breaks stuff
 
 Check that what’s in the panes is actually what you think is there. Some things look similar but are not the same, e.g., a link to google.com vs a google web search with *** in the URL or the actions. Can check with Show Source in Catalog.
 
-## Reporting problems
+## Crash Reports
 
-I got an error but don’t mention what the error is. It’s like saying “Doctor it hurts when I do something”
+When Quicksilver crashes, it may display a crash reporter dialog. Please click "Send Report" to help the development team diagnose and fix issues. The information is submitted anonymously.
 
-Describing what you did so vaguely that others can’t reproduce or help. It’s like saying “I drove to Chicago but when I stopped I wasn’t there”
+You can view crash logs for Quicksilver by opening Console.app and looking for entries beginning with "Quicksilver" in the left sidebar.
+
+## Getting Help
+
+  * Search the [Quicksilver issues on GitHub](https://github.com/quicksilver/Quicksilver/issues)
+  * Check the [FAQ](FAQ.md) for answers to common questions
+  * Review the [Known Bad Applications](known-bad-applications.md) list if you suspect another app is interfering
+
+## Reporting Problems
+
+When reporting a problem, be specific:
+
+  * Describe exactly what you did, step by step
+  * Include any error messages you saw
+  * Check Console.app for relevant log messages and include them
+  * Note which plugins you have installed

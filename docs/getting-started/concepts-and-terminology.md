@@ -25,7 +25,7 @@ When typing in one of the panes, Quicksilver determines what items **_match_**, 
 
 **_Plugins_** are optional modules that are installed which can add objects, actions, or other capabilities to Quicksilver. Plugins are managed entirely from within Quicksilver's Preferences including finding, installing, updating, enabling, configuring and removing them.
 
-Plugins can be viewed and downloaded from [qsapp.com](https://qsapp.com/plugins.php), but the in-app system is recommended. The website will always show the latest version of the plugin, while the in-app preferences will take into account your version of Quicksilver and macOS and only show you plugins that will actually work.
+Plugins can be viewed and downloaded from [qsapp.com](https://qsapp.com/plugins), but the in-app system is recommended. The website will always show the latest version of the plugin, while the in-app preferences will take into account your version of Quicksilver and macOS and only show you plugins that will actually work.
 
 ## The Catalog
 

@@ -8,6 +8,47 @@ markdown_extensions:
 - md_in_html
 nav:
 - Home: index.md
+- Project:
+  - Helping Quicksilver: project/get-involved.md
+  - Github: project/Github.md
+- App Development:
+  - Building Quicksilver: app-development/Building_Quicksilver.md
+  - Debugging Quicksilver: app-development/Debugging_Quicksilver.md
+  - Unit Tests: app-development/UnitTests.md
+  - Localization: app-development/Localization.md
+  - Release Process: project/Release_Process.md
+  - Quicksilver Server: app-development/Quicksilver_Server.md
+  - Plugin Release Process: app-development/plugin-release-process.md
+- Plugin Development:
+  - Introduction: plugin-development/intro.md
+  - Documentation: plugin-development/documentation.md
+  - Reference:
+    - Properties (Info.plist): plugin-development/reference/properties.md
+    - Registration: plugin-development/reference/registration.md
+    - Requirements: plugin-development/reference/requirements.md
+    - QSObject: plugin-development/reference/qsobject.md
+    - Proxies: plugin-development/reference/proxies.md
+    - Preferences: plugin-development/reference/preferences.md
+    - Events: plugin-development/reference/events.md
+    - Scripting Bridge: plugin-development/scripting-bridge.md
+  - Actions:
+    - Concepts: plugin-development/actions/index.md
+    - Properties: plugin-development/actions/properties.md
+    - Validation: plugin-development/actions/validation.md
+    - Combined Objects: plugin-development/actions/comma-trick.md
+    - Alternates: plugin-development/actions/alternates-reverse.md
+    - Other: plugin-development/actions/types.md
+  - Catalog:
+    - Concepts: plugin-development/catalog/index.md
+    - Custom Types: plugin-development/catalog/custom-types.md
+  - Guides:
+    - Troubleshooting: plugin-development/troubleshooting.md
+    - AppleScript Examples:
+      - Combine PDFs: plugin-development/guides/Combine_PDFs_(AppleScript).md
+      - Open AirDrop: plugin-development/guides/Open_AirDrop_(AppleScript).md
+      - Paste File Path: plugin-development/guides/Paste_file_path_(AppleScript).md
+    - Convert Units To: plugin-development/guides/Convert_Units_To.md
+    - Run Command: plugin-development/guides/Run_command_in_shell_with_arguments.md
 plugins:
 - git-revision-date-localized:
     fallback_to_build_date: true
@@ -16,7 +57,7 @@ plugins:
     lang: en
 repo_url: https://github.com/quicksilver/manual
 site_name: Quicksilver Developer Documentation
-site_url: https://qsapp.com/manual
+site_url: https://developer.qsapp.com/
 theme:
   features:
   - navigation.instant
@@ -40,10 +81,3 @@ theme:
     scheme: light
   - accent: purple
     primary: custom
-    scheme: dark
-extra:
-  social:
-    - icon: fontawesome/solid/home
-      link: https://qsapp.com
-    - icon: fontawesome/brands/github
-      link: https://github.com/quicksilver/quicksilver
