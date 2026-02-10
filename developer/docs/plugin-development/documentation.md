@@ -4,7 +4,7 @@ Before we get into the technical stuff, make sure you **provide adequate documen
 
 The best place to document your plug-in is in the `Info.plist` by adding an `extendedDescription` to the `QSPlugIn` section. This should be a string in HTML format.
 
-If the plug-in project has been updated according to the [modernization section](#plugin_cleanup_and_modernization) below, keeping documentation up to date is as simple as editing (or creating) `Documentation.mdown` at the root of your project's repository (wherever `$SRCROOT` refers to). This is a Markdown file that should be much easier to deal with than raw HTML in Property List Editor.
+Keeping documentation up to date is as simple as editing (or creating) `Documentation.mdown` at the root of your project's repository (wherever `$SRCROOT` refers to). This is a Markdown file that should be much easier to deal with than raw HTML in Property List Editor.
 
 It's processed using [Python-Markdown][pymd] with the [extra extension][mdex] enabled, so you can use the usual Markdown syntax, as well as tables, definition lists, etc.
 

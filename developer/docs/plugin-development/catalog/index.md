@@ -4,7 +4,7 @@
 
 There are two sections in `Info.plist` you should know about.
 
-[`QSPresetAdditions`](../reference/registration.md#qspresetadditions) is where you can list catalog entries that should be present by default when your plug-in is loaded. (These are the things you see in the "Modules" section of the Catalog.) These can be normal existing sources, like "QSFileSystemObjectSource" (a.k.a. File & Folder Scanner), or they can refer to a new source you define yourself.
+`QSPresetAdditions` is where you can list catalog entries that should be present by default when your plug-in is loaded. (These are the things you see in the "Modules" section of the Catalog.) These can be normal existing sources, like "QSFileSystemObjectSource" (a.k.a. File & Folder Scanner), or they can refer to a new source you define yourself.
 
 If you want to see what these look like, open `~/Library/Application Support/Quicksilver/Catalog.plist` and look at the `customEntries` section. In fact, one easy way to create a catalog preset for your plug-in is to create it as a custom entry in Quicksilver, then copy/paste it from `Catalog.plist`. The only thing you may want to add by hand is an `icon`. You'd also change `sources` to something like `QSBlahSource` if you're defining your own.
 

@@ -10,6 +10,7 @@ nav:
 - Home: index.md
 - Project:
   - Helping Quicksilver: project/get-involved.md
+  - Developer Information: project/Developer_Information.md
   - Github: project/Github.md
 - App Development:
   - Building Quicksilver: app-development/Building_Quicksilver.md
@@ -30,6 +31,9 @@ nav:
     - Proxies: plugin-development/reference/proxies.md
     - Preferences: plugin-development/reference/preferences.md
     - Events: plugin-development/reference/events.md
+    - Commands: plugin-development/reference/commands.md
+    - Resource Additions: plugin-development/reference/resource-additions.md
+    - Trigger Presets: plugin-development/reference/trigger-presets.md
     - Scripting Bridge: plugin-development/scripting-bridge.md
   - Actions:
     - Concepts: plugin-development/actions/index.md
@@ -41,6 +45,8 @@ nav:
   - Catalog:
     - Concepts: plugin-development/catalog/index.md
     - Custom Types: plugin-development/catalog/custom-types.md
+  - Notifications: plugin-development/Notifications.md
+  - Upgrading Xibs: plugin-development/Upgrading_Xibs.md
   - Guides:
     - Troubleshooting: plugin-development/troubleshooting.md
     - AppleScript Examples:

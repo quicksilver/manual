@@ -5,7 +5,7 @@
 If you want to help develop for Quicksilver, we first recommend you
 checkout the source code from the [Quicksilver
 GitHub](https://github.com/quicksilver/Quicksilver) repository. There is
-information on [Developer Information](Developer_Information "wikilink")
+information on [Developer Information](Developer_Information.md)
 available in this wiki. Many reported bugs exist in the Github [Issues
 list](https://github.com/quicksilver/Quicksilver/issues) and this is
 what we're working hardest on at the moment. You may also like to join
@@ -20,7 +20,7 @@ LOT. To sign up for a Quicksilver Wiki account, email devs@qsapp.com
 
 ### Localisation & Translation
 
-See the [Localization](Localization "wikilink") page
+See the [Localization](../app-development/Localization.md) page
 
 ### Bug Reporting
 

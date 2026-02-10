@@ -5,6 +5,7 @@ Welcome to the Quicksilver Developer Documentation. Here you will find informati
 ## Project & Contributing
 
 * [Getting Involved](project/get-involved.md): Overview of how you can get involved.
+* [Developer Information](project/Developer_Information.md): Links to source code and resources.
 * [Github Best Practices](project/Github.md): Coding style and PR workflow.
 * [Release Process](project/Release_Process.md): Checklist for releasing.
 
@@ -18,11 +19,9 @@ Welcome to the Quicksilver Developer Documentation. Here you will find informati
 ## Plugin Development
 
 * [Plugin Development Reference](plugin-development/intro.md): The comprehensive guide.
-* [Templates](plugin-development/Plugins_Template.md): Templates for docs.
 * [Notifications](plugin-development/Notifications.md): Notifications reference.
 * [Upgrading Xibs](plugin-development/Upgrading_Xibs.md): Migration info.
 
 ## Architecture
 
 * [Quicksilver Server](app-development/Quicksilver_Server.md): Server interaction.
-* [Plugin List](app-development/Updating_the_Plugins_List.md): How the plugin list is managed.

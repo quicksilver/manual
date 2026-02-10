@@ -6,7 +6,7 @@ be taken.
 -   Make final decision what's going in the new version (discuss it in
     the Dev groups)
 -   Update any pulled .strings files in the Xcode proj (See
-    [Localization](Localization "wikilink") for more info)
+    [Localization](../app-development/Localization.md) for more info)
 -   Make sure you have pulled the latest changes from upstream
     (`git pull --rebase origin main`)
 -   Update the Quicksilver version in `Developer.xcconfig`
