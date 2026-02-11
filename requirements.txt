@@ -33,7 +33,7 @@ mkdocs-to-pdf==0.10.1
 packaging==26.0
 paginate==0.5.7
 pathspec==1.0.4
-pillow==11.3.0
+pillow==12.1.1
 platformdirs==4.4.0
 pycparser==2.23
 pydyf==0.10.0
