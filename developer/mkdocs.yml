@@ -52,8 +52,6 @@ nav:
       - Combine PDFs: plugin-development/guides/Combine_PDFs_(AppleScript).md
       - Open AirDrop: plugin-development/guides/Open_AirDrop_(AppleScript).md
       - Paste File Path: plugin-development/guides/Paste_file_path_(AppleScript).md
-    - Convert Units To: plugin-development/guides/Convert_Units_To.md
-    - Run Command: plugin-development/guides/Run_command_in_shell_with_arguments.md
 plugins:
 - git-revision-date-localized:
     fallback_to_build_date: true

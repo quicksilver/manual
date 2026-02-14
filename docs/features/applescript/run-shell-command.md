@@ -1,4 +1,4 @@
-# Run\_command\_in\_shell\_with\_arguments
+# Run command in shell with arguments
 
 The following AppleScript code should be saved as a standard AppleScript .scpt file in \~/Library/Application Support/Quicksilver/Actions.
 

@@ -1,3 +1,5 @@
+hooks:
+- hooks/mark_generated.py
 edit_uri: edit/main/docs/
 extra_css:
 - css/qs.css
