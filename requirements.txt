@@ -37,7 +37,7 @@ pillow==11.3.0
 platformdirs==4.4.0
 pycparser==2.23
 pydyf==0.10.0
-Pygments==2.19.2
+Pygments==2.20.0
 pymdown-extensions==10.20.1
 pyphen==0.17.2
 python-dateutil==2.9.0.post0
